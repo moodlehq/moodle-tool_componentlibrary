@@ -1,3 +1,4 @@
+<?php
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -14,40 +15,19 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * A javascript module to retrieve user's starred courses.
+ * Links and settings
+ *
+ * This file contains links and settings used by tool_componentlibrary
  *
  * @package    tool_componentlibrary
  * @copyright  2020 Bas Brands <bas@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-define(['jquery', 'core/ajax', 'core/notification'], function($, Ajax, Notification) {
-
-    /**
-     * Render a template using a webservice.
-     *
-     * Valid args are:
-     * int template the mustache template to render
-     * int context  the data for rendering the template
-     *
-     * @method renderTemplate
-     * @param {object} args The request arguments
-     * @return {promise} Resolved with the rendered template
-     */
-    var renderTemplate = function(args) {
-
-        var request = {
-            methodname: 'tool_componentlibrary_render_template',
-            args: args
-        };
-
-        var promise = Ajax.call([request])[0];
-
-        promise.fail(Notification.exception);
-
-        return promise;
-    };
-
-    return {
-        renderTemplate: renderTemplate
-    };
-});
+defined('MOODLE_INTERNAL') || die;
+// Template library page.
+$temp = new admin_externalpage(
+    'toolcomponentlibrary',
+    get_string('pluginname', 'tool_componentlibrary'),
+    new moodle_url('/admin/tool/componentlibrary/')
+);
+$ADMIN->add('development', $temp);

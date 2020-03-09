@@ -4,6 +4,10 @@ title: "Contrast"
 description: "Moodle's use of colour in the Boost and classic themes and the impact it has on accessibility"
 date: 2020-02-04T09:40:32+01:00
 draft: false
+toc: true
+tags:
+ - MDL-64494
+ - 3.9
 ---
 
 ## Colour contrast checks
@@ -56,7 +60,6 @@ In this issue a new pallet was suggested. The colours pass but might not be easy
 </div>
 {{< /example >}}
 
-
 ## New Accessible buttons
 
 The buttons shown below are using the Component Library CSS. For each button the colour was based on the buttons shown when you click on the down <button class="btn btn-sm btn-secondary" type="button" aria-expanded="false"><i class="fa fa-caret-down fa-fw"></i></button> button. Only buttons that did not pass WCAG standards have changed.
@@ -106,7 +109,6 @@ The buttons shown below are using the Component Library CSS. For each button the
 {{< /colors.inline >}}
 </div>
 {{< /example >}}
-
 
 ## Alerts
 

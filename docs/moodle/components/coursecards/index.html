@@ -55,6 +55,7 @@
   
 <ul id="collapsec0c192728c4cce66abc09c21eccf41fa" class="sub-menu collapse ">
 <li class=""><a href="http://MOODLEROOT/moodle/accessibility/contrast/">Contrast</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/accessibility/keyboard-access/">Keyboard access</a></li>
 </ul>
   
 </li>
@@ -201,6 +202,8 @@
 
             
 
+            
+
             <h2 id="how-it-works">How it works</h2>
 <p>Course cards are rendered using a shared template found in
 <strong>course/templates/coursecard.mustache</strong>. They are loaded throught JavaScript or PHP on pages like the user dashboard.</p>
@@ -217,9 +220,18 @@
 <strong>core_course/view-cards.mustache</strong></p>
 <p>A single card:
 <strong>course/templates/coursecard.mustache</strong></p>
+<h2 id="exporter">Exporter</h2>
+<p>The data structure for course cards are provided by the exporter class:
+<strong>course/classes/external/course_summary_exporter.php</strong></p>
 <h2 id="usage">Usage</h2>
+<p>Course cards can be used in any place that lists courses, it helps users quickly scan the available content and find a course based on the remembered course image or the course name. Guidelines for using course cards are:</p>
+<ul>
+<li>Keep them simple</li>
+<li>Minimize the number of actions on a card</li>
+<li>Use images smartly</li>
+</ul>
 <p>The example below show a deck of cards as used on the starred courses block</p>
-<div id="root36" data-region="mustachewithcontext" data-template="core_course/view-cards" class="mb-5 mt-2 bg-light p-4" data-config='
+<div id="root46" data-region="mustachewithcontext" data-template="core_course/view-cards" class="mb-5 mt-2 bg-light p-4" data-config='
 {
     &#34;courses&#34;: [
         {
@@ -265,39 +277,39 @@
     <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active"
-                id="nav-rendered36-tab"
+                id="nav-rendered46-tab"
                 data-toggle="tab"
-                href="#nav-rendered36"
-                role="tab" aria-controls="nav-rendered36" aria-selected="true"
+                href="#nav-rendered46"
+                role="tab" aria-controls="nav-rendered46" aria-selected="true"
             >
                 Rendered
             </a>
             <a class="nav-item nav-link"
-                id="nav-template36-tab"
+                id="nav-template46-tab"
                 data-toggle="tab"
-                href="#nav-template36" role="tab" aria-controls="nav-template36" aria-selected="false"
+                href="#nav-template46" role="tab" aria-controls="nav-template46" aria-selected="false"
             >
                 Template
             </a>
             <a class="nav-item nav-link"
-                id="nav-variables36-tab"
+                id="nav-variables46-tab"
                 data-toggle="tab"
-                href="#nav-variables36" role="tab" aria-controls="nav-variables36" aria-selected="false"
+                href="#nav-variables46" role="tab" aria-controls="nav-variables46" aria-selected="false"
             >
                 Variables
             </a>
         </div>
     </nav>
     <div class="tab-content p-3 bg-white" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-rendered36" role="tabpanel" aria-labelledby="nav-rendered36-tab">
+        <div class="tab-pane fade show active" id="nav-rendered46" role="tabpanel" aria-labelledby="nav-rendered46-tab">
             <div data-region="rendered">
             </div>
         </div>
-        <div class="tab-pane fade" id="nav-template36" role="tabpanel" aria-labelledby="nav-template36-tab">
+        <div class="tab-pane fade" id="nav-template46" role="tabpanel" aria-labelledby="nav-template46-tab">
             <pre data-region="source" class="mb3">
             </pre>
         </div>
-        <div class="tab-pane fade" id="nav-variables36" role="tabpanel" aria-labelledby="nav-variables36-tab">
+        <div class="tab-pane fade" id="nav-variables46" role="tabpanel" aria-labelledby="nav-variables46-tab">
             <pre data-region="configinner" class="mb3"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#111">{</span>
     <span style="color:#d88200">&#34;courses&#34;</span><span style="color:#f92672">:</span> <span style="color:#111">[</span>
         <span style="color:#111">{</span>
@@ -343,7 +355,7 @@
     </div>
 </div>
 <h2 id="placeholder-images">Placeholder images</h2>
-<p>Placeholder images are rendered in core using placeholder images.</p>
+<p>Cards usually don't really look great without images. That's why we show a placeholder image when no course image is provided. Placeholder images are rendered in core using a library that generates a uniqueish svg's from idnumbers.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span> 
     <span style="color:#111">$OUTPUT</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">get_generated_image_for_id</span><span style="color:#111">(</span><span style="color:#111">$id</span><span style="color:#111">);</span>
  <span style="color:#75715e">?&gt;</span>

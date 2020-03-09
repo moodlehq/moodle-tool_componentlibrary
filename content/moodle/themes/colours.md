@@ -7,58 +7,45 @@ draft: false
 
 ## Description
 
-Normally themes set the colours used in the page. This is done using the SCSS array set in the theme preset.
+Normally themes set the colours used in the page. This is done using the SCSS array set in the theme preset. Moodle comes with a default colour set optimized for accessibility when the default presets are used in themes Boost and Classic.
 
-{{< highlight css >}}
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
-$gray-700: #495057 !default;
-$gray-800: #373a3c !default;
-$gray-900: #212529 !default;
-$black:    #000 !default;
+## Customizing preset colours
 
-$blue:    #1177d1 !default;
-$indigo:  #6610f2 !default;
-$purple:  #613d7c !default;
-$pink:    #e83e8c !default;
-$red:     #d9534f !default;
-$orange:  #f0ad4e !default;
-$yellow:  #ff7518 !default;
-$green:   #5cb85c !default;
-$teal:    #20c997 !default;
-$cyan:    #5bc0de !default;
+Because Boost Css is build with Scss we can utilize some great features build into Bootstrap. In the example blow a Scss array of colours is defined before we load all of the Bootstrap and Moodle scss files. This array of colours dictates how Bootstrap css will be created for our components like alerts, buttons and backgrounds.
 
-$primary:       $blue !default;
-$secondary:     $gray-800 !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
-
+{{< highlight scss >}}
 $theme-colors: map-merge((
-    primary: $primary,
-    secondary: $gray-400,
-    success: $success,
-    info: $info,
-    warning: $orange,
-    danger: $danger,
-    light: $gray-100,
-    dark: $gray-800
+    primary: #1177d1,
+    secondary: #ced4da,
+    success: #398439,
+    info: #5bc0de,
+    warning: #f0ad4e,
+    danger: #d43f3a,
+    light: #f8f9fa,
+    dark: #373a3c
 ), $theme-colors);
+
+
+@each $color, $value in $theme-colors {
+    .btn-#{$color} {
+        @include button-variant($value, $value);
+    }
+}
 {{< /highlight >}}
 
+This generates classes like:
+{{< highlight css>}}
+.btn-primary {
+    color: #fff;
+    background-color: #1177d1;
+    border-color: #1177d1;
+}
+{{< /highlight >}}
 ## Using the $theme-colors map
 
 Colours automatically create CSS classes for a range of Bootstrap Utility classes.
 
-{{< example >}}
+{{< example show_markup="false">}}
 <div class="row no-gutter">
    <div class="col-sm-6 py-3"><p>Using a white Background</p></div>
    <div class="col-sm-6 py-3 text-light bg-dark"><p>Using a dark Background</p></div>
@@ -76,6 +63,8 @@ Colours automatically create CSS classes for a range of Bootstrap Utility classe
 {{- end -}}
 {{< /colors.inline >}}
 {{< /example >}}
+
+## Moodle comes
 
 {{< example show_markup=false >}}
 <div class="card-deck">

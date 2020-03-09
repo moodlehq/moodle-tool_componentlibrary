@@ -21,7 +21,7 @@
  * @copyright  2020 Bas Brands <bas@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-define(['jquery', 'tool_componentlibrary/lunr', 'core/log'],
+define(['jquery', 'tool_componentlibrary/build/lunr', 'core/log'],
 
 function($, lunr, Log) {
 

@@ -55,6 +55,7 @@
   
 <ul id="collapsec0c192728c4cce66abc09c21eccf41fa" class="sub-menu collapse ">
 <li class=""><a href="http://MOODLEROOT/moodle/accessibility/contrast/">Contrast</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/accessibility/keyboard-access/">Keyboard access</a></li>
 </ul>
   
 </li>
@@ -197,7 +198,9 @@
         <div class="col-md-9 col-lg-10 py-md-3 pl-md-5 pr-md-5 bd-content">
         
             <h1 class="bd-title" id="content">Syntax highlighting</h1>
-            <p class="bd-lead"></p>
+            <p class="bd-lead">Use Hugo shortcodes for Syntax highlighting.</p>
+
+            
 
             
 
@@ -214,7 +217,7 @@
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;myclass&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
 	This is an example.
 <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span></code></pre></div>
-<h2 id="php-highlighting">PHP highlighting</h2>
+<h2 id="php-shortcode">PHP shortcode</h2>
 <p>Syntax for markdown (.md) files:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">{{&lt; php &gt;}}
   $mform-&gt;addElement(&#39;passwordunmask&#39;, &#39;password&#39;, get_string(&#39;label&#39;), $attributes);
@@ -224,7 +227,7 @@
 	<span style="color:#111">$mform</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">addElement</span><span style="color:#111">(</span><span style="color:#d88200">&#39;passwordunmask&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;password&#39;</span><span style="color:#111">,</span> <span style="color:#75af00">get_string</span><span style="color:#111">(</span><span style="color:#d88200">&#39;label&#39;</span><span style="color:#111">),</span> <span style="color:#111">$attributes</span><span style="color:#111">);</span>
  <span style="color:#75715e">?&gt;</span>
 </code></pre></div>
-<h2 id="javascript-highlighting">JavaScript highlighting</h2>
+<h2 id="highlight-shortcode">Highlight shortcode</h2>
 <p>Syntax for markdown (.md) files:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">{{&lt; highlight js &gt;}}
 var config = {
@@ -238,19 +241,39 @@ var config = {
     <span style="color:#75af00">selector</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#39;[data-drag-type=move]&#39;</span>
 <span style="color:#111">}</span><span style="color:#111">;</span>
 </code></pre></div>
-<h2 id="html-higlighting-and-rendering">HTML Higlighting and rendering</h2>
-<p>Using this (shortcode) syntax you can show syntax and render it on the page in one go.</p>
+<h2 id="example-shortcode">Example shortcode</h2>
+<p>The example shortcode shows the HTML source with syntax highlighting and renders it on the page. This shortcode takes the following arguments:</p>
+<p>show_markup=&quot;true/false&rdquo;
+show_preview=&quot;true/false&rdquo;</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">{{&lt; example &gt;}}
-&lt;div class=&#34;spinner-border&#34; role=&#34;status&#34;&gt;
-  &lt;span class=&#34;sr-only&#34;&gt;Loading...&lt;/span&gt;
+&lt;div class=&#34;input-group&#34;&gt;
+  &lt;input type=&#34;text&#34; class=&#34;form-control&#34; placeholder=&#34;Search&#34;&gt;
+  &lt;div class=&#34;input-group-append&#34;&gt;
+    &lt;button class=&#34;btn btn-primary&#34; type=&#34;button&#34;&gt;
+        &lt;i class=&#34;fa fa-search&#34;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
+{{#js}}
+    window.console.log(&#39;hello&#39;);
+{{/js}}
 {{&lt; /example  &gt;}}
 </code></pre></div><div class="bd-example">
-<div class="spinner-border" role="status">
-  <span class="sr-only">Loading...</span>
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="Search">
+  <div class="input-group-append">
+    <button class="btn btn-primary" type="button">
+        <i class="fa fa-search"></i>
+    </button>
+  </div>
 </div>
-</div><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;spinner-border&#34;</span> <span style="color:#75af00">role</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;status&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
-  <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;sr-only&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Loading...<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
+</div><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;input-group&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+  <span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;text&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;form-control&#34;</span> <span style="color:#75af00">placeholder</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Search&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;input-group-append&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;btn btn-primary&#34;</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+        <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-search&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
+  <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
 <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span></code></pre></div>
 
         </div>

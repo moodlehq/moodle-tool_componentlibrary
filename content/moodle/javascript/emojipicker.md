@@ -3,6 +3,9 @@ layout: docs
 title: "Emojipicker"
 date: 2020-02-04T09:40:32+01:00
 draft: false
+tags:
+- MDL-65896
+- 3.8
 ---
 
 ## Description

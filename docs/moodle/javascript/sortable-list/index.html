@@ -55,6 +55,7 @@
   
 <ul id="collapsec0c192728c4cce66abc09c21eccf41fa" class="sub-menu collapse ">
 <li class=""><a href="http://MOODLEROOT/moodle/accessibility/contrast/">Contrast</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/accessibility/keyboard-access/">Keyboard access</a></li>
 </ul>
   
 </li>
@@ -201,6 +202,18 @@
 
             
 
+            
+              
+
+                  <div class="badge badge-info">MDL-51803</div>
+
+              
+
+                  <div class="badge badge-info">3.7</div>
+
+              
+            
+
             <h2 id="description">Description</h2>
 <p>The sortable lists can be used for horizontal and vertical ordering of list elements. The key element of using a sortable list is to provide drag handles to list items. These can be included using the core drag_handle template.</p>
 <h2 id="source-files">Source files</h2>
@@ -249,38 +262,77 @@
 </table>
 <h2 id="examples">Examples</h2>
 <div class="bd-example">
-<ul class="list-group my-draggable-list">
-    <li class="list-group-item">
-        <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="1. Cras justo odio">
-            <i class="fa fa-arrows"></i>
-        </span>
-        1. Cras justo odio
-    </li>
-    <li class="list-group-item">
-        <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="2. Dapibus ac facilisis in">
-            <i class="fa fa-arrows"></i>
-        </span>
-        2. Dapibus ac facilisis in
-    </li>
-    <li class="list-group-item">
-        <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="3. Morbi leo risus">
-            <i class="fa fa-arrows"></i>
-        </span>
-        3. Morbi leo risus
-    </li>
-    <li class="list-group-item">
-        <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="4. Porta ac consectetur ac">
-            <i class="fa fa-arrows"></i>
-        </span>
-        4. Porta ac consectetur ac
-    </li>
-    <li class="list-group-item">
-        <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="5. Vestibulum at eros">
-            <i class="fa fa-arrows"></i>
-        </span>
-        5. Vestibulum at eros
-    </li>
-</ul>
+<div class="row w-50">
+  <div class="col-md-6">
+    <ul class="list-group my-draggable-list">
+        <li class="list-group-item bg-success">
+            <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="1. Cras justo odio">
+                <i class="fa fa-arrows"></i>
+            </span>
+            1. Cras justo odio
+        </li>
+        <li class="list-group-item bg-info">
+            <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="2. Dapibus ac facilisis in">
+                <i class="fa fa-arrows"></i>
+            </span>
+            2. Dapibus ac facilisis in
+        </li>
+        <li class="list-group-item bg-warning">
+            <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="3. Morbi leo risus">
+                <i class="fa fa-arrows"></i>
+            </span>
+            3. Morbi leo risus
+        </li>
+        <li class="list-group-item bg-danger">
+            <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="4. Porta ac consectetur ac">
+                <i class="fa fa-arrows"></i>
+            </span>
+            4. Porta ac consectetur ac
+        </li>
+        <li class="list-group-item bg-secundary">
+            <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="5. Vestibulum at eros">
+                <i class="fa fa-arrows"></i>
+            </span>
+            5. Vestibulum at eros
+        </li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <ul class="list-group my-draggable-list">
+        <li class="list-group-item bg-dark text-success">
+            <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="1. Cras justo odio">
+                <i class="fa fa-arrows"></i>
+            </span>
+            1. Cras justo odio
+        </li>
+        <li class="list-group-item bg-dark text-info">
+            <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="2. Dapibus ac facilisis in">
+                <i class="fa fa-arrows"></i>
+            </span>
+            2. Dapibus ac facilisis in
+        </li>
+        <li class="list-group-item bg-dark text-warning">
+            <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="3. Morbi leo risus">
+                <i class="fa fa-arrows"></i>
+            </span>
+            3. Morbi leo risus
+        </li>
+        <li class="list-group-item bg-dark text-danger">
+            <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="4. Porta ac consectetur ac">
+                <i class="fa fa-arrows"></i>
+            </span>
+            4. Porta ac consectetur ac
+        </li>
+        <li class="list-group-item bg-dark text-light">
+            <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="5. Vestibulum at eros">
+                <i class="fa fa-arrows"></i>
+            </span>
+            5. Vestibulum at eros
+        </li>
+    </ul>
+  </div>
+</div>
+
 <div class='hidden' data-action='runjs'>
 require(
 [
@@ -298,38 +350,77 @@ function(
      });
 });
 </div>
-</div><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#111">&lt;</span><span style="color:#f92672">ul</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;list-group my-draggable-list&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
-    <span style="color:#111">&lt;</span><span style="color:#f92672">li</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;list-group-item&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
-        <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">tabindex</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;0&#34;</span> <span style="color:#75af00">role</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;true&#34;</span> <span style="color:#75af00">data-drag-type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;move&#34;</span> <span style="color:#75af00">title</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;1. Cras justo odio&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
-            <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-arrows&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
-        <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
-        1. Cras justo odio
-    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">li</span><span style="color:#111">&gt;</span>
-    <span style="color:#111">&lt;</span><span style="color:#f92672">li</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;list-group-item&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
-        <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">tabindex</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;0&#34;</span> <span style="color:#75af00">role</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;true&#34;</span> <span style="color:#75af00">data-drag-type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;move&#34;</span> <span style="color:#75af00">title</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;2. Dapibus ac facilisis in&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
-            <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-arrows&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
-        <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
-        2. Dapibus ac facilisis in
-    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">li</span><span style="color:#111">&gt;</span>
-    <span style="color:#111">&lt;</span><span style="color:#f92672">li</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;list-group-item&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
-        <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">tabindex</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;0&#34;</span> <span style="color:#75af00">role</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;true&#34;</span> <span style="color:#75af00">data-drag-type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;move&#34;</span> <span style="color:#75af00">title</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;3. Morbi leo risus&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
-            <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-arrows&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
-        <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
-        3. Morbi leo risus
-    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">li</span><span style="color:#111">&gt;</span>
-    <span style="color:#111">&lt;</span><span style="color:#f92672">li</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;list-group-item&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
-        <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">tabindex</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;0&#34;</span> <span style="color:#75af00">role</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;true&#34;</span> <span style="color:#75af00">data-drag-type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;move&#34;</span> <span style="color:#75af00">title</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;4. Porta ac consectetur ac&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
-            <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-arrows&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
-        <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
-        4. Porta ac consectetur ac
-    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">li</span><span style="color:#111">&gt;</span>
-    <span style="color:#111">&lt;</span><span style="color:#f92672">li</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;list-group-item&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
-        <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">tabindex</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;0&#34;</span> <span style="color:#75af00">role</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;true&#34;</span> <span style="color:#75af00">data-drag-type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;move&#34;</span> <span style="color:#75af00">title</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;5. Vestibulum at eros&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
-            <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-arrows&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
-        <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
-        5. Vestibulum at eros
-    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">li</span><span style="color:#111">&gt;</span>
-<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">ul</span><span style="color:#111">&gt;</span>
+</div><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;row w-50&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;col-md-6&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">ul</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;list-group my-draggable-list&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+        <span style="color:#111">&lt;</span><span style="color:#f92672">li</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;list-group-item bg-success&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">tabindex</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;0&#34;</span> <span style="color:#75af00">role</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;true&#34;</span> <span style="color:#75af00">data-drag-type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;move&#34;</span> <span style="color:#75af00">title</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;1. Cras justo odio&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+                <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-arrows&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
+            1. Cras justo odio
+        <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">li</span><span style="color:#111">&gt;</span>
+        <span style="color:#111">&lt;</span><span style="color:#f92672">li</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;list-group-item bg-info&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">tabindex</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;0&#34;</span> <span style="color:#75af00">role</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;true&#34;</span> <span style="color:#75af00">data-drag-type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;move&#34;</span> <span style="color:#75af00">title</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;2. Dapibus ac facilisis in&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+                <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-arrows&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
+            2. Dapibus ac facilisis in
+        <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">li</span><span style="color:#111">&gt;</span>
+        <span style="color:#111">&lt;</span><span style="color:#f92672">li</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;list-group-item bg-warning&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">tabindex</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;0&#34;</span> <span style="color:#75af00">role</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;true&#34;</span> <span style="color:#75af00">data-drag-type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;move&#34;</span> <span style="color:#75af00">title</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;3. Morbi leo risus&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+                <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-arrows&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
+            3. Morbi leo risus
+        <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">li</span><span style="color:#111">&gt;</span>
+        <span style="color:#111">&lt;</span><span style="color:#f92672">li</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;list-group-item bg-danger&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">tabindex</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;0&#34;</span> <span style="color:#75af00">role</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;true&#34;</span> <span style="color:#75af00">data-drag-type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;move&#34;</span> <span style="color:#75af00">title</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;4. Porta ac consectetur ac&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+                <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-arrows&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
+            4. Porta ac consectetur ac
+        <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">li</span><span style="color:#111">&gt;</span>
+        <span style="color:#111">&lt;</span><span style="color:#f92672">li</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;list-group-item bg-secundary&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">tabindex</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;0&#34;</span> <span style="color:#75af00">role</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;true&#34;</span> <span style="color:#75af00">data-drag-type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;move&#34;</span> <span style="color:#75af00">title</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;5. Vestibulum at eros&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+                <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-arrows&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
+            5. Vestibulum at eros
+        <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">li</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">ul</span><span style="color:#111">&gt;</span>
+  <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;col-md-6&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">ul</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;list-group my-draggable-list&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+        <span style="color:#111">&lt;</span><span style="color:#f92672">li</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;list-group-item bg-dark text-success&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">tabindex</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;0&#34;</span> <span style="color:#75af00">role</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;true&#34;</span> <span style="color:#75af00">data-drag-type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;move&#34;</span> <span style="color:#75af00">title</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;1. Cras justo odio&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+                <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-arrows&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
+            1. Cras justo odio
+        <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">li</span><span style="color:#111">&gt;</span>
+        <span style="color:#111">&lt;</span><span style="color:#f92672">li</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;list-group-item bg-dark text-info&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">tabindex</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;0&#34;</span> <span style="color:#75af00">role</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;true&#34;</span> <span style="color:#75af00">data-drag-type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;move&#34;</span> <span style="color:#75af00">title</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;2. Dapibus ac facilisis in&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+                <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-arrows&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
+            2. Dapibus ac facilisis in
+        <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">li</span><span style="color:#111">&gt;</span>
+        <span style="color:#111">&lt;</span><span style="color:#f92672">li</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;list-group-item bg-dark text-warning&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">tabindex</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;0&#34;</span> <span style="color:#75af00">role</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;true&#34;</span> <span style="color:#75af00">data-drag-type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;move&#34;</span> <span style="color:#75af00">title</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;3. Morbi leo risus&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+                <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-arrows&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
+            3. Morbi leo risus
+        <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">li</span><span style="color:#111">&gt;</span>
+        <span style="color:#111">&lt;</span><span style="color:#f92672">li</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;list-group-item bg-dark text-danger&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">tabindex</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;0&#34;</span> <span style="color:#75af00">role</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;true&#34;</span> <span style="color:#75af00">data-drag-type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;move&#34;</span> <span style="color:#75af00">title</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;4. Porta ac consectetur ac&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+                <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-arrows&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
+            4. Porta ac consectetur ac
+        <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">li</span><span style="color:#111">&gt;</span>
+        <span style="color:#111">&lt;</span><span style="color:#f92672">li</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;list-group-item bg-dark text-light&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">tabindex</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;0&#34;</span> <span style="color:#75af00">role</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;true&#34;</span> <span style="color:#75af00">data-drag-type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;move&#34;</span> <span style="color:#75af00">title</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;5. Vestibulum at eros&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+                <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-arrows&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
+            5. Vestibulum at eros
+        <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">li</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">ul</span><span style="color:#111">&gt;</span>
+  <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+
 {{#js}}
 require(
 [

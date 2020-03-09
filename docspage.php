@@ -58,6 +58,7 @@ $PAGE->requires->css($cssfile);
 $PAGE->requires->js_call_amd('tool_componentlibrary/mustache', 'init');
 $PAGE->requires->js_call_amd('tool_componentlibrary/jsrunner', 'init');
 $PAGE->requires->js_call_amd('tool_componentlibrary/checkcontrast', 'init');
+$PAGE->requires->js_call_amd('tool_componentlibrary/clipboardwrapper', 'init');
 
 echo $OUTPUT->header();
 

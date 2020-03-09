@@ -26,6 +26,14 @@
                 </div>
             {{ end }}
 
+            {{ if .Page.Params.tags }}
+              {{ range .Page.Params.tags }}
+
+                  <div class="badge badge-info">{{.}}</div>
+
+              {{ end }}
+            {{ end }}
+
             {{ .Content }}
         </div>
         {{ if (eq .Page.Params.toc true) }}

@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: "Syntax highlighting"
+description: Use Hugo shortcodes for Syntax highlighting.
 date: 2020-02-04T09:40:32+01:00
 draft: false
 weight: 3
@@ -29,7 +30,7 @@ Rendered result on this page:
 </div>
 {{< /highlight >}}
 
-## PHP highlighting
+## PHP shortcode
 
 Syntax for markdown (.md) files:
 
@@ -44,7 +45,7 @@ Rendered result on this page:
 	$mform->addElement('passwordunmask', 'password', get_string('label'), $attributes);
 {{< /php >}}
 
-## JavaScript highlighting
+## Highlight shortcode
 
 Syntax for markdown (.md) files:
 
@@ -66,20 +67,39 @@ var config = {
 {{< /highlight >}}
 
 
-## HTML Higlighting and rendering
+## Example shortcode
 
-Using this (shortcode) syntax you can show syntax and render it on the page in one go.
+The example shortcode shows the HTML source with syntax highlighting and renders it on the page. This shortcode takes the following arguments:
+
+show_markup="true/false"
+show_preview="true/false"
+
+
+
 
 ```
 {{</* example */>}}
-<div class="spinner-border" role="status">
-  <span class="sr-only">Loading...</span>
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="Search">
+  <div class="input-group-append">
+    <button class="btn btn-primary" type="button">
+        <i class="fa fa-search"></i>
+    </button>
+  </div>
 </div>
+{{#js}}
+    window.console.log('hello');
+{{/js}}
 {{</* /example  */>}}
 ```
 
 {{< example >}}
-<div class="spinner-border" role="status">
-  <span class="sr-only">Loading...</span>
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="Search">
+  <div class="input-group-append">
+    <button class="btn btn-primary" type="button">
+        <i class="fa fa-search"></i>
+    </button>
+  </div>
 </div>
 {{< /example >}}

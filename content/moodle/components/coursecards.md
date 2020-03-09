@@ -29,7 +29,17 @@ A deck of course cards:
 A single card:
 **course/templates/coursecard.mustache**
 
+## Exporter
+The data structure for course cards are provided by the exporter class:
+**course/classes/external/course_summary_exporter.php**
+
 ## Usage
+
+Course cards can be used in any place that lists courses, it helps users quickly scan the available content and find a course based on the remembered course image or the course name. Guidelines for using course cards are:
+
+* Keep them simple
+* Minimize the number of actions on a card
+* Use images smartly
 
 The example below show a deck of cards as used on the starred courses block
 
@@ -79,7 +89,7 @@ The example below show a deck of cards as used on the starred courses block
 
 ## Placeholder images
 
-Placeholder images are rendered in core using placeholder images.
+Cards usually don't really look great without images. That's why we show a placeholder image when no course image is provided. Placeholder images are rendered in core using a library that generates a uniqueish svg's from idnumbers.
 
 {{< php >}}
     $OUTPUT->get_generated_image_for_id($id);

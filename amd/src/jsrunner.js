@@ -29,7 +29,7 @@ function($) {
         var root = $('[data-region="componentlibrary"]');
         root.find('[data-action="runjs"]').each(function() {
             var jsCode = $(this).html();
-            eval(jsCode);
+            eval(jsCode); // eslint-disable-line no-eval
         });
     };
 
