@@ -1,0 +1,99 @@
+languageCode:           "en"
+title:                  "Moodle Component Library"
+baseURL:                "http://MOODLEROOT/"
+enableInlineShortcodes:  true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+markup:
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+      autoHeadingIDType: github
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xHTML: false
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: monokailight
+    tabWidth: 4
+
+buildDrafts:            false
+buildFuture:            true
+
+enableRobotsTXT:        true
+metaDataFormat:         "yaml"
+
+disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
+
+# Uncommenting this allows for the creation of PHP files.
+# outputs:
+#   page:
+#   - HTML
+#   home:
+#   - HTML
+#
+# mediaTypes:
+#   text/html:
+#     suffixes:
+#     - php
+
+# outputFormats:
+#   HTML:
+#     mediaType: "text/html"
+
+blackfriday:
+  fractions:            false
+
+relativeURLs:           true
+
+publishDir:             "./docs"
+
+archetypeDir:           "./hugo/archetypes"
+assetDir:               "./hugo/assets"
+contentDir:             "./content"
+dataDir:                "./hugo/site/data"
+layoutDir:              "./hugo/site/layouts"
+staticDir:              "./content/static"
+
+params:
+  moodleroot:           "MOODLEROOT"
+
+  current_version:      "4.3.1"
+  current_ruby_version: "4.3.1"
+  rfs_version:          "9.0.2"
+  docs_version:         "4.4"
+
+  download:
+    source:             "https://github.com/twbs/bootstrap/archive/v4.3.1.zip"
+    dist:               "https://github.com/twbs/bootstrap/releases/download/v4.3.1/bootstrap-4.3.1-dist.zip"
+
+  cdn:
+    # See https://www.srihash.org for info on how to generate the hashes
+    css:              "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    css_hash:         "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    js:               "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    js_hash:          "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    js_bundle:        "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+    js_bundle_hash:   "sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+    popper:           "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    popper_hash:      "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"

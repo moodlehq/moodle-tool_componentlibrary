@@ -1,0 +1,54 @@
+{{- /*
+  Usage: `mustache [args]`
+
+  `args` are optional and can be one of the following:
+    id: the `div`'s id - default: ""
+    class: any extra class(es) to be added to the `div` - default ""
+    show_preview: if the preview should be output in the HTML - default: `true`
+    show_markup: if the markup should be output in the HTML - default: `true`
+*/ -}}
+
+<div id="root{{- .Position.LineNumber -}}" data-region="mustachewithcontext" data-template="{{- .Get "template" -}}" class="mb-5 mt-2 bg-light p-4" data-config='{{- .Inner | safeHTML -}}'>
+    <h6 class="mb-3">{{- .Get "template" -}}</h6>
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active"
+                id="nav-rendered{{- .Position.LineNumber -}}-tab"
+                data-toggle="tab"
+                href="#nav-rendered{{- .Position.LineNumber -}}"
+                role="tab" aria-controls="nav-rendered{{- .Position.LineNumber -}}" aria-selected="true"
+            >
+                Rendered
+            </a>
+            <a class="nav-item nav-link"
+                id="nav-template{{- .Position.LineNumber -}}-tab"
+                data-toggle="tab"
+                href="#nav-template{{- .Position.LineNumber -}}" role="tab" aria-controls="nav-template{{- .Position.LineNumber -}}" aria-selected="false"
+            >
+                Template
+            </a>
+            <a class="nav-item nav-link"
+                id="nav-variables{{- .Position.LineNumber -}}-tab"
+                data-toggle="tab"
+                href="#nav-variables{{- .Position.LineNumber -}}" role="tab" aria-controls="nav-variables{{- .Position.LineNumber -}}" aria-selected="false"
+            >
+                Variables
+            </a>
+        </div>
+    </nav>
+    <div class="tab-content p-3 bg-white" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-rendered{{- .Position.LineNumber -}}" role="tabpanel" aria-labelledby="nav-rendered{{- .Position.LineNumber -}}-tab">
+            <div data-region="rendered">
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-template{{- .Position.LineNumber -}}" role="tabpanel" aria-labelledby="nav-template{{- .Position.LineNumber -}}-tab">
+            <pre data-region="source" class="mb3">
+            </pre>
+        </div>
+        <div class="tab-pane fade" id="nav-variables{{- .Position.LineNumber -}}" role="tabpanel" aria-labelledby="nav-variables{{- .Position.LineNumber -}}-tab">
+            <pre data-region="configinner" class="mb3">
+                {{- highlight (trim .Inner "\n") "js" "" -}}
+            </pre>
+        </div>
+    </div>
+</div>

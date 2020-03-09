@@ -1,0 +1,107 @@
+// stylelint-disable declaration-no-important
+.sidebar {
+  font-size: 90%;
+  line-height: 1.8;
+  background: #f9f9f9;
+  border-right: 1px solid #eee;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar a {
+  position: relative;
+  display: block;
+  color: #404040;
+  text-decoration: none;
+  padding: .2rem 1rem;
+  border-left: solid 4px #f9f9f9;
+  border-bottom: solid 1px #eee;
+}
+
+.sidebar a:hover {
+  color: #404040;
+  background: #eee;
+  border-left: solid 4px #ccc;
+}
+
+.sidebar nav > ul > li li a {
+  padding-left: 2rem;
+}
+
+.sidebar nav > ul > li > a {
+  font-size: 1.2rem;
+}
+
+.sidebar nav > ul > li > ul > li > a {
+}
+
+.sidebar nav > ul ul > li li a {
+  padding-left: 3rem;
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar nav > ul > li:first-child a {
+    border-top: solid 1px #eee;
+  }
+}
+
+.sidebar .active > a {
+  background: #eee;
+  border-left: solid 4px #ccc;
+  font-weight: bold;
+}
+
+.sidebar .slide-menu .has-sub-menu:not(.parent) ul {
+  display: none;
+}
+
+.sidebar .slide-menu .has-sub-menu > a span.mark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  line-height: 2;
+  text-align: center;
+  color: #979797;
+  background: #f2f2f2;
+  border-left: 1px solid #e7e7e7;
+}
+
+.sidebar-footer {
+  padding: 1.28rem;
+}
+
+.sticky-top.secondnav {
+  z-index: 0;
+}
+
+#TableOfContents > ul {
+  font-size: 90%;
+  padding-left: 0;
+  border-left: 1px solid #eee;
+
+  ul {
+    padding-left: 1rem;
+  }
+  li {
+    display: block;
+
+    a {
+      display: block;
+      padding: .125rem 1.5rem;
+      color: #77757a;
+
+      &:hover {
+        color: $blue;
+        text-decoration: none;
+      }
+    }
+  }
+}
+

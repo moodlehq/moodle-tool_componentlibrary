@@ -1,0 +1,17 @@
+{{- /*
+  Usage: `example [args]`
+
+  `args` are optional and can be one of the following:
+    id: the `div`'s id - default: ""
+    class: any extra class(es) to be added to the `div` - default ""
+    show_preview: if the preview should be output in the HTML - default: `true`
+    show_markup: if the markup should be output in the HTML - default: `true`
+*/ -}}
+
+  <a class="btn btn-primary btn-round" data-toggle="collapse" href="#help{{- .Position.LineNumber -}}" role="button" aria-expanded="false" aria-controls="help{{- .Position.LineNumber -}}">php help</a>
+  <div class="collapse multi-collapse" id="help{{- .Position.LineNumber -}}">
+    <div class="card card-body">
+      {{- .Inner | markdownify -}}
+    </div>
+  </div>
+

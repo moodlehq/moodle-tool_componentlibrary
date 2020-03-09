@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ partial "header" . }}
+  </head>
+  <body>
+    {{ partial "skippy" . }}
+
+    {{ .Content }}
+
+    {{ partial "footer" . }}
+    {{ partial "scripts" . }}
+  </body>
+</html>
