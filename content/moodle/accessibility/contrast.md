@@ -171,3 +171,35 @@ Because of the changes in the button colours alerts will be affected too:
 {{< /colors.inline >}}
 </div>
 {{< /example >}}
+
+## Badges
+
+{{< example show_markup="false">}}
+<div data-action="contrastcheck">
+{{< colors.inline >}}
+{{- range (index $.Site.Data "a11ycolours") }}
+<p>
+    <div class="badge badge-{{ .name }} mr-2">
+        badge-{{ .name }}
+    </div>
+</p>
+{{- end -}}
+{{< /colors.inline >}}
+</div>
+{{< /example >}}
+
+## New badges
+
+{{< example show_markup="false">}}
+<div data-action="contrastcheck">
+{{< colors.inline >}}
+{{- range (index $.Site.Data "a11ycolours") }}
+<p>
+    <div class="badge badge-new-{{ .name }} mr-2">
+        badge-new-{{ .name }}
+    </div>
+</p>
+{{- end -}}
+{{< /colors.inline >}}
+</div>
+{{< /example >}}

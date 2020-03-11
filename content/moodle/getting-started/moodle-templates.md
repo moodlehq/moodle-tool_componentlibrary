@@ -30,7 +30,7 @@ Not all templates found in Moodle core are will documented with example JSON for
 ```
 {{</* mustachejson template="core/notification_error" */>}}
 {
-    "message": "Your pants are on awesome!",
+    "message": "Your pants are awesome!",
     "closebutton": 1,
     "announce": 1,
     "extraclasses": "foo bar"
@@ -42,7 +42,7 @@ This is the result of adding the core/notification template on this page:
 
 {{< mustachejson template="core/notification_error" >}}
 {
-    "message": "Your pants are on awesome!",
+    "message": "Your pants are awesome!",
     "closebutton": 1,
     "announce": 1,
     "extraclasses": "foo bar"

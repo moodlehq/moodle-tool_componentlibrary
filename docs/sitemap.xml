@@ -77,6 +77,10 @@
     <lastmod>2020-02-03T15:26:15+00:00</lastmod>
   </url>
   <url>
+    <loc>http://MOODLEROOT/moodle/components/example/</loc>
+    <lastmod>2020-01-28T10:13:29+01:00</lastmod>
+  </url>
+  <url>
     <loc>http://MOODLEROOT/moodle/components/footer/</loc>
     <lastmod>2020-03-02T16:32:24+01:00</lastmod>
   </url>
@@ -95,6 +99,10 @@
   <url>
     <loc>http://MOODLEROOT/</loc>
     <lastmod>2020-03-02T16:32:24+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://MOODLEROOT/moodle/accessibility/background-contrast/</loc>
+    <lastmod>2020-02-04T09:40:32+01:00</lastmod>
   </url>
   <url>
     <loc>http://MOODLEROOT/moodle/themes/colours/</loc>
@@ -118,6 +126,10 @@
   </url>
   <url>
     <loc>http://MOODLEROOT/moodle/javascript/sortable-list/</loc>
+    <lastmod>2020-02-04T09:40:32+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://MOODLEROOT/moodle/accessibility/tab-jumpback/</loc>
     <lastmod>2020-02-04T09:40:32+01:00</lastmod>
   </url>
   <url>

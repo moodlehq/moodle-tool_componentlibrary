@@ -81,7 +81,7 @@ Use primary buttons for the positive action on the page, for example "Save" or "
 			<div class="card-body">
 				<strong>Save Changes?</strong>
 				<div class="d-flex">
-					<button type="button" class="btn btn-secondary">Cancel</button>
+					<button type="button" class="btn btn-secondary mr-1">Cancel</button>
 					<button type="button" class="btn btn-primary mr-1">Save</button>
 				</div>
 			</div>
@@ -92,7 +92,7 @@ Use primary buttons for the positive action on the page, for example "Save" or "
 			<div class="card-body">
 				<strong>Delete profile</strong>
 				<div class="d-flex">
-					<button type="button" class="btn btn-primary">Cancel</button>
+					<button type="button" class="btn btn-primary mr-1">Cancel</button>
 					<button type="button" class="btn btn-secondary">Delete</button>
 				</div>
 			</div>

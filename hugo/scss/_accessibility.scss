@@ -48,7 +48,7 @@ $mdl-colours : (
 }
 
 $new-colors :(
-    primary: #1177d1,
+    primary: #106fc3,
     secondary: #ced4da,
     success: #398439,
     info: #5bc0de,
@@ -87,4 +87,16 @@ $new-outline-colors :(
     }
 }
 
+$linkcolour: #1177d1;
+@for $i from 0 to 50 {
+    .linktest-#{$i} {
+        color: darken($linkcolour, $i);
+    }
+}
+
+@each $color, $value in $new-colors {
+    .badge-new-#{$color} {
+        @include badge-variant($value);
+    }
+}
 

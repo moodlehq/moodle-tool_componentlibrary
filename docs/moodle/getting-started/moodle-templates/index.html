@@ -34,6 +34,7 @@
 <li class=""><a href="http://MOODLEROOT/moodle/components/introduction/">Introduction</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/buttons/">Buttons</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/coursecards/">Course cards</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/example/">Example</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/footer/">Footer</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/moodle-icons/">Moodle icons</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/notification/">Notification</a></li>
@@ -54,8 +55,10 @@
 <li class=""><a href="#" data-toggle="collapse" data-target="#collapsec0c192728c4cce66abc09c21eccf41fa" aria-expanded="true" aria-controls="collapsec0c192728c4cce66abc09c21eccf41fa">Accessibility</a>
   
 <ul id="collapsec0c192728c4cce66abc09c21eccf41fa" class="sub-menu collapse ">
+<li class=""><a href="http://MOODLEROOT/moodle/accessibility/background-contrast/">Background contrast</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/accessibility/contrast/">Contrast</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/accessibility/keyboard-access/">Keyboard access</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/accessibility/tab-jumpback/">Tab order jump back</a></li>
 </ul>
   
 </li>
@@ -257,7 +260,7 @@
 <p>Not all templates found in Moodle core are will documented with example JSON formatted data (see the variables tab for the notification_error). To use custom Json data please use this (shortcode) syntax:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">{{&lt; mustachejson template=&#34;core/notification_error&#34; &gt;}}
 {
-    &#34;message&#34;: &#34;Your pants are on awesome!&#34;,
+    &#34;message&#34;: &#34;Your pants are awesome!&#34;,
     &#34;closebutton&#34;: 1,
     &#34;announce&#34;: 1,
     &#34;extraclasses&#34;: &#34;foo bar&#34;
@@ -266,7 +269,7 @@
 </code></pre></div><p>This is the result of adding the core/notification template on this page:</p>
 <div id="root43" data-region="mustachewithcontext" data-template="core/notification_error" class="mb-5 mt-2 bg-light p-4" data-config='
 {
-    &#34;message&#34;: &#34;Your pants are on awesome!&#34;,
+    &#34;message&#34;: &#34;Your pants are awesome!&#34;,
     &#34;closebutton&#34;: 1,
     &#34;announce&#34;: 1,
     &#34;extraclasses&#34;: &#34;foo bar&#34;
@@ -310,7 +313,7 @@
         </div>
         <div class="tab-pane fade" id="nav-variables43" role="tabpanel" aria-labelledby="nav-variables43-tab">
             <pre data-region="configinner" class="mb3"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#111">{</span>
-    <span style="color:#d88200">&#34;message&#34;</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#34;Your pants are on awesome!&#34;</span><span style="color:#111">,</span>
+    <span style="color:#d88200">&#34;message&#34;</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#34;Your pants are awesome!&#34;</span><span style="color:#111">,</span>
     <span style="color:#d88200">&#34;closebutton&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span><span style="color:#111">,</span>
     <span style="color:#d88200">&#34;announce&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span><span style="color:#111">,</span>
     <span style="color:#d88200">&#34;extraclasses&#34;</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#34;foo bar&#34;</span>

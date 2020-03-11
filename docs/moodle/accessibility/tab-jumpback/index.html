@@ -10,9 +10,9 @@
 <nav class="docs-sidebar" aria-label="Component Library Navigation">
 <ul>
 
-<li class=""><a href="#" data-toggle="collapse" data-target="#collapse653a408ab95e41dcde1c00945f6c01a9" aria-expanded="true" aria-controls="collapse653a408ab95e41dcde1c00945f6c01a9">Moodle</a>
+<li class="parent"><a href="#" data-toggle="collapse" data-target="#collapse653a408ab95e41dcde1c00945f6c01a9" aria-expanded="true" aria-controls="collapse653a408ab95e41dcde1c00945f6c01a9">Moodle</a>
   
-<ul id="collapse653a408ab95e41dcde1c00945f6c01a9" class="sub-menu collapse ">
+<ul id="collapse653a408ab95e41dcde1c00945f6c01a9" class="sub-menu collapse show">
 
 <li class=""><a href="#" data-toggle="collapse" data-target="#collapseb48e793ecd64f381beae053e81ea80eb" aria-expanded="true" aria-controls="collapseb48e793ecd64f381beae053e81ea80eb">Getting Started</a>
   
@@ -52,13 +52,13 @@
   
 </li>
 
-<li class=""><a href="#" data-toggle="collapse" data-target="#collapsec0c192728c4cce66abc09c21eccf41fa" aria-expanded="true" aria-controls="collapsec0c192728c4cce66abc09c21eccf41fa">Accessibility</a>
+<li class="parent"><a href="#" data-toggle="collapse" data-target="#collapsec0c192728c4cce66abc09c21eccf41fa" aria-expanded="true" aria-controls="collapsec0c192728c4cce66abc09c21eccf41fa">Accessibility</a>
   
-<ul id="collapsec0c192728c4cce66abc09c21eccf41fa" class="sub-menu collapse ">
+<ul id="collapsec0c192728c4cce66abc09c21eccf41fa" class="sub-menu collapse show">
 <li class=""><a href="http://MOODLEROOT/moodle/accessibility/background-contrast/">Background contrast</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/accessibility/contrast/">Contrast</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/accessibility/keyboard-access/">Keyboard access</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/accessibility/tab-jumpback/">Tab order jump back</a></li>
+<li class="active"><a href="http://MOODLEROOT/moodle/accessibility/tab-jumpback/">Tab order jump back</a></li>
 </ul>
   
 </li>
@@ -75,9 +75,9 @@
   
 </li>
 
-<li class="parent"><a href="#" data-toggle="collapse" data-target="#collapse291db7b30d95093b0765f3db5fe6bca5" aria-expanded="true" aria-controls="collapse291db7b30d95093b0765f3db5fe6bca5">Bootstrap</a>
+<li class=""><a href="#" data-toggle="collapse" data-target="#collapse291db7b30d95093b0765f3db5fe6bca5" aria-expanded="true" aria-controls="collapse291db7b30d95093b0765f3db5fe6bca5">Bootstrap</a>
   
-<ul id="collapse291db7b30d95093b0765f3db5fe6bca5" class="sub-menu collapse show">
+<ul id="collapse291db7b30d95093b0765f3db5fe6bca5" class="sub-menu collapse ">
 
 <li class=""><a href="#" data-toggle="collapse" data-target="#collapse9bc5d2d561af78dbd32e3920b99f8c71" aria-expanded="true" aria-controls="collapse9bc5d2d561af78dbd32e3920b99f8c71">Bootstrap Setup</a>
   
@@ -145,11 +145,11 @@
   
 </li>
 
-<li class="parent"><a href="#" data-toggle="collapse" data-target="#collapse8933d081d969e692f9aa045197df6298" aria-expanded="true" aria-controls="collapse8933d081d969e692f9aa045197df6298">Helpers</a>
+<li class=""><a href="#" data-toggle="collapse" data-target="#collapse8933d081d969e692f9aa045197df6298" aria-expanded="true" aria-controls="collapse8933d081d969e692f9aa045197df6298">Helpers</a>
   
-<ul id="collapse8933d081d969e692f9aa045197df6298" class="sub-menu collapse show">
+<ul id="collapse8933d081d969e692f9aa045197df6298" class="sub-menu collapse ">
 <li class=""><a href="http://MOODLEROOT/bootstrap/helpers/clearfix/">Clearfix</a></li>
-<li class="active"><a href="http://MOODLEROOT/bootstrap/helpers/colored-links/">Colored links</a></li>
+<li class=""><a href="http://MOODLEROOT/bootstrap/helpers/colored-links/">Colored links</a></li>
 <li class=""><a href="http://MOODLEROOT/bootstrap/helpers/embed/">Embeds</a></li>
 <li class=""><a href="http://MOODLEROOT/bootstrap/helpers/position/">Position</a></li>
 <li class=""><a href="http://MOODLEROOT/bootstrap/helpers/screen-readers/">Screen readers</a></li>
@@ -200,32 +200,104 @@
         
         <div class="col-md-9 col-lg-10 py-md-3 pl-md-5 pr-md-5 bd-content">
         
-            <h1 class="bd-title" id="content">Colored links</h1>
-            <p class="bd-lead">Colored links with hover states</p>
+            <h1 class="bd-title" id="content">Tab order jump back</h1>
+            <p class="bd-lead">Teleport focus on taborder</p>
 
             
 
             
 
-            <p>You can use the <code>.link-*</code> classes to colorize links. Unlike the <a href="../../../bootstrap/utilities/colors/#colors"><code>.text-*</code> classes</a>, these classes have a <code>:hover</code> and <code>:focus</code> state.</p>
+            <h2 id="taborder-issue">Taborder issue</h2>
+<p>When a user open the messaging UI the focus is changed from the messaging toggle button to the messaging UI. When the user tries to tab back (shift-tab) the user is not returned to the toggle button.</p>
 <div class="bd-example">
+<div style="width: 300px">
+    <div class="card">
+        <div class="card-body">
+            Start Tabbing <a href="#">here</a>
+            <button id="movefocus" class="btn btn-success">Move Focus</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            Lorup ipsum dolor sit amet <a href="#">card</a>
+        </div>
+    </div>
+    <div id="card2" class="card hidden">
+        <div class="card-body">
+            <a class="sr-only sr-only-focusable" id="firstlink" href="#">Skip to focuson</a>
+            <a class="sr-only sr-only-focusable" id="jumpback" href="#" data-jumpto="">jumpback link</a>
+            <a id="focusonme" href="#"></a>
+            Lorup ipsum dolor sit amet <a href="#">card</a>
+        </div>
+    </div>
+</div>
 
-<a href="#" class="link-primary">Primary link</a>
-<a href="#" class="link-secondary">Secondary link</a>
-<a href="#" class="link-success">Success link</a>
-<a href="#" class="link-danger">Danger link</a>
-<a href="#" class="link-warning">Warning link</a>
-<a href="#" class="link-info">Info link</a>
-<a href="#" class="link-light">Light link</a>
-<a href="#" class="link-dark">Dark link</a>
-</div><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;link-primary&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Primary link<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
-<span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;link-secondary&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Secondary link<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
-<span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;link-success&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Success link<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
-<span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;link-danger&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Danger link<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
-<span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;link-warning&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Warning link<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
-<span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;link-info&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Info link<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
-<span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;link-light&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Light link<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
-<span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;link-dark&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Dark link<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span></code></pre></div>
+<div class='hidden' data-action='runjs'>
+    require(
+    [
+        'jquery'
+    ],
+    function(
+        $
+    ) {
+        $('#movefocus').on('click', function() {
+            $('#card2').toggleClass('hidden');
+            $('#jumpback').attr('data-jumpto', '#movefocus');
+            $('#focusonme').focus();
+        });
+        $('#firstlink').on('focus', function() {
+            $('#focusonme').focus();
+        })
+        $('#jumpback').on('focus', function() {
+            var jumpto = $(this).attr('data-jumpto');
+            $(jumpto).focus();
+        })
+    });
+</div>
+</div><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">style</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;width: 300px&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;card&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;card-body&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+            Start Tabbing <span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>here<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;movefocus&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;btn btn-success&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Move Focus<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
+        <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;card&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;card-body&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+            Lorup ipsum dolor sit amet <span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>card<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
+        <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;card2&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;card hidden&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;card-body&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;sr-only sr-only-focusable&#34;</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;firstlink&#34;</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Skip to focuson<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;sr-only sr-only-focusable&#34;</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;jumpback&#34;</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span> <span style="color:#75af00">data-jumpto</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>jumpback link<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
+            <span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;focusonme&#34;</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
+            Lorup ipsum dolor sit amet <span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>card<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
+        <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+
+{{#js}}
+    require(
+    [
+        &#39;jquery&#39;
+    ],
+    function(
+        $
+    ) {
+        $(&#39;#movefocus&#39;).on(&#39;click&#39;, function() {
+            $(&#39;#card2&#39;).toggleClass(&#39;hidden&#39;);
+            $(&#39;#jumpback&#39;).attr(&#39;data-jumpto&#39;, &#39;#movefocus&#39;);
+            $(&#39;#focusonme&#39;).focus();
+        });
+        $(&#39;#firstlink&#39;).on(&#39;focus&#39;, function() {
+            $(&#39;#focusonme&#39;).focus();
+        })
+        $(&#39;#jumpback&#39;).on(&#39;focus&#39;, function() {
+            var jumpto = $(this).attr(&#39;data-jumpto&#39;);
+            $(jumpto).focus();
+        })
+    });
+{{/js}}</code></pre></div>
 
         </div>
         

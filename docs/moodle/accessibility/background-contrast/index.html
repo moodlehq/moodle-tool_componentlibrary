@@ -10,9 +10,9 @@
 <nav class="docs-sidebar" aria-label="Component Library Navigation">
 <ul>
 
-<li class=""><a href="#" data-toggle="collapse" data-target="#collapse653a408ab95e41dcde1c00945f6c01a9" aria-expanded="true" aria-controls="collapse653a408ab95e41dcde1c00945f6c01a9">Moodle</a>
+<li class="parent"><a href="#" data-toggle="collapse" data-target="#collapse653a408ab95e41dcde1c00945f6c01a9" aria-expanded="true" aria-controls="collapse653a408ab95e41dcde1c00945f6c01a9">Moodle</a>
   
-<ul id="collapse653a408ab95e41dcde1c00945f6c01a9" class="sub-menu collapse ">
+<ul id="collapse653a408ab95e41dcde1c00945f6c01a9" class="sub-menu collapse show">
 
 <li class=""><a href="#" data-toggle="collapse" data-target="#collapseb48e793ecd64f381beae053e81ea80eb" aria-expanded="true" aria-controls="collapseb48e793ecd64f381beae053e81ea80eb">Getting Started</a>
   
@@ -52,10 +52,10 @@
   
 </li>
 
-<li class=""><a href="#" data-toggle="collapse" data-target="#collapsec0c192728c4cce66abc09c21eccf41fa" aria-expanded="true" aria-controls="collapsec0c192728c4cce66abc09c21eccf41fa">Accessibility</a>
+<li class="parent"><a href="#" data-toggle="collapse" data-target="#collapsec0c192728c4cce66abc09c21eccf41fa" aria-expanded="true" aria-controls="collapsec0c192728c4cce66abc09c21eccf41fa">Accessibility</a>
   
-<ul id="collapsec0c192728c4cce66abc09c21eccf41fa" class="sub-menu collapse ">
-<li class=""><a href="http://MOODLEROOT/moodle/accessibility/background-contrast/">Background contrast</a></li>
+<ul id="collapsec0c192728c4cce66abc09c21eccf41fa" class="sub-menu collapse show">
+<li class="active"><a href="http://MOODLEROOT/moodle/accessibility/background-contrast/">Background contrast</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/accessibility/contrast/">Contrast</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/accessibility/keyboard-access/">Keyboard access</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/accessibility/tab-jumpback/">Tab order jump back</a></li>
@@ -75,9 +75,9 @@
   
 </li>
 
-<li class="parent"><a href="#" data-toggle="collapse" data-target="#collapse291db7b30d95093b0765f3db5fe6bca5" aria-expanded="true" aria-controls="collapse291db7b30d95093b0765f3db5fe6bca5">Bootstrap</a>
+<li class=""><a href="#" data-toggle="collapse" data-target="#collapse291db7b30d95093b0765f3db5fe6bca5" aria-expanded="true" aria-controls="collapse291db7b30d95093b0765f3db5fe6bca5">Bootstrap</a>
   
-<ul id="collapse291db7b30d95093b0765f3db5fe6bca5" class="sub-menu collapse show">
+<ul id="collapse291db7b30d95093b0765f3db5fe6bca5" class="sub-menu collapse ">
 
 <li class=""><a href="#" data-toggle="collapse" data-target="#collapse9bc5d2d561af78dbd32e3920b99f8c71" aria-expanded="true" aria-controls="collapse9bc5d2d561af78dbd32e3920b99f8c71">Bootstrap Setup</a>
   
@@ -145,11 +145,11 @@
   
 </li>
 
-<li class="parent"><a href="#" data-toggle="collapse" data-target="#collapse8933d081d969e692f9aa045197df6298" aria-expanded="true" aria-controls="collapse8933d081d969e692f9aa045197df6298">Helpers</a>
+<li class=""><a href="#" data-toggle="collapse" data-target="#collapse8933d081d969e692f9aa045197df6298" aria-expanded="true" aria-controls="collapse8933d081d969e692f9aa045197df6298">Helpers</a>
   
-<ul id="collapse8933d081d969e692f9aa045197df6298" class="sub-menu collapse show">
+<ul id="collapse8933d081d969e692f9aa045197df6298" class="sub-menu collapse ">
 <li class=""><a href="http://MOODLEROOT/bootstrap/helpers/clearfix/">Clearfix</a></li>
-<li class="active"><a href="http://MOODLEROOT/bootstrap/helpers/colored-links/">Colored links</a></li>
+<li class=""><a href="http://MOODLEROOT/bootstrap/helpers/colored-links/">Colored links</a></li>
 <li class=""><a href="http://MOODLEROOT/bootstrap/helpers/embed/">Embeds</a></li>
 <li class=""><a href="http://MOODLEROOT/bootstrap/helpers/position/">Position</a></li>
 <li class=""><a href="http://MOODLEROOT/bootstrap/helpers/screen-readers/">Screen readers</a></li>
@@ -200,32 +200,124 @@
         
         <div class="col-md-9 col-lg-10 py-md-3 pl-md-5 pr-md-5 bd-content">
         
-            <h1 class="bd-title" id="content">Colored links</h1>
-            <p class="bd-lead">Colored links with hover states</p>
+            <h1 class="bd-title" id="content">Background contrast</h1>
+            <p class="bd-lead">Moodle's use of Background colour in the Boost and classic themes and the impact it has on accessibility</p>
 
             
 
             
+              
 
-            <p>You can use the <code>.link-*</code> classes to colorize links. Unlike the <a href="../../../bootstrap/utilities/colors/#colors"><code>.text-*</code> classes</a>, these classes have a <code>:hover</code> and <code>:focus</code> state.</p>
+                  <div class="badge badge-info">MDL-64494</div>
+
+              
+
+                  <div class="badge badge-info">3.9</div>
+
+              
+            
+
+            <h2 id="frontpage-course-listing">Frontpage course listing</h2>
+<p>The frontpage course listing uses a (somewhat outdated) pattern of styling the background colour for a course to color #F2F2F2.</p>
+<p>Testing with new link colours:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#111">.</span><span style="color:#75af00">linktest-1</span> <span style="color:#111">{</span>
+    <span style="color:#00a8c8">color</span><span style="color:#111">:</span> <span style="color:#ae81ff">#1174cc</span><span style="color:#111">;</span>
+<span style="color:#111">}</span>
+<span style="color:#111">.</span><span style="color:#75af00">linktest-2</span> <span style="color:#111">{</span>
+    <span style="color:#00a8c8">color</span><span style="color:#111">:</span> <span style="color:#ae81ff">#1072c8</span><span style="color:#111">;</span>
+<span style="color:#111">}</span>
+<span style="color:#111">.</span><span style="color:#75af00">linktest-3</span> <span style="color:#111">{</span>
+    <span style="color:#00a8c8">color</span><span style="color:#111">:</span> <span style="color:#ae81ff">#106fc3</span>
+<span style="color:#111">}</span></code></pre></div>
 <div class="bd-example">
-
-<a href="#" class="link-primary">Primary link</a>
-<a href="#" class="link-secondary">Secondary link</a>
-<a href="#" class="link-success">Success link</a>
-<a href="#" class="link-danger">Danger link</a>
-<a href="#" class="link-warning">Warning link</a>
-<a href="#" class="link-info">Info link</a>
-<a href="#" class="link-light">Light link</a>
-<a href="#" class="link-dark">Dark link</a>
-</div><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;link-primary&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Primary link<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
-<span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;link-secondary&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Secondary link<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
-<span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;link-success&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Success link<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
-<span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;link-danger&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Danger link<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
-<span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;link-warning&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Warning link<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
-<span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;link-info&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Info link<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
-<span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;link-light&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Light link<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
-<span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;link-dark&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Dark link<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span></code></pre></div>
+<div class="courses" >
+    <div class="coursebox clearfix even" style="background-color:#F2F2F2">
+        <div class="info">
+            <h3 class="coursename">
+                <a class="" href="http://localhost:8888/moodle/course/view.php?id=18">German Expert</a>
+            </h3>
+            <div class="moreinfo"></div>
+            <div class="enrolmenticons">
+                <i class="icon fa fa-sign-in fa-fw " title="Self enrolment" aria-label="Self enrolment"></i>
+            </div>
+        </div>
+        <div class="content">
+            <div class="summary">
+                <div class="no-overflow">Viele Desktop Publisher und Webeditoren nutzen mittlerweile Lorem Ipsum als den Standardtext, auch die Suche im Internet nach "lorem ipsum" macht viele Webseiten sichtbar, wo diese noch immer vorkommen. Mittlerweile gibt es mehrere Versionen des Lorem Ipsum, einige zufllig, andere bewusst
+                </div>
+            </div>
+            <ul class="teachers" data-action="contrastcheck">
+                <li><a class="linktest-1" href="http://localhost:8888/moodle/user/view.php?id=13&amp;course=1">Irene Ipsen (new link colour 1)</a></li>
+                <li><a class="linktest-2" href="http://localhost:8888/moodle/user/view.php?id=13&amp;course=1">Gubbe Gortal (new link colour 2)</a></li>
+                <li><a class="linktest-3" href="http://localhost:8888/moodle/user/view.php?id=13&amp;course=1">Marga More (new link colour 3)</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="coursebox clearfix odd">
+        <div class="info">
+            <h3 class="coursename">
+                <a class="" href="http://localhost:8888/moodle/course/view.php?id=18">German Expert</a>
+            </h3>
+            <div class="moreinfo"></div>
+            <div class="enrolmenticons">
+                <i class="icon fa fa-sign-in fa-fw " title="Self enrolment" aria-label="Self enrolment"></i>
+            </div>
+        </div>
+        <div class="content">
+            <div class="summary">
+                <div class="no-overflow">Viele Desktop Publisher und Webeditoren nutzen mittlerweile Lorem Ipsum als den Standardtext, auch die Suche im Internet nach "lorem ipsum" macht viele Webseiten sichtbar, wo diese noch immer vorkommen. Mittlerweile gibt es mehrere Versionen des Lorem Ipsum, einige zufllig, andere bewusst
+                </div>
+            </div>
+            <ul class="teachers" data-action="contrastcheck">
+                <li><a class="linktest-1" href="http://localhost:8888/moodle/user/view.php?id=13&amp;course=1">Irene Ipsen (new link colour 1)</a></li>
+                <li><a class="linktest-2" href="http://localhost:8888/moodle/user/view.php?id=13&amp;course=1">Gubbe Gortal (new link colour 2)</a></li>
+                <li><a class="linktest-3" href="http://localhost:8888/moodle/user/view.php?id=13&amp;course=1">Marga More (new link colour 3)</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+<h2 id="tables-with-links">Tables with links</h2>
+<p>Pages like the enrolment page use tables with links.</p>
+<div class="bd-example">
+<table class="flexible table table-striped table-hover generaltable generalbox" data-action="contrastcheck">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color:#F2F2F2">
+      <th scope="row"><input type="checkbox" class="m-1" value="" data-action="toggle" data-toggle="master" data-togglegroup="participants-table" data-toggle-selectall="Select all" data-toggle-deselectall="Deselect all"></th>
+      <td><a href="#">Bas Brands (old link colour)</a></td>
+      <td>bas@example.com</td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><input type="checkbox" class="m-1" value="" data-action="toggle" data-toggle="master" data-togglegroup="participants-table" data-toggle-selectall="Select all" data-toggle-deselectall="Deselect all"></th>
+      <td><a href="#">Chris Cross</a></td>
+      <td>chris@example.com</td>
+      <td>
+        Active
+        </td>
+    </tr>
+    <tr style="background-color:#F2F2F2">
+      <th scope="row"><input type="checkbox" class="m-1" value="" data-action="toggle" data-toggle="master" data-togglegroup="participants-table" data-toggle-selectall="Select all" data-toggle-deselectall="Deselect all"></th>
+      <td>
+<a class="linktest-1" href="#">Irene Ipsum (new link colour 1)</a><br>
+<a class="linktest-3" href="#">Irene Ipsum (new link colour 2)</a><br>
+<a class="linktest-3" href="#">Irene Ipsum (new link colour 2)</a><br>
+        </td>
+      <td>irene@example.com</td>
+      <td>@blab</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
         </div>
         
