@@ -219,7 +219,7 @@
 
             <h2 id="colour-contrast-checks">Colour contrast checks</h2>
 <p>The colour contrast of the components on this page are checked with some JS that adds a badge like this: <span class="badge badge-danger border border-dark m-1">2.50:1</span> if a the colour contrast of the component does not meet the WCAG standards. For AA compliance with these standards the number should be at least 4.5:1 to pass.</p>
-<h2 id="theme-buttons">Theme Buttons</h2>
+<h2 id="buttons">Buttons</h2>
 <p>The buttons shown below are rendered with your current theme CSS.</p>
 <div class="bd-example">
 <div data-action="contrastcheck">
@@ -286,87 +286,20 @@
 </p>
 </div>
 </div>
-<h2 id="buttons-according-to-mdl-64494">Buttons according to MDL-64494</h2>
-<p>In this issue a new pallet was suggested. The colours pass but might not be easy to differentiate. Some outline buttons have not been made accessible.</p>
-<div class="bd-example">
-<div data-action="contrastcheck">
-
-<p>
-    <button type="button" class="btn btn-mdl-primary mr-2">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        btn-primary
-    </button>
-    <button type="button" class="btn btn-outline-mdl-primary">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        btn-outline-primary
-    </button>
-</p>
-<p>
-    <button type="button" class="btn btn-mdl-secondary mr-2">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        btn-secondary
-    </button>
-    <button type="button" class="btn btn-outline-mdl-secondary">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        btn-outline-secondary
-    </button>
-</p>
-<p>
-    <button type="button" class="btn btn-mdl-success mr-2">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        btn-success
-    </button>
-    <button type="button" class="btn btn-outline-mdl-success">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        btn-outline-success
-    </button>
-</p>
-<p>
-    <button type="button" class="btn btn-mdl-info mr-2">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        btn-info
-    </button>
-    <button type="button" class="btn btn-outline-mdl-info">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        btn-outline-info
-    </button>
-</p>
-<p>
-    <button type="button" class="btn btn-mdl-warning mr-2">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        btn-warning
-    </button>
-    <button type="button" class="btn btn-outline-mdl-warning">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        btn-outline-warning
-    </button>
-</p>
-<p>
-    <button type="button" class="btn btn-mdl-danger mr-2">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        btn-danger
-    </button>
-    <button type="button" class="btn btn-outline-mdl-danger">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        btn-outline-danger
-    </button>
-</p>
-</div>
-</div>
-<h2 id="new-accessible-buttons">New Accessible buttons</h2>
-<p>The buttons shown below are using the Component Library CSS. For each button the colour was based on the buttons shown when you click on the down <button class="btn btn-sm btn-secondary" type="button" aria-expanded="false"><i class="fa fa-caret-down fa-fw"></i></button> button. Only buttons that did not pass WCAG standards have changed.</p>
+<h2 id="buttons-wcag-aa">Buttons WCAG AA</h2>
+<p>For each button the colour was based on the buttons shown when you click on the down <button class="btn btn-sm btn-secondary" type="button" aria-expanded="false"><i class="fa fa-caret-down fa-fw"></i></button> button. Only buttons that did not pass WCAG standards have changed.</p>
 <div class="bd-example">
 <div data-action="contrastcheck">
 
 <div class="row mt-2 mb">
     <div class="col-12">
-        <button type="button" class="btn btn-new-primary mr-2">
+        <button type="button" class="btn btn-aa-primary mr-2">
             <i class="icon fa fa-lightbulb-o fa-fw"></i>
-            New btn-primary
+            aa btn-primary
         </button>
-        <button type="button" class="btn btn-outline-new-primary mr-2">
+        <button type="button" class="btn btn-outline-aa-primary mr-2">
             <i class="icon fa fa-lightbulb-o fa-fw"></i>
-            New btn-outline-primary
+            aa btn-outline-primary
         </button>
         <button class="btn btn-sm btn-secondary" type="button" data-toggle="collapse" data-target="#btn-test-primary" aria-expanded="false">
            <i class="fa fa-caret-down fa-fw"></i>
@@ -1069,13 +1002,13 @@
 </div>
 <div class="row mt-2 mb">
     <div class="col-12">
-        <button type="button" class="btn btn-new-secondary mr-2">
+        <button type="button" class="btn btn-aa-secondary mr-2">
             <i class="icon fa fa-lightbulb-o fa-fw"></i>
-            New btn-secondary
+            aa btn-secondary
         </button>
-        <button type="button" class="btn btn-outline-new-secondary mr-2">
+        <button type="button" class="btn btn-outline-aa-secondary mr-2">
             <i class="icon fa fa-lightbulb-o fa-fw"></i>
-            New btn-outline-secondary
+            aa btn-outline-secondary
         </button>
         <button class="btn btn-sm btn-secondary" type="button" data-toggle="collapse" data-target="#btn-test-secondary" aria-expanded="false">
            <i class="fa fa-caret-down fa-fw"></i>
@@ -1778,13 +1711,13 @@
 </div>
 <div class="row mt-2 mb">
     <div class="col-12">
-        <button type="button" class="btn btn-new-success mr-2">
+        <button type="button" class="btn btn-aa-success mr-2">
             <i class="icon fa fa-lightbulb-o fa-fw"></i>
-            New btn-success
+            aa btn-success
         </button>
-        <button type="button" class="btn btn-outline-new-success mr-2">
+        <button type="button" class="btn btn-outline-aa-success mr-2">
             <i class="icon fa fa-lightbulb-o fa-fw"></i>
-            New btn-outline-success
+            aa btn-outline-success
         </button>
         <button class="btn btn-sm btn-secondary" type="button" data-toggle="collapse" data-target="#btn-test-success" aria-expanded="false">
            <i class="fa fa-caret-down fa-fw"></i>
@@ -2487,13 +2420,13 @@
 </div>
 <div class="row mt-2 mb">
     <div class="col-12">
-        <button type="button" class="btn btn-new-info mr-2">
+        <button type="button" class="btn btn-aa-info mr-2">
             <i class="icon fa fa-lightbulb-o fa-fw"></i>
-            New btn-info
+            aa btn-info
         </button>
-        <button type="button" class="btn btn-outline-new-info mr-2">
+        <button type="button" class="btn btn-outline-aa-info mr-2">
             <i class="icon fa fa-lightbulb-o fa-fw"></i>
-            New btn-outline-info
+            aa btn-outline-info
         </button>
         <button class="btn btn-sm btn-secondary" type="button" data-toggle="collapse" data-target="#btn-test-info" aria-expanded="false">
            <i class="fa fa-caret-down fa-fw"></i>
@@ -3196,13 +3129,13 @@
 </div>
 <div class="row mt-2 mb">
     <div class="col-12">
-        <button type="button" class="btn btn-new-warning mr-2">
+        <button type="button" class="btn btn-aa-warning mr-2">
             <i class="icon fa fa-lightbulb-o fa-fw"></i>
-            New btn-warning
+            aa btn-warning
         </button>
-        <button type="button" class="btn btn-outline-new-warning mr-2">
+        <button type="button" class="btn btn-outline-aa-warning mr-2">
             <i class="icon fa fa-lightbulb-o fa-fw"></i>
-            New btn-outline-warning
+            aa btn-outline-warning
         </button>
         <button class="btn btn-sm btn-secondary" type="button" data-toggle="collapse" data-target="#btn-test-warning" aria-expanded="false">
            <i class="fa fa-caret-down fa-fw"></i>
@@ -3905,13 +3838,13 @@
 </div>
 <div class="row mt-2 mb">
     <div class="col-12">
-        <button type="button" class="btn btn-new-danger mr-2">
+        <button type="button" class="btn btn-aa-danger mr-2">
             <i class="icon fa fa-lightbulb-o fa-fw"></i>
-            New btn-danger
+            aa btn-danger
         </button>
-        <button type="button" class="btn btn-outline-new-danger mr-2">
+        <button type="button" class="btn btn-outline-aa-danger mr-2">
             <i class="icon fa fa-lightbulb-o fa-fw"></i>
-            New btn-outline-danger
+            aa btn-outline-danger
         </button>
         <button class="btn btn-sm btn-secondary" type="button" data-toggle="collapse" data-target="#btn-test-danger" aria-expanded="false">
            <i class="fa fa-caret-down fa-fw"></i>
@@ -4614,33 +4547,86 @@
 </div>
 </div>
 </div>
-<h2 id="alerts">Alerts</h2>
-<p>The alert shown below are rendered with your current theme CSS.</p>
+<h2 id="buttons-wcag-aaa">Buttons WCAG AAA</h2>
 <div class="bd-example">
 <div data-action="contrastcheck">
 
 <p>
-    <div class="alert alert-primary mr-2">
+    <button type="button" class="btn btn-aaa-primary mr-2">
         <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        alert-primary
-    </div>
+        btn-primary
+    </button>
+    <button type="button" class="btn btn-outline-aaa-primary">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        btn-outline-primary
+    </button>
 </p>
 <p>
-    <div class="alert alert-secondary mr-2">
+    <button type="button" class="btn btn-aaa-secondary mr-2">
         <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        alert-secondary
+        btn-secondary
+    </button>
+    <button type="button" class="btn btn-outline-aaa-secondary">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        btn-outline-secondary
+    </button>
+</p>
+<p>
+    <button type="button" class="btn btn-aaa-success mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        btn-success
+    </button>
+    <button type="button" class="btn btn-outline-aaa-success">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        btn-outline-success
+    </button>
+</p>
+<p>
+    <button type="button" class="btn btn-aaa-info mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        btn-info
+    </button>
+    <button type="button" class="btn btn-outline-aaa-info">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        btn-outline-info
+    </button>
+</p>
+<p>
+    <button type="button" class="btn btn-aaa-warning mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        btn-warning
+    </button>
+    <button type="button" class="btn btn-outline-aaa-warning">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        btn-outline-warning
+    </button>
+</p>
+<p>
+    <button type="button" class="btn btn-aaa-danger mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        btn-danger
+    </button>
+    <button type="button" class="btn btn-outline-aaa-danger">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        btn-outline-danger
+    </button>
+</p>
+</div>
+</div>
+<h2 id="alerts">Alerts</h2>
+<p>The alert shown below are rendered with your current theme CSS. Moodle core only support 4 types of alerts.</p>
+<div class="bd-example">
+<div data-action="contrastcheck">
+<p>
+    <div class="alert alert-info mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        alert-info
     </div>
 </p>
 <p>
     <div class="alert alert-success mr-2">
         <i class="icon fa fa-lightbulb-o fa-fw"></i>
         alert-success
-    </div>
-</p>
-<p>
-    <div class="alert alert-info mr-2">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        alert-info
     </div>
 </p>
 <p>
@@ -4657,95 +4643,78 @@
 </p>
 </div>
 </div>
-<h2 id="alerts-with-links">Alerts with links</h2>
-<p>When an alert is using a link, make sure the link uses the <code>.alert-link</code> class, the link will not be accessible without it see:</p>
-<div data-action="contrastcheck">
-    <div class="alert alert-info mr-2">
-        <a href="#">Missing link-alert</a>
-    </div>
-</div>
-<div class="bd-example">
-<div data-action="contrastcheck">
-
-<p>
-    <div class="alert alert-primary mr-2">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        alert-primary <a href="#" class="alert-link">Link</a>
-    </div>
-</p>
-<p>
-    <div class="alert alert-secondary mr-2">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        alert-secondary <a href="#" class="alert-link">Link</a>
-    </div>
-</p>
-<p>
-    <div class="alert alert-success mr-2">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        alert-success <a href="#" class="alert-link">Link</a>
-    </div>
-</p>
-<p>
-    <div class="alert alert-info mr-2">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        alert-info <a href="#" class="alert-link">Link</a>
-    </div>
-</p>
-<p>
-    <div class="alert alert-warning mr-2">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        alert-warning <a href="#" class="alert-link">Link</a>
-    </div>
-</p>
-<p>
-    <div class="alert alert-danger mr-2">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        alert-danger <a href="#" class="alert-link">Link</a>
-    </div>
-</p>
-</div>
-</div>
-<h2 id="new-alerts-using-the-new-button-colours">New Alerts using the new Button colours</h2>
+<h2 id="alerts-wcag-aa">Alerts WCAG AA</h2>
 <p>Because of the changes in the button colours alerts will be affected too:</p>
 <div class="bd-example">
 <div data-action="contrastcheck">
-
 <p>
-    <div class="alert alert-new-primary mr-2">
+    <div class="alert alert-aa-info mr-2">
         <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        alert-primary <a href="#" class="alert-link">Link</a>
+        alert-info
     </div>
 </p>
 <p>
-    <div class="alert alert-new-secondary mr-2">
+    <div class="alert alert-aa-success mr-2">
         <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        alert-secondary <a href="#" class="alert-link">Link</a>
+        alert-success
     </div>
 </p>
 <p>
-    <div class="alert alert-new-success mr-2">
+    <div class="alert alert-aa-warning mr-2">
         <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        alert-success <a href="#" class="alert-link">Link</a>
+        alert-warning
     </div>
 </p>
 <p>
-    <div class="alert alert-new-info mr-2">
+    <div class="alert alert-aa-danger mr-2">
         <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        alert-info <a href="#" class="alert-link">Link</a>
+        alert-danger
+    </div>
+</p>
+</div>
+</div>
+<h2 id="alerts-wcag-aaa">Alerts WCAG AAA</h2>
+<p>Because of the changes in the button colours alerts will be affected too:</p>
+<div class="bd-example">
+<div data-action="contrastcheck">
+<p>
+    <div class="alert alert-aaa-info mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        aaa alert-info
     </div>
 </p>
 <p>
-    <div class="alert alert-new-warning mr-2">
+    <div class="alert alert-aaa-success mr-2">
         <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        alert-warning <a href="#" class="alert-link">Link</a>
+        alert-success
     </div>
 </p>
 <p>
-    <div class="alert alert-new-danger mr-2">
+    <div class="alert alert-aaa-warning mr-2">
         <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        alert-danger <a href="#" class="alert-link">Link</a>
+        alert-warning
     </div>
 </p>
+<p>
+    <div class="alert alert-aaa-danger mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        alert-danger
+    </div>
+</p>
+</div>
+</div>
+<h2 id="alerts-with-links">Alerts with links</h2>
+<p>When an alert is using a link, make sure the link uses the <code>.alert-link</code> class, the link will not be accessible without it see:</p>
+<div class="bd-example">
+<div data-action="contrastcheck">
+    <div class="alert alert-info mr-2">
+        <a href="#">Missing alert-link class</a>
+    </div>
+</div>
+<div data-action="contrastcheck">
+    <div class="alert alert-info mr-2">
+        <a href="#" class="alert-link">With alert-link class</a>
+    </div>
 </div>
 </div>
 <h2 id="badges">Badges</h2>
@@ -4784,38 +4753,74 @@
 </p>
 </div>
 </div>
-<h2 id="new-badges">New badges</h2>
+<h2 id="badges-wcag-aa">Badges WCAG AA</h2>
 <div class="bd-example">
 <div data-action="contrastcheck">
 
 <p>
-    <div class="badge badge-new-primary mr-2">
-        badge-new-primary
+    <div class="badge badge-aa-primary mr-2">
+        badge-aa-primary
     </div>
 </p>
 <p>
-    <div class="badge badge-new-secondary mr-2">
-        badge-new-secondary
+    <div class="badge badge-aa-secondary mr-2">
+        badge-aa-secondary
     </div>
 </p>
 <p>
-    <div class="badge badge-new-success mr-2">
-        badge-new-success
+    <div class="badge badge-aa-success mr-2">
+        badge-aa-success
     </div>
 </p>
 <p>
-    <div class="badge badge-new-info mr-2">
-        badge-new-info
+    <div class="badge badge-aa-info mr-2">
+        badge-aa-info
     </div>
 </p>
 <p>
-    <div class="badge badge-new-warning mr-2">
-        badge-new-warning
+    <div class="badge badge-aa-warning mr-2">
+        badge-aa-warning
     </div>
 </p>
 <p>
-    <div class="badge badge-new-danger mr-2">
-        badge-new-danger
+    <div class="badge badge-aa-danger mr-2">
+        badge-aa-danger
+    </div>
+</p>
+</div>
+</div>
+<h2 id="badges-wcag-aaa">Badges WCAG AAA</h2>
+<div class="bd-example">
+<div data-action="contrastcheck">
+
+<p>
+    <div class="badge badge-aaa-primary mr-2">
+        badge-aaa-primary
+    </div>
+</p>
+<p>
+    <div class="badge badge-aaa-secondary mr-2">
+        badge-aaa-secondary
+    </div>
+</p>
+<p>
+    <div class="badge badge-aaa-success mr-2">
+        badge-aaa-success
+    </div>
+</p>
+<p>
+    <div class="badge badge-aaa-info mr-2">
+        badge-aaa-info
+    </div>
+</p>
+<p>
+    <div class="badge badge-aaa-warning mr-2">
+        badge-aaa-warning
+    </div>
+</p>
+<p>
+    <div class="badge badge-aaa-danger mr-2">
+        badge-aaa-danger
     </div>
 </p>
 </div>
@@ -4828,14 +4833,16 @@
                 <nav id="TableOfContents">
   <ul>
     <li><a href="#colour-contrast-checks">Colour contrast checks</a></li>
-    <li><a href="#theme-buttons">Theme Buttons</a></li>
-    <li><a href="#buttons-according-to-mdl-64494">Buttons according to MDL-64494</a></li>
-    <li><a href="#new-accessible-buttons">New Accessible buttons</a></li>
+    <li><a href="#buttons">Buttons</a></li>
+    <li><a href="#buttons-wcag-aa">Buttons WCAG AA</a></li>
+    <li><a href="#buttons-wcag-aaa">Buttons WCAG AAA</a></li>
     <li><a href="#alerts">Alerts</a></li>
+    <li><a href="#alerts-wcag-aa">Alerts WCAG AA</a></li>
+    <li><a href="#alerts-wcag-aaa">Alerts WCAG AAA</a></li>
     <li><a href="#alerts-with-links">Alerts with links</a></li>
-    <li><a href="#new-alerts-using-the-new-button-colours">New Alerts using the new Button colours</a></li>
     <li><a href="#badges">Badges</a></li>
-    <li><a href="#new-badges">New badges</a></li>
+    <li><a href="#badges-wcag-aa">Badges WCAG AA</a></li>
+    <li><a href="#badges-wcag-aaa">Badges WCAG AAA</a></li>
   </ul>
 </nav>
             </div>

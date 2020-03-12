@@ -14,7 +14,7 @@ tags:
 
 The colour contrast of the components on this page are checked with some JS that adds a badge like this: <span class="badge badge-danger border border-dark m-1">2.50:1</span> if a the colour contrast of the component does not meet the WCAG standards. For AA compliance with these standards the number should be at least 4.5:1 to pass.
 
-## Theme Buttons
+## Buttons
 
 The buttons shown below are rendered with your current theme CSS.
 
@@ -37,32 +37,9 @@ The buttons shown below are rendered with your current theme CSS.
 </div>
 {{< /example >}}
 
-## Buttons according to MDL-64494
+## Buttons WCAG AA
 
-In this issue a new pallet was suggested. The colours pass but might not be easy to differentiate. Some outline buttons have not been made accessible.
-
-{{< example show_markup="false">}}
-<div data-action="contrastcheck">
-{{< colors.inline >}}
-{{- range (index $.Site.Data "a11ycolours") }}
-<p>
-    <button type="button" class="btn btn-mdl-{{ .name }} mr-2">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        btn-{{ .name }}
-    </button>
-    <button type="button" class="btn btn-outline-mdl-{{ .name }}">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        btn-outline-{{ .name }}
-    </button>
-</p>
-{{- end -}}
-{{< /colors.inline >}}
-</div>
-{{< /example >}}
-
-## New Accessible buttons
-
-The buttons shown below are using the Component Library CSS. For each button the colour was based on the buttons shown when you click on the down <button class="btn btn-sm btn-secondary" type="button" aria-expanded="false"><i class="fa fa-caret-down fa-fw"></i></button> button. Only buttons that did not pass WCAG standards have changed.
+For each button the colour was based on the buttons shown when you click on the down <button class="btn btn-sm btn-secondary" type="button" aria-expanded="false"><i class="fa fa-caret-down fa-fw"></i></button> button. Only buttons that did not pass WCAG standards have changed.
 
 {{< example show_markup="false">}}
 <div data-action="contrastcheck">
@@ -70,13 +47,13 @@ The buttons shown below are using the Component Library CSS. For each button the
 {{- range $themecolours := (index $.Site.Data "a11ycolours") }}
 <div class="row mt-2 mb">
     <div class="col-12">
-        <button type="button" class="btn btn-new-{{ .name }} mr-2">
+        <button type="button" class="btn btn-aa-{{ .name }} mr-2">
             <i class="icon fa fa-lightbulb-o fa-fw"></i>
-            New btn-{{ $themecolours.name }}
+            aa btn-{{ $themecolours.name }}
         </button>
-        <button type="button" class="btn btn-outline-new-{{ .name }} mr-2">
+        <button type="button" class="btn btn-outline-aa-{{ .name }} mr-2">
             <i class="icon fa fa-lightbulb-o fa-fw"></i>
-            New btn-outline-{{ $themecolours.name }}
+            aa btn-outline-{{ $themecolours.name }}
         </button>
         <button class="btn btn-sm btn-secondary" type="button" data-toggle="collapse" data-target="#btn-test-{{ .name }}" aria-expanded="false">
            <i class="fa fa-caret-down fa-fw"></i>
@@ -110,65 +87,140 @@ The buttons shown below are using the Component Library CSS. For each button the
 </div>
 {{< /example >}}
 
-## Alerts
-
-The alert shown below are rendered with your current theme CSS.
+## Buttons WCAG AAA
 
 {{< example show_markup="false">}}
 <div data-action="contrastcheck">
 {{< colors.inline >}}
 {{- range (index $.Site.Data "a11ycolours") }}
 <p>
-    <div class="alert alert-{{ .name }} mr-2">
+    <button type="button" class="btn btn-aaa-{{ .name }} mr-2">
         <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        alert-{{ .name }}
-    </div>
+        btn-{{ .name }}
+    </button>
+    <button type="button" class="btn btn-outline-aaa-{{ .name }}">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        btn-outline-{{ .name }}
+    </button>
 </p>
 {{- end -}}
 {{< /colors.inline >}}
+</div>
+{{< /example >}}
+
+## Alerts
+
+The alert shown below are rendered with your current theme CSS. Moodle core only support 4 types of alerts.
+
+{{< example show_markup="false">}}
+<div data-action="contrastcheck">
+<p>
+    <div class="alert alert-info mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        alert-info
+    </div>
+</p>
+<p>
+    <div class="alert alert-success mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        alert-success
+    </div>
+</p>
+<p>
+    <div class="alert alert-warning mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        alert-warning
+    </div>
+</p>
+<p>
+    <div class="alert alert-danger mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        alert-danger
+    </div>
+</p>
+</div>
+{{< /example >}}
+
+## Alerts WCAG AA
+
+Because of the changes in the button colours alerts will be affected too:
+
+{{< example show_markup="false">}}
+<div data-action="contrastcheck">
+<p>
+    <div class="alert alert-aa-info mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        alert-info
+    </div>
+</p>
+<p>
+    <div class="alert alert-aa-success mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        alert-success
+    </div>
+</p>
+<p>
+    <div class="alert alert-aa-warning mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        alert-warning
+    </div>
+</p>
+<p>
+    <div class="alert alert-aa-danger mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        alert-danger
+    </div>
+</p>
+</div>
+{{< /example >}}
+
+
+## Alerts WCAG AAA
+
+Because of the changes in the button colours alerts will be affected too:
+
+{{< example show_markup="false">}}
+<div data-action="contrastcheck">
+<p>
+    <div class="alert alert-aaa-info mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        aaa alert-info
+    </div>
+</p>
+<p>
+    <div class="alert alert-aaa-success mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        alert-success
+    </div>
+</p>
+<p>
+    <div class="alert alert-aaa-warning mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        alert-warning
+    </div>
+</p>
+<p>
+    <div class="alert alert-aaa-danger mr-2">
+        <i class="icon fa fa-lightbulb-o fa-fw"></i>
+        alert-danger
+    </div>
+</p>
 </div>
 {{< /example >}}
 
 ## Alerts with links
 When an alert is using a link, make sure the link uses the ```.alert-link``` class, the link will not be accessible without it see:
 
+{{< example show_markup="false">}}
 <div data-action="contrastcheck">
     <div class="alert alert-info mr-2">
-        <a href="#">Missing link-alert</a>
+        <a href="#">Missing alert-link class</a>
     </div>
 </div>
-
-{{< example show_markup="false">}}
 <div data-action="contrastcheck">
-{{< colors.inline >}}
-{{- range (index $.Site.Data "a11ycolours") }}
-<p>
-    <div class="alert alert-{{ .name }} mr-2">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        alert-{{ .name }} <a href="#" class="alert-link">Link</a>
+    <div class="alert alert-info mr-2">
+        <a href="#" class="alert-link">With alert-link class</a>
     </div>
-</p>
-{{- end -}}
-{{< /colors.inline >}}
-</div>
-{{< /example >}}
-
-## New Alerts using the new Button colours
-
-Because of the changes in the button colours alerts will be affected too:
-
-{{< example show_markup="false">}}
-<div data-action="contrastcheck">
-{{< colors.inline >}}
-{{- range (index $.Site.Data "a11ycolours") }}
-<p>
-    <div class="alert alert-new-{{ .name }} mr-2">
-        <i class="icon fa fa-lightbulb-o fa-fw"></i>
-        alert-{{ .name }} <a href="#" class="alert-link">Link</a>
-    </div>
-</p>
-{{- end -}}
-{{< /colors.inline >}}
 </div>
 {{< /example >}}
 
@@ -188,15 +240,31 @@ Because of the changes in the button colours alerts will be affected too:
 </div>
 {{< /example >}}
 
-## New badges
+## Badges WCAG AA
 
 {{< example show_markup="false">}}
 <div data-action="contrastcheck">
 {{< colors.inline >}}
 {{- range (index $.Site.Data "a11ycolours") }}
 <p>
-    <div class="badge badge-new-{{ .name }} mr-2">
-        badge-new-{{ .name }}
+    <div class="badge badge-aa-{{ .name }} mr-2">
+        badge-aa-{{ .name }}
+    </div>
+</p>
+{{- end -}}
+{{< /colors.inline >}}
+</div>
+{{< /example >}}
+
+## Badges WCAG AAA
+
+{{< example show_markup="false">}}
+<div data-action="contrastcheck">
+{{< colors.inline >}}
+{{- range (index $.Site.Data "a11ycolours") }}
+<p>
+    <div class="badge badge-aaa-{{ .name }} mr-2">
+        badge-aaa-{{ .name }}
     </div>
 </p>
 {{- end -}}

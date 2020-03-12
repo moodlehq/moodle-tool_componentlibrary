@@ -47,7 +47,7 @@ $mdl-colours : (
     }
 }
 
-$new-colors :(
+$aa-colors :(
     primary: #106fc3,
     secondary: #ced4da,
     success: #398439,
@@ -58,7 +58,7 @@ $new-colors :(
     dark: #373a3c
 );
 
-$new-outline-colors :(
+$aa-outline-colors :(
     primary: #1177d1,
     secondary: #677889,
     success: #398439,
@@ -69,23 +69,72 @@ $new-outline-colors :(
     dark: #373a3c
 );
 
-@each $color, $value in $new-colors {
-    .btn-new-#{$color} {
+$aaa-colors :(
+    primary: #0d599d,
+    secondary: #ced4da,
+    success: #2a602a,
+    info: #5bc0de,
+    warning: #f0ad4e,
+    danger: #a42723,
+    light: #f8f9fa,
+    dark: #373a3c
+);
+
+$aaa-outline-colors :(
+    primary: #0d599d,
+    secondary: #4d5966,
+    success: #2a602a,
+    info: #175f74,
+    warning: #7c4d0b,
+    danger: #a42723,
+    light: darken(#677c91, 2%),
+    dark: #373a3c
+);
+
+@each $color, $value in $aa-colors {
+    .btn-aa-#{$color} {
         @include button-variant($value, $value);
     }
 }
 
-@each $color, $value in $new-outline-colors {
-    .btn-outline-new-#{$color} {
+@each $color, $value in $aa-outline-colors {
+    .btn-outline-aa-#{$color} {
         @include button-outline-variant($value);
     }
 }
 
-@each $color, $value in $new-colors {
-    .alert-new-#{$color} {
-        @include alert-variant(theme-color-level($color, $alert-bg-level), theme-color-level($color, $alert-border-level), theme-color-level($color, $alert-color-level));
+@each $color, $value in $aaa-colors {
+    .btn-aaa-#{$color} {
+        @include button-variant($value, $value);
     }
 }
+
+@each $color, $value in $aaa-outline-colors {
+    .btn-outline-aaa-#{$color} {
+        @include button-outline-variant($value);
+    }
+}
+
+// Request a theme color level
+@function clevel($color: "#000", $level: 0) {
+  $color-base: if($level > 0, $black, $white);
+  $level: abs($level);
+  @return mix($color-base, $color, $level * $theme-color-interval);
+}
+
+@each $color, $value in $aa-colors {
+    .alert-aa-#{$color} {
+        @include alert-variant(clevel($value, $alert-bg-level), clevel($value, $alert-border-level), clevel($value, $alert-color-level));
+    }
+}
+
+@each $color, $value in $aaa-colors {
+    .alert-aaa-#{$color} {
+        @include alert-variant(clevel($value, -11), clevel($value, $alert-border-level), clevel($value, 7));
+    }
+}
+
+
 
 $linkcolour: #1177d1;
 @for $i from 0 to 50 {
@@ -94,9 +143,14 @@ $linkcolour: #1177d1;
     }
 }
 
-@each $color, $value in $new-colors {
-    .badge-new-#{$color} {
+@each $color, $value in $aa-colors {
+    .badge-aa-#{$color} {
         @include badge-variant($value);
     }
 }
 
+@each $color, $value in $aaa-colors {
+    .badge-aaa-#{$color} {
+        @include badge-variant($value);
+    }
+}
