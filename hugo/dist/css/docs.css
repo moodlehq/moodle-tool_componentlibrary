@@ -28608,36 +28608,36 @@ div[role="main"] {
 
 .btn-aa-primary {
   color: #fff;
-  background-color: #106fc3;
-  border-color: #106fc3;
+  background-color: #1177d1;
+  border-color: #1177d1;
 }
 
 .btn-aa-primary:hover {
   color: #fff;
-  background-color: #0d5ba0;
-  border-color: #0c5494;
+  background-color: #0e63ae;
+  border-color: #0d5ca2;
 }
 
 .btn-aa-primary:focus, .btn-aa-primary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(52, 133, 204, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(53, 139, 216, 0.5);
 }
 
 .btn-aa-primary.disabled, .btn-aa-primary:disabled {
   color: #fff;
-  background-color: #106fc3;
-  border-color: #106fc3;
+  background-color: #1177d1;
+  border-color: #1177d1;
 }
 
 .btn-aa-primary:not(:disabled):not(.disabled):active, .btn-aa-primary:not(:disabled):not(.disabled).active,
 .show > .btn-aa-primary.dropdown-toggle {
   color: #fff;
-  background-color: #0c5494;
-  border-color: #0b4d88;
+  background-color: #0d5ca2;
+  border-color: #0c5596;
 }
 
 .btn-aa-primary:not(:disabled):not(.disabled):active:focus, .btn-aa-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-aa-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(52, 133, 204, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(53, 139, 216, 0.5);
 }
 
 .btn-aa-secondary {
@@ -29663,17 +29663,17 @@ div[role="main"] {
 }
 
 .alert-aa-primary {
-  color: #083a65;
-  background-color: #cfe2f3;
-  border-color: #bcd7ee;
+  color: #093e6d;
+  background-color: #cfe4f6;
+  border-color: #bcd9f2;
 }
 
 .alert-aa-primary hr {
-  border-top-color: #a8cbe9;
+  border-top-color: #a7cdee;
 }
 
 .alert-aa-primary .alert-link {
-  color: #041f36;
+  color: #05233e;
 }
 
 .alert-aa-secondary {
@@ -30088,17 +30088,17 @@ div[role="main"] {
 
 .badge-aa-primary {
   color: #fff;
-  background-color: #106fc3;
+  background-color: #1177d1;
 }
 
 .badge-aa-primary[href]:hover, .badge-aa-primary[href]:focus {
   color: #fff;
-  background-color: #0c5494;
+  background-color: #0d5ca2;
 }
 
 .badge-aa-primary[href]:focus, .badge-aa-primary[href].focus {
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(16, 111, 195, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(17, 119, 209, 0.5);
 }
 
 .badge-aa-secondary {
