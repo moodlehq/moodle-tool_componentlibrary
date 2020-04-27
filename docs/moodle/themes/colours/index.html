@@ -37,6 +37,7 @@
 <li class=""><a href="http://MOODLEROOT/moodle/components/example/">Example</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/footer/">Footer</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/moodle-icons/">Moodle icons</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/stack/">Stack icons</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/notification/">Notification</a></li>
 </ul>
   
@@ -68,6 +69,7 @@
 <ul id="collapse7b7cb3e12f31632afcffe09ab4202917" class="sub-menu collapse show">
 <li class="active"><a href="http://MOODLEROOT/moodle/themes/colours/">Colours</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/themes/layout/">Layout</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/themes/text/">Text</a></li>
 </ul>
   
 </li>
@@ -207,10 +209,83 @@
 
             
 
-            <h2 id="description">Description</h2>
-<p>Normally themes set the colours used in the page. This is done using the SCSS array set in the theme preset. Moodle comes with a default colour set optimized for accessibility when the default presets are used in themes Boost and Classic.</p>
-<h2 id="customizing-preset-colours">Customizing preset colours</h2>
-<p>Because Boost Css is build with Scss we can utilize some great features build into Bootstrap. In the example blow a Scss array of colours is defined before we load all of the Bootstrap and Moodle scss files. This array of colours dictates how Bootstrap css will be created for our components like alerts, buttons and backgrounds.</p>
+            <h2 id="the-moodle-colour-scheme">The Moodle colour scheme:</h2>
+<div class="bd-example">
+<div class="card-deck">
+
+  <div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
+    <div class="card-body bg-primary w-100" style="height: 100px">
+    </div>
+    <div class="card-footer w-100">
+     <span>primary</span>
+   </div>
+  </div>
+  <div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
+    <div class="card-body bg-secondary w-100" style="height: 100px">
+    </div>
+    <div class="card-footer w-100">
+     <span>secondary</span>
+   </div>
+  </div>
+  <div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
+    <div class="card-body bg-success w-100" style="height: 100px">
+    </div>
+    <div class="card-footer w-100">
+     <span>success</span>
+   </div>
+  </div>
+  <div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
+    <div class="card-body bg-info w-100" style="height: 100px">
+    </div>
+    <div class="card-footer w-100">
+     <span>info</span>
+   </div>
+  </div>
+  <div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
+    <div class="card-body bg-warning w-100" style="height: 100px">
+    </div>
+    <div class="card-footer w-100">
+     <span>warning</span>
+   </div>
+  </div>
+  <div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
+    <div class="card-body bg-danger w-100" style="height: 100px">
+    </div>
+    <div class="card-footer w-100">
+     <span>danger</span>
+   </div>
+  </div>
+  <div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
+    <div class="card-body bg-light w-100" style="height: 100px">
+    </div>
+    <div class="card-footer w-100">
+     <span>light</span>
+   </div>
+  </div>
+  <div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
+    <div class="card-body bg-dark w-100" style="height: 100px">
+    </div>
+    <div class="card-footer w-100">
+     <span>dark</span>
+   </div>
+  </div>
+</div>
+</div>
+<p>These colours are used throughout Moodle in text, buttons</p>
+<div class="bd-example">
+<p>
+<span class="badge badge-success">Badges</span>
+</p>
+<p>
+<button class="btn btn-success">Buttons</button>
+</p>
+<p>
+  <div class="border border-success">Borders</div>
+</p>
+
+</div>
+<h2 id="customizing-moodle-colours">Customizing moodle colours</h2>
+<p>Use the $theme-colours Scss array to customize colours in theme/boost/scss/preset/default.scss.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="color:#111">$theme-colors</span><span style="color:#f92672">:</span> <span style="color:#75af00">map-merge</span><span style="color:#111">((</span>
     <span style="color:#111">primary</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">#1177d1</span><span style="color:#f92672">,</span>
     <span style="color:#111">secondary</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">#ced4da</span><span style="color:#f92672">,</span>
@@ -220,163 +295,7 @@
     <span style="color:#111">danger</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">#d43f3a</span><span style="color:#f92672">,</span>
     <span style="color:#111">light</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">#f8f9fa</span><span style="color:#f92672">,</span>
     <span style="color:#111">dark</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">#373a3c</span>
-<span style="color:#111">)</span><span style="color:#f92672">,</span> <span style="color:#111">$theme-colors</span><span style="color:#111">)</span><span style="color:#111">;</span>
-
-
-<span style="color:#00a8c8">@each</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#f92672">color</span><span style="color:#f92672">,</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#f92672">value</span> <span style="color:#f92672">in</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#f92672">theme-colors</span> <span style="color:#111">{</span>
-    <span style="color:#75af00">.</span><span style="color:#75af00">btn-</span><span style="color:#d88200">#{</span><span style="color:#111">$color</span><span style="color:#d88200">}</span> <span style="color:#111">{</span>
-        <span style="color:#00a8c8">@include</span><span style="color:#75af00"> button-variant</span><span style="color:#111">(</span><span style="color:#111">$value</span><span style="color:#f92672">,</span> <span style="color:#111">$value</span><span style="color:#111">)</span><span style="color:#111">;</span>
-    <span style="color:#111">}</span>
-<span style="color:#111">}</span></code></pre></div>
-<p>This generates classes like:
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#111">.</span><span style="color:#75af00">btn-primary</span> <span style="color:#111">{</span>
-    <span style="color:#00a8c8">color</span><span style="color:#111">:</span> <span style="color:#ae81ff">#fff</span><span style="color:#111">;</span>
-    <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#ae81ff">#1177d1</span><span style="color:#111">;</span>
-    <span style="color:#00a8c8">border-color</span><span style="color:#111">:</span> <span style="color:#ae81ff">#1177d1</span><span style="color:#111">;</span>
-<span style="color:#111">}</span></code></pre></div></p>
-<h2 id="using-the-theme-colors-map">Using the $theme-colors map</h2>
-<p>Colours automatically create CSS classes for a range of Bootstrap Utility classes.</p>
-<div class="bd-example">
-<div class="row no-gutter">
-   <div class="col-sm-6 py-3"><p>Using a white Background</p></div>
-   <div class="col-sm-6 py-3 text-light bg-dark"><p>Using a dark Background</p></div>
-</div>
-
-<div class="row no-gutter">
-   <div class="col-sm-6">
-      <p class="text-primary">.text-primary #1177d1</p>
-    </div>
-    <div class="col-sm-6 bg-dark">
-      <p class="text-primary">.text-primary #1177d1</p>
-    </div>
-</div>
-<div class="row no-gutter">
-   <div class="col-sm-6">
-      <p class="text-secondary">.text-secondary #373a3c</p>
-    </div>
-    <div class="col-sm-6 bg-dark">
-      <p class="text-secondary">.text-secondary #373a3c</p>
-    </div>
-</div>
-<div class="row no-gutter">
-   <div class="col-sm-6">
-      <p class="text-success">.text-success #5cb85c</p>
-    </div>
-    <div class="col-sm-6 bg-dark">
-      <p class="text-success">.text-success #5cb85c</p>
-    </div>
-</div>
-<div class="row no-gutter">
-   <div class="col-sm-6">
-      <p class="text-info">.text-info #5bc0de</p>
-    </div>
-    <div class="col-sm-6 bg-dark">
-      <p class="text-info">.text-info #5bc0de</p>
-    </div>
-</div>
-<div class="row no-gutter">
-   <div class="col-sm-6">
-      <p class="text-warning">.text-warning #f0ad4e</p>
-    </div>
-    <div class="col-sm-6 bg-dark">
-      <p class="text-warning">.text-warning #f0ad4e</p>
-    </div>
-</div>
-<div class="row no-gutter">
-   <div class="col-sm-6">
-      <p class="text-danger">.text-danger #d9534f</p>
-    </div>
-    <div class="col-sm-6 bg-dark">
-      <p class="text-danger">.text-danger #d9534f</p>
-    </div>
-</div>
-<div class="row no-gutter">
-   <div class="col-sm-6">
-      <p class="text-light">.text-light #f8f9fa</p>
-    </div>
-    <div class="col-sm-6 bg-dark">
-      <p class="text-light">.text-light #f8f9fa</p>
-    </div>
-</div>
-<div class="row no-gutter">
-   <div class="col-sm-6">
-      <p class="text-dark">.text-dark #373a3c</p>
-    </div>
-    <div class="col-sm-6 bg-dark">
-      <p class="text-dark">.text-dark #373a3c</p>
-    </div>
-</div>
-</div>
-<h2 id="moodle-comes">Moodle comes</h2>
-<div class="bd-example">
-<div class="card-deck">
-
-  <div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
-    <div class="card-body bg-primary w-100" style="height: 100px">
-    </div>
-    <div class="card-footer w-100">
-     <span>.bg-primary</span>:
-     <span>#1177d1</span>
-   </div>
-  </div>
-  <div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
-    <div class="card-body bg-secondary w-100" style="height: 100px">
-    </div>
-    <div class="card-footer w-100">
-     <span>.bg-secondary</span>:
-     <span>#373a3c</span>
-   </div>
-  </div>
-  <div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
-    <div class="card-body bg-success w-100" style="height: 100px">
-    </div>
-    <div class="card-footer w-100">
-     <span>.bg-success</span>:
-     <span>#5cb85c</span>
-   </div>
-  </div>
-  <div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
-    <div class="card-body bg-info w-100" style="height: 100px">
-    </div>
-    <div class="card-footer w-100">
-     <span>.bg-info</span>:
-     <span>#5bc0de</span>
-   </div>
-  </div>
-  <div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
-    <div class="card-body bg-warning w-100" style="height: 100px">
-    </div>
-    <div class="card-footer w-100">
-     <span>.bg-warning</span>:
-     <span>#f0ad4e</span>
-   </div>
-  </div>
-  <div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
-    <div class="card-body bg-danger w-100" style="height: 100px">
-    </div>
-    <div class="card-footer w-100">
-     <span>.bg-danger</span>:
-     <span>#d9534f</span>
-   </div>
-  </div>
-  <div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
-    <div class="card-body bg-light w-100" style="height: 100px">
-    </div>
-    <div class="card-footer w-100">
-     <span>.bg-light</span>:
-     <span>#f8f9fa</span>
-   </div>
-  </div>
-  <div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
-    <div class="card-body bg-dark w-100" style="height: 100px">
-    </div>
-    <div class="card-footer w-100">
-     <span>.bg-dark</span>:
-     <span>#373a3c</span>
-   </div>
-  </div>
-</div>
-</div>
+<span style="color:#111">)</span><span style="color:#f92672">,</span> <span style="color:#111">$theme-colors</span><span style="color:#111">)</span><span style="color:#111">;</span></code></pre></div>
 
         </div>
         
