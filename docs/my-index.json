@@ -604,21 +604,9 @@
         "tags": []
     },
     {
-        "uri": "/moodle/themes/altercssurls",
-        "title": "alter_css_urls",
-        "content": "\nA callback for serving CSS\n\nFor the workplace project the altercssurls() callback was introcuded in lib/outputlib.php. This callback allows the theme to change serving css files from theme/styles.php to a custom script.\n\nHow are styles served?\n\nBefore diving into the altercssurls() callback it helps to understand Moodle's css servering model a bit. In boost it works like this\n\nlib/outputlib.php adds the links to our stylesheet to the page header\nthe browser tries to fetch the stylesheet using a link like theme/styles.php/boost/1587649141_1587628940/all\nstyles.php checks if the file exists as a cached file and simply serves it if it does\nif the file is not cached the caches have probably been cleared and a new css file needs to be returned from the theme (themestylesgenerateandstore)\nThis will eventually call getcsscontentfromscss:\n\nfetches all scss for the theme, see boost's config.php\n\n{{}}\n$THEME->scss = function($theme) {\n    return themeboostgetmainscss_content($theme);\n};\n{{}}\n",
-        "tags": []
-    },
-    {
         "uri": "/moodle/themes/colours",
         "title": "Colours",
-        "content": "\nThe Moodle default colour scheme:\n\n{{}}\n\n{{}}\n{{- range (index $.Site.Data \"colours\") }}\n\n     {{ .name }}:\n     {{ .hex }}\n\n{{- end -}}\n{{}}\n\n{{}}\n\nThese colours are used for backgrounds and buttons.\n\nCustomizing moodle colours\n\nBecause Boost Css is build with Scss we can utilize some great features build into Bootstrap. In the example blow a Scss array of colours is defined before we load all of the Bootstrap and Moodle scss files. This array of colours dictates how Bootstrap css will be created for our components like alerts, buttons and backgrounds.\n\n{{}}\n$theme-colors: map-merge((\n    primary: #1177d1,\n    secondary: #ced4da,\n    success: #398439,\n    info: #5bc0de,\n    warning: #f0ad4e,\n    danger: #d43f3a,\n    light: #f8f9fa,\n    dark: #373a3c\n), $theme-colors);\n\n@each $color, $value in $theme-colors {\n    .btn-#{$color} {\n        @include button-variant($value, $value);\n    }\n}\n{{}}\n\nThis generates classes like:\n{{}}\n.btn-primary {\n    color: #fff;\n    background-color: #1177d1;\n    border-color: #1177d1;\n}\n{{}}\nUsing the $theme-colors map\n\nColours automatically create CSS classes for a range of Bootstrap Utility classes.\n\n{{}}\n\n   Using a white Background\n   Using a dark Background\n\n{{}}\n{{- range (index $.Site.Data \"colours\") }}\n\n      .text-{{ .name }} {{ .hex }}\n\n      .text-{{ .name }} {{ .hex }}\n\n{{- end -}}\n{{}}\n{{}}\n\nMoodle comes\n",
-        "tags": []
-    },
-    {
-        "uri": "/moodle/themes/cssmaps",
-        "title": "Theme colours",
-        "content": "\nBase theme colors\n\nThese are Bootstrap theme colours from boostrap/_variables.scss\n\n{{}}\n$theme-colors: () !default;\n$theme-colors: map-merge((\n    primary: $primary,\n    secondary: $secondary,\n    success: $success,\n    info: $info,\n    warning: $warning,\n    danger: $danger,\n), $theme-colors);\n{{}}\n\nThe $theme-colors array is used to create classes for a number of Bootstrap components: for example:\n\n{{}}\n@each $color, $value in $theme-colors {\n    .btn-#{$color} {\n        @include button-variant($value, $value);\n    }\n}\n{{}}\n\nThis generates classes like:\n\n{{}}\n.btn-primary {\n    color: #fff;\n    background-color: #1177d1;\n    border-color: #1177d1;\n}\n{{}}\n",
+        "content": "\nThe Moodle colour scheme:\n\n{{}}\n\n{{}}\n{{- range (index $.Site.Data \"colours\") }}\n\n     {{ .name }}\n\n{{- end -}}\n{{}}\n\n{{}}\n\nThese colours are used throughout Moodle in text, buttons\n\n{{}}\n\nBadges\n\nButtons\n\n  Borders\n\n{{}}\n\nCustomizing moodle colours\n\nUse the $theme-colours Scss array to customize colours in theme/boost/scss/preset/default.scss.\n\n{{}}\n$theme-colors: map-merge((\n    primary: #1177d1,\n    secondary: #ced4da,\n    success: #398439,\n    info: #5bc0de,\n    warning: #f0ad4e,\n    danger: #d43f3a,\n    light: #f8f9fa,\n    dark: #373a3c\n), $theme-colors);\n{{}}\n",
         "tags": []
     },
     {
@@ -628,15 +616,15 @@
         "tags": []
     },
     {
-        "uri": "/moodle/themes/text",
-        "title": "Text",
-        "content": "\nBlockquotes\n\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\nDonec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\nnascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.",
+        "uri": "/moodle/themes/positioning",
+        "title": "Positioning",
+        "content": "\nPosition an item at the right\n\n{{}}\n\nOK\n\n{{}}\n",
         "tags": []
     },
     {
-        "uri": "/moodle/themes/themecolours",
-        "title": "Theme colours",
-        "content": "\nBase theme colors\n\nThese are Bootstrap theme colours from boostrap/_variables.scss\n\n{{}}\n$theme-colors: () !default;\n$theme-colors: map-merge((\n    primary: $primary,\n    secondary: $secondary,\n    success: $success,\n    info: $info,\n    warning: $warning,\n    danger: $danger,\n), $theme-colors);\n{{}}\n\nThe $theme-colors array is used to create classes for a number of Bootstrap components: for example:\n\n{{}}\n@each $color, $value in $theme-colors {\n    .btn-#{$color} {\n        @include button-variant($value, $value);\n    }\n}\n{{}}\n\nThis generates classes like:\n\n{{}}\n.btn-primary {\n    color: #fff;\n    background-color: #1177d1;\n    border-color: #1177d1;\n}\n{{}}\n",
+        "uri": "/moodle/themes/text",
+        "title": "Text",
+        "content": "\nHeadings\n\n{{}}\nh1 heading\nh2 heading\nh3 heading\nh4 heading\nh5 heading\nh6 heading\n{{}}\n\n{{}}\nYou can use the mark tag to highlight text.\nThis line of text is meant to be treated as deleted text.\nThis line of text is meant to be treated as no longer accurate.\nThis line of text is meant to be treated as an addition to the document.\nThis line of text will render as underlined\nThis line of text is meant to be treated as fine print.\nThis line rendered as bold text.\nThis line rendered as italicized text.\n{{}}",
         "tags": []
     },
     {

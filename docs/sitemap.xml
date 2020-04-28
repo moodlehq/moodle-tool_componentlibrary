@@ -5,6 +5,10 @@
     <lastmod>2020-02-04T09:40:32+01:00</lastmod>
   </url>
   <url>
+    <loc>http://MOODLEROOT/moodle/themes/responsive/</loc>
+    <lastmod>2020-02-04T09:40:32+01:00</lastmod>
+  </url>
+  <url>
     <loc>http://MOODLEROOT/moodle/components/introduction/</loc>
     <lastmod>2020-01-28T10:13:29+01:00</lastmod>
   </url>
@@ -25,8 +29,20 @@
     <lastmod>2020-02-04T09:40:32+01:00</lastmod>
   </url>
   <url>
+    <loc>http://MOODLEROOT/moodle/themes/positioning/</loc>
+    <lastmod>2020-02-04T09:40:32+01:00</lastmod>
+  </url>
+  <url>
     <loc>http://MOODLEROOT/moodle/getting-started/syntax-highlighting/</loc>
     <lastmod>2020-02-04T09:40:32+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://MOODLEROOT/moodle/themes/spacing/</loc>
+    <lastmod>2020-02-04T09:40:32+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://MOODLEROOT/moodle/themes/iconsizes/</loc>
+    <lastmod>2020-04-27T09:40:32+01:00</lastmod>
   </url>
   <url>
     <loc>http://MOODLEROOT/moodle/components/buttons/</loc>
@@ -106,7 +122,7 @@
   </url>
   <url>
     <loc>http://MOODLEROOT/</loc>
-    <lastmod>2020-03-02T16:32:24+01:00</lastmod>
+    <lastmod>2020-04-27T09:40:32+01:00</lastmod>
   </url>
   <url>
     <loc>http://MOODLEROOT/moodle/accessibility/background-contrast/</loc>

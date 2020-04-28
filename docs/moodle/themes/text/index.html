@@ -68,6 +68,10 @@
   
 <ul id="collapse7b7cb3e12f31632afcffe09ab4202917" class="sub-menu collapse show">
 <li class=""><a href="http://MOODLEROOT/moodle/themes/colours/">Colours</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/themes/responsive/">Responsive</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/themes/positioning/">Positioning</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/themes/spacing/">Spacing</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/themes/iconsizes/">Icon Utilitiy classes</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/themes/layout/">Layout</a></li>
 <li class="active"><a href="http://MOODLEROOT/moodle/themes/text/">Text</a></li>
 </ul>
@@ -203,26 +207,42 @@
         <div class="col-md-9 col-lg-10 py-md-3 pl-md-5 pr-md-5 bd-content">
         
             <h1 class="bd-title" id="content">Text</h1>
-            <p class="bd-lead">Moodle page layouts for themes</p>
+            <p class="bd-lead">Moodle text utility classes</p>
 
             
 
             
 
-            <h2 id="headings">Headings</h2>
+            <h2 id="heading-sizes-with-native-heading-tags">Heading sizes with native heading tags</h2>
+<div class="bd-example">
+<h1>h1 heading</h1>
+<h2>h2 heading</h2>
+<h3>h3 heading</h3>
+<h4>h4 heading</h4>
+<h5>h5 heading</h5>
+<h6>h6 heading</h6>
+</div><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#111">&lt;</span><span style="color:#f92672">h1</span><span style="color:#111"></span><span style="color:#111">&gt;</span>h1 heading<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>
+<span style="color:#111">&lt;</span><span style="color:#f92672">h2</span><span style="color:#111"></span><span style="color:#111">&gt;</span>h2 heading<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">h2</span><span style="color:#111">&gt;</span>
+<span style="color:#111">&lt;</span><span style="color:#f92672">h3</span><span style="color:#111"></span><span style="color:#111">&gt;</span>h3 heading<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">h3</span><span style="color:#111">&gt;</span>
+<span style="color:#111">&lt;</span><span style="color:#f92672">h4</span><span style="color:#111"></span><span style="color:#111">&gt;</span>h4 heading<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">h4</span><span style="color:#111">&gt;</span>
+<span style="color:#111">&lt;</span><span style="color:#f92672">h5</span><span style="color:#111"></span><span style="color:#111">&gt;</span>h5 heading<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">h5</span><span style="color:#111">&gt;</span>
+<span style="color:#111">&lt;</span><span style="color:#f92672">h6</span><span style="color:#111"></span><span style="color:#111">&gt;</span>h6 heading<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">h6</span><span style="color:#111">&gt;</span></code></pre></div>
+<h2 id="heading-sizes-with-heading-classes">Heading sizes with heading classes</h2>
+<p>tip: you can use heading classes to style a native heading tag differently.</p>
 <div class="bd-example">
 <p class="h1">h1 heading</p>
 <p class="h2">h2 heading</p>
-<p class="h3">h3 heading</p>
+<h1 class="h3">h3 heading</h1>
 <p class="h4">h4 heading</p>
 <p class="h5">h5 heading</p>
 <p class="h6">h6 heading</p>
 </div><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#111">&lt;</span><span style="color:#f92672">p</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;h1&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>h1 heading<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
 <span style="color:#111">&lt;</span><span style="color:#f92672">p</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;h2&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>h2 heading<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
-<span style="color:#111">&lt;</span><span style="color:#f92672">p</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;h3&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>h3 heading<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
+<span style="color:#111">&lt;</span><span style="color:#f92672">h1</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;h3&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>h3 heading<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>
 <span style="color:#111">&lt;</span><span style="color:#f92672">p</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;h4&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>h4 heading<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
 <span style="color:#111">&lt;</span><span style="color:#f92672">p</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;h5&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>h5 heading<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
 <span style="color:#111">&lt;</span><span style="color:#f92672">p</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;h6&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>h6 heading<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span></code></pre></div>
+<h2 id="native-text-tags">Native text tags</h2>
 <div class="bd-example">
 <p>You can use the mark tag to <mark>highlight</mark> text.</p>
 <p><del>This line of text is meant to be treated as deleted text.</del></p>
@@ -240,7 +260,40 @@
 <span style="color:#111">&lt;</span><span style="color:#f92672">p</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#f92672">small</span><span style="color:#111"></span><span style="color:#111">&gt;</span>This line of text is meant to be treated as fine print.<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">small</span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
 <span style="color:#111">&lt;</span><span style="color:#f92672">p</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#f92672">strong</span><span style="color:#111"></span><span style="color:#111">&gt;</span>This line rendered as bold text.<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">strong</span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
 <span style="color:#111">&lt;</span><span style="color:#f92672">p</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#f92672">em</span><span style="color:#111"></span><span style="color:#111">&gt;</span>This line rendered as italicized text.<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">em</span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span></code></pre></div>
+<h2 id="custom-text-tags">Custom text tags</h2>
+<div class="bd-example">
+<p class="text-lowercase">Lowercased text.</p>
+<p class="text-uppercase">Uppercased text.</p>
+<p class="font-weight-bold">Bold text.</p>
+<p class="font-weight-normal">Normal weight text.</p>
+<p class="font-italic">Italic text.</p>
 
+<p class="text-muted">
+  	Muted text with a <a href="#" class="text-reset">reset link</a>.
+</p>
+</div><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#111">&lt;</span><span style="color:#f92672">p</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;text-lowercase&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Lowercased text.<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
+<span style="color:#111">&lt;</span><span style="color:#f92672">p</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;text-uppercase&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Uppercased text.<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
+<span style="color:#111">&lt;</span><span style="color:#f92672">p</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;font-weight-bold&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Bold text.<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
+<span style="color:#111">&lt;</span><span style="color:#f92672">p</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;font-weight-normal&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Normal weight text.<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
+<span style="color:#111">&lt;</span><span style="color:#f92672">p</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;font-italic&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Italic text.<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
+
+<span style="color:#111">&lt;</span><span style="color:#f92672">p</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;text-muted&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+  	Muted text with a <span style="color:#111">&lt;</span><span style="color:#f92672">a</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;#&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;text-reset&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>reset link<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>.
+<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span></code></pre></div>
+<h2 id="for-screenreaders">For screenreaders</h2>
+<h2 class="sr-only">Title for screen readers</h2>
+<a class="sr-only-focusable" href="#content">Skip to main content</a>
+<h2 id="text-truncation">Text truncation</h2>
+<!-- Block level -->
+<div class="row">
+  <div class="col-2 text-truncate">
+    Praeterea iter est quasdam res quas ex communi.
+  </div>
+</div>
+<!-- Inline level -->
+<span class="d-inline-block text-truncate" style="max-width: 150px;">
+  Praeterea iter est quasdam res quas ex communi.
+</span>
         </div>
         
     </div>
