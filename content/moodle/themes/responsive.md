@@ -1,42 +1,75 @@
 ---
 layout: docs
-title: "Responsive"
-descriptions: Guidelines for making responsive user interfaces
+title: "Grids"
+descriptions: Using grids in Moodle
 date: 2020-02-04T09:40:32+01:00
 draft: false
 weight: 1
 ---
 
-Display properties do not always work well on differnt device sizes:
+Use the bootstrap grid column classes to create responsive grids. Rules to follow:
 
-Each Moodle user interface should be usable in a viewport of 320px by 254px according to WCAG 1.4.10.
+* Always wrap rows in a container
+* Combine column classes to create responsive grids
+* Keep the context in mind, modals behave different from #region-main
+* Don't add to much styles to the grid container, us an inner div
 
-This is important when working with grids of items.
 
-{{< example show_markup=false >}}
-<div class="1-100">
-<div class="card-deck">
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+{{< example>}}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+      Lorem ipsum dolor sit amet
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+      Lonsectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+      Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+    ascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu.
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+    Lretium quis, sem. Nulla consequat massa quis enim.
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+    Aenean commodo massa quis enim.
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+    Aenean commodo ligula eget dolor. Aenean massa. Cu quis enim.
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+    Loltricies nec, pellentesque eu, quis enim.
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+    Ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis.
+      </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-</div>
 </div>
 {{< /example >}}
+
+If needed 

@@ -68,7 +68,7 @@
   
 <ul id="collapse7b7cb3e12f31632afcffe09ab4202917" class="sub-menu collapse show">
 <li class=""><a href="http://MOODLEROOT/moodle/themes/colours/">Colours</a></li>
-<li class="active"><a href="http://MOODLEROOT/moodle/themes/responsive/">Responsive</a></li>
+<li class="active"><a href="http://MOODLEROOT/moodle/themes/responsive/">Grids</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/themes/positioning/">Positioning</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/themes/spacing/">Spacing</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/themes/iconsizes/">Icon Utilitiy classes</a></li>
@@ -206,43 +206,130 @@
         
         <div class="col-md-9 col-lg-10 py-md-3 pl-md-5 pr-md-5 bd-content">
         
-            <h1 class="bd-title" id="content">Responsive</h1>
+            <h1 class="bd-title" id="content">Grids</h1>
             <p class="bd-lead"></p>
 
             
 
             
 
-            <p>Display properties do not always work well on differnt device sizes:</p>
-<p>Each Moodle user interface should be usable in a viewport of 320px by 254px according to WCAG 1.4.10.</p>
-<p>This is important when working with grids of items.</p>
+            <p>Use the bootstrap grid column classes to create responsive grids. Rules to follow:</p>
+<ul>
+<li>Always wrap rows in a container</li>
+<li>Combine column classes to create responsive grids</li>
+<li>Keep the context in mind, modals behave different from #region-main</li>
+<li>Don't add to much styles to the grid container, us an inner div</li>
+</ul>
 <div class="bd-example">
-<div class="1-100">
-<div class="card-deck">
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+      Lorem ipsum dolor sit amet
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+      Lonsectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+      Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+    ascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu.
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+    Lretium quis, sem. Nulla consequat massa quis enim.
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+    Aenean commodo massa quis enim.
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+    Aenean commodo ligula eget dolor. Aenean massa. Cu quis enim.
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+    Loltricies nec, pellentesque eu, quis enim.
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary">
+      <div class="inner h-100">
+    Ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis.
+      </div>
     </div>
   </div>
 </div>
-</div>
-</div>
+</div><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;container-fluid&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;row&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;inner h-100&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+      Lorem ipsum dolor sit amet
+      <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;inner h-100&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+      Lonsectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+      <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;inner h-100&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+      Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;inner h-100&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+    ascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu.
+      <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;inner h-100&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+    Lretium quis, sem. Nulla consequat massa quis enim.
+      <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;inner h-100&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+    Aenean commodo massa quis enim.
+      <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;inner h-100&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+      <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;inner h-100&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+    Aenean commodo ligula eget dolor. Aenean massa. Cu quis enim.
+      <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;inner h-100&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+    Loltricies nec, pellentesque eu, quis enim.
+      <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;col-6 col-md-4 col-lg-3 col-xl-2 mb-4 bg-secondary&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;inner h-100&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+    Ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis.
+      <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+  <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span></code></pre></div>
+<p>If needed</p>
 
         </div>
         

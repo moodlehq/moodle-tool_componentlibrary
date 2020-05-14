@@ -17,8 +17,6 @@
 /**
  * Moodle Component Library
  *
- * Servers the Hugo docs html pages.
- *
  * @package    tool_componentlibrary
  * @copyright  2020 Bas Brands <bas@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -33,33 +31,21 @@ require_once($CFG->libdir.'/clilib.php');
 require_once($CFG->dirroot . '/lib/filelib.php');
 
 
-for ($i = 1; $i <= 10; $i++) {
-    $image = $OUTPUT->get_generated_image_for_id($i);
-    $jsonfile = $CFG->dirroot . '/admin/tool/componentlibrary/content/static/moodle-3.9/components/coursecards/placeholder-' . $i .'.txt';
-     $fh = fopen($jsonfile, 'w');
- fwrite($fh, $image);
- fclose($fh);
-}
-
-
 // Now get cli options.
 list($options, $unrecognized) = cli_get_params(array(
-    'icontype' => false,
     'help' => false,
     ), array('h' => 'help'));
 
-if ($options['help'] || !$options['icontype']) {
+if ($options['help']) {
     $help = <<<EOL
 Generate a json file with all core icons for the component library.
 
 Options:
---icontype=fontawesome      Icon type
 -h, --help                  Print out this help.
 
 Example:
-\$sudo -u www-data /usr/bin/php admin/tool/componentlibrary/cli/fetchicons.php --icontype=fontawesome\n
+\$sudo -u www-data /usr/bin/php admin/tool/componentlibrary/cli/fetchicons.php\n
 EOL;
-
     echo $help;
     die;
 }
@@ -70,28 +56,24 @@ if (!$admin) {
     die;
 }
 
-if ($options['icontype']) {
-	if ($options['icontype'] === 'fontawesome') {
-		$output = $PAGE->get_renderer('core');
-		$isfontawesome = \core\output\icon_system::instance(\core\output\icon_system::FONTAWESOME);
-		$isstandard = \core\output\icon_system::instance(\core\output\icon_system::STANDARD);
-		$map = $isfontawesome->get_icon_name_map();
-		$icons = [];
-		foreach ($map as $name => $icon) {
-			$parts = explode(':', $name);
-			$imageicon = new image_icon($parts[1], $name, $parts[0], []);
-			$i = new \stdClass();
-			$i->name = $name;
-			$i->icon = $icon;
-			if ($imageicon) {
-				$i->standardicon = $isstandard->render_pix_icon($output, $imageicon);
-			}
-			$icons[] = $i;
-		}
-		$jsonfile = $CFG->dirroot . '/admin/tool/componentlibrary/hugo/site/data/fontawesomeicons.json';
-		$fh = fopen($jsonfile, 'w');
-		fwrite($fh, json_encode($icons));
-		fclose($fh);
-	}
+$output = $PAGE->get_renderer('core');
+$isfontawesome = \core\output\icon_system::instance(\core\output\icon_system::FONTAWESOME);
+$isstandard = \core\output\icon_system::instance(\core\output\icon_system::STANDARD);
+$map = $isfontawesome->get_icon_name_map();
+$icons = [];
+foreach ($map as $name => $icon) {
+    $parts = explode(':', $name);
+    $imageicon = new image_icon($parts[1], $name, $parts[0], []);
+    $i = new \stdClass();
+    $i->name = $name;
+    $i->icon = $icon;
+    if ($imageicon) {
+        $i->standardicon = $isstandard->render_pix_icon($output, $imageicon);
+    }
+    $icons[] = $i;
 }
+$jsonfile = $CFG->dirroot . '/admin/tool/componentlibrary/hugo/site/data/fontawesomeicons.json';
+$fh = fopen($jsonfile, 'w');
+fwrite($fh, json_encode($icons));
+fclose($fh);
 
