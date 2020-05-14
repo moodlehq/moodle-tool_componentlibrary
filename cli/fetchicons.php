@@ -71,7 +71,7 @@ foreach ($map as $name => $icon) {
     $i->name = $name;
     $i->icon = $icon;
     if ($imageicon) {
-        $i->standardicon = $isstandard->render_pix_icon($output, $imageicon);
+        $i->standardicon = str_replace($CFG->wwwroot, 'MOODLESITE', $isstandard->render_pix_icon($output, $imageicon));
     }
     $icons[] = $i;
 }
