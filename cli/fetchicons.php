@@ -63,6 +63,9 @@ $map = $isfontawesome->get_icon_name_map();
 $icons = [];
 foreach ($map as $name => $icon) {
     $parts = explode(':', $name);
+    if ($parts[0] === 'theme') {
+        continue;
+    }
     $imageicon = new image_icon($parts[1], $name, $parts[0], []);
     $i = new \stdClass();
     $i->name = $name;
