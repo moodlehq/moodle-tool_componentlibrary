@@ -67,69 +67,35 @@ The events listed below can be used to connect the sortable list to a webserver 
 
 ## Examples
 
-{{< example >}}
+{{< example>}}
 <div class="row w-50">
   <div class="col-md-6">
-    <ul class="list-group my-draggable-list">
-        <li class="list-group-item bg-success">
+    <ul class="list-group my-draggable-list-ex">
+        <li class="list-group-item">
             <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="1. Cras justo odio">
                 <i class="fa fa-arrows"></i>
             </span>
             1. Cras justo odio
         </li>
-        <li class="list-group-item bg-info">
+        <li class="list-group-item">
             <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="2. Dapibus ac facilisis in">
                 <i class="fa fa-arrows"></i>
             </span>
             2. Dapibus ac facilisis in
         </li>
-        <li class="list-group-item bg-warning">
+        <li class="list-group-item">
             <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="3. Morbi leo risus">
                 <i class="fa fa-arrows"></i>
             </span>
             3. Morbi leo risus
         </li>
-        <li class="list-group-item bg-danger">
+        <li class="list-group-item">
             <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="4. Porta ac consectetur ac">
                 <i class="fa fa-arrows"></i>
             </span>
             4. Porta ac consectetur ac
         </li>
-        <li class="list-group-item bg-secundary">
-            <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="5. Vestibulum at eros">
-                <i class="fa fa-arrows"></i>
-            </span>
-            5. Vestibulum at eros
-        </li>
-    </ul>
-  </div>
-  <div class="col-md-6">
-    <ul class="list-group my-draggable-list">
-        <li class="list-group-item bg-dark text-success">
-            <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="1. Cras justo odio">
-                <i class="fa fa-arrows"></i>
-            </span>
-            1. Cras justo odio
-        </li>
-        <li class="list-group-item bg-dark text-info">
-            <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="2. Dapibus ac facilisis in">
-                <i class="fa fa-arrows"></i>
-            </span>
-            2. Dapibus ac facilisis in
-        </li>
-        <li class="list-group-item bg-dark text-warning">
-            <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="3. Morbi leo risus">
-                <i class="fa fa-arrows"></i>
-            </span>
-            3. Morbi leo risus
-        </li>
-        <li class="list-group-item bg-dark text-danger">
-            <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="4. Porta ac consectetur ac">
-                <i class="fa fa-arrows"></i>
-            </span>
-            4. Porta ac consectetur ac
-        </li>
-        <li class="list-group-item bg-dark text-light">
+        <li class="list-group-item">
             <span tabindex="0" role="button" aria-haspopup="true" data-drag-type="move" title="5. Vestibulum at eros">
                 <i class="fa fa-arrows"></i>
             </span>
@@ -149,9 +115,9 @@ function(
     $,
     SortableList
 ) {
-     new SortableList('ul.my-draggable-list');
+     new SortableList('ul.my-draggable-list-ex');
 
-     $('ul.my-draggable-list > *').on(SortableList.EVENTS.DROP, function(evt, info) {
+     $('ul.my-draggable-list-ex > *').on(SortableList.EVENTS.DROP, function(evt, info) {
         console.log(info);
      });
 });

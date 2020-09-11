@@ -6,6 +6,13 @@ date: 2020-02-04T09:40:32+01:00
 draft: false
 ---
 
+{{< example show_markup="false">}}
+<div class="alert alert-info alert-block fade in foo bar" role="alert" data-aria-autofocus="true" id="yui_3_17_2_1_1599746674354_24">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    Hello
+</div>
+{{< /example >}}
+
 ## Description
 
 Notifications are coupled with actions and provide instant feedback to the action results. Moodle notifications are shown right above the actionable content or overlaying the user interface for JavaScript related actions.

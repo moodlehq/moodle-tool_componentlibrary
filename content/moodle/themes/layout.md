@@ -3,7 +3,7 @@ layout: docs
 title: "Layout"
 description: "Moodle page layouts for themes"
 date: 2019-12-10T13:53:41+01:00
-draft: false
+draft: true
 ---
 
 ## High level templates

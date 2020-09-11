@@ -7,7 +7,23 @@ draft: false
 weight: 20
 ---
 
-## How it works
+{{< mustachejson template="core_course/view-cards" show_markup="false">}}
+{
+    "courses": [
+        {
+            "viewurl": "https://moodlesite/course/view.php?id=2",
+            "courseimage": "https://placekitten.com/300/500",
+            "fullname": "Mathematics Year One",
+            "isfavourite": true,
+            "coursecategory": "Miscellaneous",
+            "showcoursecategory": true,
+            "visible": true
+        }
+    ]
+}
+{{< /mustachejson >}}
+
+## Overview
 
 Course cards are rendered using a shared template found in
 **course/templates/coursecard.mustache**. They are loaded throught JavaScript or PHP on pages like the user dashboard.

@@ -57,6 +57,10 @@
     <lastmod>2017-10-17T15:26:15+00:00</lastmod>
   </url>
   <url>
+    <loc>http://MOODLEROOT/moodle/components/navigation/</loc>
+    <lastmod>2020-09-07T16:32:24+01:00</lastmod>
+  </url>
+  <url>
     <loc>http://MOODLEROOT/moodle/components/</loc>
     <lastmod>2020-02-03T15:26:15+00:00</lastmod>
   </url>
@@ -97,8 +101,8 @@
     <lastmod>2020-02-03T15:26:15+00:00</lastmod>
   </url>
   <url>
-    <loc>http://MOODLEROOT/moodle/components/example/</loc>
-    <lastmod>2020-01-28T10:13:29+01:00</lastmod>
+    <loc>http://MOODLEROOT/moodle/components/search-input/</loc>
+    <lastmod>2020-08-26T16:32:24+01:00</lastmod>
   </url>
   <url>
     <loc>http://MOODLEROOT/moodle/components/footer/</loc>
@@ -122,7 +126,7 @@
   </url>
   <url>
     <loc>http://MOODLEROOT/</loc>
-    <lastmod>2020-04-27T09:40:32+01:00</lastmod>
+    <lastmod>2020-09-07T16:32:24+01:00</lastmod>
   </url>
   <url>
     <loc>http://MOODLEROOT/moodle/accessibility/background-contrast/</loc>
@@ -167,10 +171,6 @@
   <url>
     <loc>http://MOODLEROOT/moodle/getting-started/component-library-backend/</loc>
     <lastmod>2020-01-01T15:43:07+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://MOODLEROOT/moodle/themes/layout/</loc>
-    <lastmod>2019-12-10T13:53:41+01:00</lastmod>
   </url>
   <url>
     <loc>http://MOODLEROOT/moodle/themes/text/</loc>

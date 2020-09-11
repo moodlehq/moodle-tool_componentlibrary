@@ -1,20 +1,11 @@
 ---
 layout: docs
 title: "Buttons"
-description: Button types and UX guidelines for using Buttons in Moodle
+description: "Button types used in Moodle"
 date: 2020-01-14T16:32:24+01:00
 draft: false
 weight: 10
 ---
-
-
-## Button types
-
-Button components are available as part of a Moodle form, as a single button functioning as a form submit or triggering a JavaScript action.
-
-Buttons used in Moodle are based on the [Bootstrap buttons]({{< docsref "/components/buttons" >}}).
-
-The most used buttons types in Moodle are:
 
 {{< example >}}
 <button type="button" class="btn btn-primary">Primary Button</button>
@@ -23,19 +14,40 @@ The most used buttons types in Moodle are:
 <button type="button" class="btn btn-outline-secondary">Outline Button</button>
 {{< /example >}}
 
+
+## Button types
+
+Button components are available as part of a Moodle form, as a single button functioning as a form submit or triggering a JavaScript action. Buttons used in Moodle are based on the [Bootstrap buttons]({{< docsref "/components/buttons" >}}).
+
+The most used buttons types in Moodle are:
+
 ### Primary buttons
 
-For the primary/most used action on the page use a primary button. For each for or UI component there should only be one primary button.
+{{< example show_markup="false">}}
+<button type="button" class="btn btn-primary">Primary Button</button>
+{{< /example >}}
+
+For the primary/most used action on the page use a primary button.
+For each for or UI component there should only be one primary button.
 
 ### Secondary buttons
+{{< example show_markup="false">}}
+<button type="button" class="btn btn-secondary">Primary Button</button>
+{{< /example >}}
 
 Secondary buttons are used for the the cancel options on a form or as a button that is always visible (blocks editing on)
 
-### Danger buttons
+### Danger buttons.
+{{< example show_markup="false">}}
+<button type="button" class="btn btn-danger">Primary Button</button>
+{{< /example >}}
 
 Use a danger button when the primary action is a potentially dangerous action, like deleting a contact in the messaging interface.
 
 ### Outline buttons
+{{< example show_markup="false">}}
+<button type="button" class="btn btn-outline-secondary">Primary Button</button>
+{{< /example >}}
 
 Outline buttons are used for buttons that controll part of the user interface, like filters on a table or the display type on the user dashboard. Outline buttons look more subtle than secondary buttons and do not distract the user from the main user interface too much.
 

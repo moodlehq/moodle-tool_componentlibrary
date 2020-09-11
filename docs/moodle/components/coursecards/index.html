@@ -33,8 +33,9 @@
 <ul id="collapsee74fae0ce25d18ab8db372c1fbe8aff4" class="sub-menu collapse show">
 <li class=""><a href="http://MOODLEROOT/moodle/components/introduction/">Introduction</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/buttons/">Buttons</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/navigation/">Navigation</a></li>
 <li class="active"><a href="http://MOODLEROOT/moodle/components/coursecards/">Course cards</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/components/example/">Example</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/search-input/">Search Input</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/footer/">Footer</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/moodle-icons/">Moodle icons</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/stack/">Stack icons</a></li>
@@ -72,7 +73,6 @@
 <li class=""><a href="http://MOODLEROOT/moodle/themes/positioning/">Positioning</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/themes/spacing/">Spacing</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/themes/iconsizes/">Icon Utilitiy classes</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/themes/layout/">Layout</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/themes/text/">Text</a></li>
 </ul>
   
@@ -213,7 +213,76 @@
 
             
 
-            <h2 id="how-it-works">How it works</h2>
+            <div id="root10" data-region="mustachewithcontext" data-template="core_course/view-cards" class="mb-5 mt-2 bg-light p-4" data-config='
+{
+    &#34;courses&#34;: [
+        {
+            &#34;viewurl&#34;: &#34;https://moodlesite/course/view.php?id=2&#34;,
+            &#34;courseimage&#34;: &#34;https://placekitten.com/300/500&#34;,
+            &#34;fullname&#34;: &#34;Mathematics Year One&#34;,
+            &#34;isfavourite&#34;: true,
+            &#34;coursecategory&#34;: &#34;Miscellaneous&#34;,
+            &#34;showcoursecategory&#34;: true,
+            &#34;visible&#34;: true
+        }
+    ]
+}
+'>
+    <h6 class="mb-3">core_course/view-cards</h6>
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active"
+                id="nav-rendered10-tab"
+                data-toggle="tab"
+                href="#nav-rendered10"
+                role="tab" aria-controls="nav-rendered10" aria-selected="true"
+            >
+                Rendered
+            </a>
+            <a class="nav-item nav-link"
+                id="nav-template10-tab"
+                data-toggle="tab"
+                href="#nav-template10" role="tab" aria-controls="nav-template10" aria-selected="false"
+            >
+                Template
+            </a>
+            <a class="nav-item nav-link"
+                id="nav-variables10-tab"
+                data-toggle="tab"
+                href="#nav-variables10" role="tab" aria-controls="nav-variables10" aria-selected="false"
+            >
+                Variables
+            </a>
+        </div>
+    </nav>
+    <div class="tab-content p-3 bg-white" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-rendered10" role="tabpanel" aria-labelledby="nav-rendered10-tab">
+            <div data-region="rendered">
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-template10" role="tabpanel" aria-labelledby="nav-template10-tab">
+            <pre data-region="source" class="mb3">
+            </pre>
+        </div>
+        <div class="tab-pane fade" id="nav-variables10" role="tabpanel" aria-labelledby="nav-variables10-tab">
+            <pre data-region="configinner" class="mb3"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#111">{</span>
+    <span style="color:#d88200">&#34;courses&#34;</span><span style="color:#f92672">:</span> <span style="color:#111">[</span>
+        <span style="color:#111">{</span>
+            <span style="color:#d88200">&#34;viewurl&#34;</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#34;https://moodlesite/course/view.php?id=2&#34;</span><span style="color:#111">,</span>
+            <span style="color:#d88200">&#34;courseimage&#34;</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#34;https://placekitten.com/300/500&#34;</span><span style="color:#111">,</span>
+            <span style="color:#d88200">&#34;fullname&#34;</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#34;Mathematics Year One&#34;</span><span style="color:#111">,</span>
+            <span style="color:#d88200">&#34;isfavourite&#34;</span><span style="color:#f92672">:</span> <span style="color:#00a8c8">true</span><span style="color:#111">,</span>
+            <span style="color:#d88200">&#34;coursecategory&#34;</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#34;Miscellaneous&#34;</span><span style="color:#111">,</span>
+            <span style="color:#d88200">&#34;showcoursecategory&#34;</span><span style="color:#f92672">:</span> <span style="color:#00a8c8">true</span><span style="color:#111">,</span>
+            <span style="color:#d88200">&#34;visible&#34;</span><span style="color:#f92672">:</span> <span style="color:#00a8c8">true</span>
+        <span style="color:#111">}</span>
+    <span style="color:#111">]</span>
+<span style="color:#111">}</span>
+</code></pre></div></pre>
+        </div>
+    </div>
+</div>
+<h2 id="overview">Overview</h2>
 <p>Course cards are rendered using a shared template found in
 <strong>course/templates/coursecard.mustache</strong>. They are loaded throught JavaScript or PHP on pages like the user dashboard.</p>
 <p>Course cards should always contain an image, if no image is provided by the backend a placeholder image is used. The card image and title should be clickable and should always link you to a course page.</p>
@@ -240,7 +309,7 @@
 <li>Use images smartly</li>
 </ul>
 <p>The example below show a deck of cards as used on the starred courses block</p>
-<div id="root46" data-region="mustachewithcontext" data-template="core_course/view-cards" class="mb-5 mt-2 bg-light p-4" data-config='
+<div id="root62" data-region="mustachewithcontext" data-template="core_course/view-cards" class="mb-5 mt-2 bg-light p-4" data-config='
 {
     &#34;courses&#34;: [
         {
@@ -286,39 +355,39 @@
     <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active"
-                id="nav-rendered46-tab"
+                id="nav-rendered62-tab"
                 data-toggle="tab"
-                href="#nav-rendered46"
-                role="tab" aria-controls="nav-rendered46" aria-selected="true"
+                href="#nav-rendered62"
+                role="tab" aria-controls="nav-rendered62" aria-selected="true"
             >
                 Rendered
             </a>
             <a class="nav-item nav-link"
-                id="nav-template46-tab"
+                id="nav-template62-tab"
                 data-toggle="tab"
-                href="#nav-template46" role="tab" aria-controls="nav-template46" aria-selected="false"
+                href="#nav-template62" role="tab" aria-controls="nav-template62" aria-selected="false"
             >
                 Template
             </a>
             <a class="nav-item nav-link"
-                id="nav-variables46-tab"
+                id="nav-variables62-tab"
                 data-toggle="tab"
-                href="#nav-variables46" role="tab" aria-controls="nav-variables46" aria-selected="false"
+                href="#nav-variables62" role="tab" aria-controls="nav-variables62" aria-selected="false"
             >
                 Variables
             </a>
         </div>
     </nav>
     <div class="tab-content p-3 bg-white" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-rendered46" role="tabpanel" aria-labelledby="nav-rendered46-tab">
+        <div class="tab-pane fade show active" id="nav-rendered62" role="tabpanel" aria-labelledby="nav-rendered62-tab">
             <div data-region="rendered">
             </div>
         </div>
-        <div class="tab-pane fade" id="nav-template46" role="tabpanel" aria-labelledby="nav-template46-tab">
+        <div class="tab-pane fade" id="nav-template62" role="tabpanel" aria-labelledby="nav-template62-tab">
             <pre data-region="source" class="mb3">
             </pre>
         </div>
-        <div class="tab-pane fade" id="nav-variables46" role="tabpanel" aria-labelledby="nav-variables46-tab">
+        <div class="tab-pane fade" id="nav-variables62" role="tabpanel" aria-labelledby="nav-variables62-tab">
             <pre data-region="configinner" class="mb3"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#111">{</span>
     <span style="color:#d88200">&#34;courses&#34;</span><span style="color:#f92672">:</span> <span style="color:#111">[</span>
         <span style="color:#111">{</span>

@@ -33,8 +33,9 @@
 <ul id="collapsee74fae0ce25d18ab8db372c1fbe8aff4" class="sub-menu collapse show">
 <li class=""><a href="http://MOODLEROOT/moodle/components/introduction/">Introduction</a></li>
 <li class="active"><a href="http://MOODLEROOT/moodle/components/buttons/">Buttons</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/navigation/">Navigation</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/coursecards/">Course cards</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/components/example/">Example</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/search-input/">Search Input</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/footer/">Footer</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/moodle-icons/">Moodle icons</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/stack/">Stack icons</a></li>
@@ -72,7 +73,6 @@
 <li class=""><a href="http://MOODLEROOT/moodle/themes/positioning/">Positioning</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/themes/spacing/">Spacing</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/themes/iconsizes/">Icon Utilitiy classes</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/themes/layout/">Layout</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/themes/text/">Text</a></li>
 </ul>
   
@@ -207,17 +207,13 @@
         <div class="col-md-9 col-lg-10 py-md-3 pl-md-5 pr-md-5 bd-content">
         
             <h1 class="bd-title" id="content">Buttons</h1>
-            <p class="bd-lead">Button types and UX guidelines for using Buttons in Moodle</p>
+            <p class="bd-lead">Button types used in Moodle</p>
 
             
 
             
 
-            <h2 id="button-types">Button types</h2>
-<p>Button components are available as part of a Moodle form, as a single button functioning as a form submit or triggering a JavaScript action.</p>
-<p>Buttons used in Moodle are based on the <a href="../../../bootstrap/components/buttons/">Bootstrap buttons</a>.</p>
-<p>The most used buttons types in Moodle are:</p>
-<div class="bd-example">
+            <div class="bd-example">
 <button type="button" class="btn btn-primary">Primary Button</button>
 <button type="button" class="btn btn-secondary">Secondary Button</button>
 <button type="button" class="btn btn-danger">Danger Button</button>
@@ -226,13 +222,29 @@
 <span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;btn btn-secondary&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Secondary Button<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
 <span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;btn btn-danger&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Danger Button<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
 <span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;btn btn-outline-secondary&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>Outline Button<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span></code></pre></div>
+<h2 id="button-types">Button types</h2>
+<p>Button components are available as part of a Moodle form, as a single button functioning as a form submit or triggering a JavaScript action. Buttons used in Moodle are based on the <a href="../../../bootstrap/components/buttons/">Bootstrap buttons</a>.</p>
+<p>The most used buttons types in Moodle are:</p>
 <h3 id="primary-buttons">Primary buttons</h3>
-<p>For the primary/most used action on the page use a primary button. For each for or UI component there should only be one primary button.</p>
+<div class="bd-example">
+<button type="button" class="btn btn-primary">Primary Button</button>
+</div>
+<p>For the primary/most used action on the page use a primary button.
+For each for or UI component there should only be one primary button.</p>
 <h3 id="secondary-buttons">Secondary buttons</h3>
+<div class="bd-example">
+<button type="button" class="btn btn-secondary">Primary Button</button>
+</div>
 <p>Secondary buttons are used for the the cancel options on a form or as a button that is always visible (blocks editing on)</p>
-<h3 id="danger-buttons">Danger buttons</h3>
+<h3 id="danger-buttons">Danger buttons.</h3>
+<div class="bd-example">
+<button type="button" class="btn btn-danger">Primary Button</button>
+</div>
 <p>Use a danger button when the primary action is a potentially dangerous action, like deleting a contact in the messaging interface.</p>
 <h3 id="outline-buttons">Outline buttons</h3>
+<div class="bd-example">
+<button type="button" class="btn btn-outline-secondary">Primary Button</button>
+</div>
 <p>Outline buttons are used for buttons that controll part of the user interface, like filters on a table or the display type on the user dashboard. Outline buttons look more subtle than secondary buttons and do not distract the user from the main user interface too much.</p>
 <h2 id="adding-buttons-to-a-page">Adding buttons to a page</h2>
 <h3 id="using-the-single_select-renderer">Using the single_select renderer</h3>
