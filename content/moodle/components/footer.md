@@ -5,6 +5,9 @@ description: Moodle footer HTML and required code injected in the page footer
 date: 2020-03-02T16:32:24+01:00
 draft: false
 weight: 40
+tags:
+- available
+- needs review
 ---
 
 ## How are footers implemented in Moodle?

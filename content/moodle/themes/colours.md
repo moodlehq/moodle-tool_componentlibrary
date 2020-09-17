@@ -24,6 +24,23 @@ weight: 1
 </div>
 {{< /example >}}
 
+## Grays
+
+<div class="card-deck">
+{{< colors.inline >}}
+{{- range (index $.Site.Data "grays") }}
+  <div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
+    <div class="card-body bg-{{ .name }} w-100" style="height: 100px; background-color: {{ .hex }};">
+    </div>
+    <div class="card-footer w-100">
+     <span>{{ .name }}</span>
+   </div>
+  </div>
+{{- end -}}
+{{< /colors.inline >}}
+</div>
+{{< /example >}}
+
 These colours are used throughout Moodle in text, buttons
 
 {{< example show_markup=false >}}

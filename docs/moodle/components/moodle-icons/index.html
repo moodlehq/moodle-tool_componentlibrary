@@ -17,7 +17,7 @@
 <li class=""><a href="#" data-toggle="collapse" data-target="#collapseb48e793ecd64f381beae053e81ea80eb" aria-expanded="true" aria-controls="collapseb48e793ecd64f381beae053e81ea80eb">Getting Started</a>
   
 <ul id="collapseb48e793ecd64f381beae053e81ea80eb" class="sub-menu collapse ">
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/introduction/">Introduction</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/getting-started/introduction/">The Moodle UI component library</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/getting-started/adding-pages/">Adding pages</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/getting-started/adding-images/">Adding images</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/getting-started/syntax-highlighting/">Syntax highlighting</a></li>
@@ -31,15 +31,16 @@
 <li class="parent"><a href="#" data-toggle="collapse" data-target="#collapsee74fae0ce25d18ab8db372c1fbe8aff4" aria-expanded="true" aria-controls="collapsee74fae0ce25d18ab8db372c1fbe8aff4">Moodle Components</a>
   
 <ul id="collapsee74fae0ce25d18ab8db372c1fbe8aff4" class="sub-menu collapse show">
-<li class=""><a href="http://MOODLEROOT/moodle/components/introduction/">Introduction</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/introduction/">A Introduction</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/activity/">Activity</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/buttons/">Buttons</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/components/navigation/">Navigation</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/coursecards/">Course cards</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/components/search-input/">Search Input</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/form-elements/">Form elements</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/footer/">Footer</a></li>
-<li class="active"><a href="http://MOODLEROOT/moodle/components/moodle-icons/">Moodle icons</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/components/stack/">Stack icons</a></li>
+<li class="active"><a href="http://MOODLEROOT/moodle/components/moodle-icons/">Icons</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/navigation/">Navigation</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/notification/">Notification</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/search-input/">Search Input</a></li>
 </ul>
   
 </li>
@@ -206,11 +207,17 @@
         
         <div class="col-md-9 col-lg-10 py-md-3 pl-md-5 pr-md-5 bd-content">
         
-            <h1 class="bd-title" id="content">Moodle icons</h1>
+            <h1 class="bd-title" id="content">Icons</h1>
             <p class="bd-lead">Moodle icons are rendered with fontawesome or as small images</p>
 
             
 
+            
+              
+
+                  <div class="badge badge-info">available</div>
+
+              
             
 
             <h2 id="description">Description</h2>
@@ -222,8 +229,8 @@
 <p><code>{{#pix}} i/edit, core {{/pix}}</code></p>
 <h2 id="rendering-icons-in-php">Rendering icons in Php</h2>
 <p>Use the pix_icon method to retreive the HTML for an icon.</p>
-<p><a class="btn btn-primary btn-round" data-toggle="collapse" href="#help28" role="button" aria-expanded="false" aria-controls="help28">php help</a>
-  <div class="collapse multi-collapse" id="help28">
+<p><a class="btn btn-primary btn-round" data-toggle="collapse" href="#help30" role="button" aria-expanded="false" aria-controls="help30">php help</a>
+  <div class="collapse multi-collapse" id="help30">
     <div class="card card-body">/**</p>
 <ul>
 <li>Return HTML for a pix_icon.</li>
@@ -248,6 +255,16 @@
 <p>Options:</p>
 <h2 id="list-of-mapped-font-awesome-icons">List of mapped font-awesome icons</h2>
 <p>The top title of each cards displayse the name of the icon. The icon shown left is the font-awesome icons. The icon shown on the right is the old image base icon.</p>
+<h2 id="stacking-fontawesome-icons">Stacking fontawesome icons</h2>
+<div class="bd-example">
+<span class="fa-stack fa-lg">
+  <i class="fa fa-comment fa-stack-2x"></i>
+  <i class="fa fa-thumbs-o-up fa-stack-1x fa-inverse"></i>
+</span>
+</div><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa-stack fa-lg&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+  <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-comment fa-stack-2x&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
+  <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-thumbs-o-up fa-stack-1x fa-inverse&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
+<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span></code></pre></div>
 <div class="card-deck">
   
   <div class="card mb-2 p-1 d-flex text-center" style="flex: 0 0 20%; height: 150px">

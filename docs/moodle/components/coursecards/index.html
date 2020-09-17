@@ -17,7 +17,7 @@
 <li class=""><a href="#" data-toggle="collapse" data-target="#collapseb48e793ecd64f381beae053e81ea80eb" aria-expanded="true" aria-controls="collapseb48e793ecd64f381beae053e81ea80eb">Getting Started</a>
   
 <ul id="collapseb48e793ecd64f381beae053e81ea80eb" class="sub-menu collapse ">
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/introduction/">Introduction</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/getting-started/introduction/">The Moodle UI component library</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/getting-started/adding-pages/">Adding pages</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/getting-started/adding-images/">Adding images</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/getting-started/syntax-highlighting/">Syntax highlighting</a></li>
@@ -31,15 +31,16 @@
 <li class="parent"><a href="#" data-toggle="collapse" data-target="#collapsee74fae0ce25d18ab8db372c1fbe8aff4" aria-expanded="true" aria-controls="collapsee74fae0ce25d18ab8db372c1fbe8aff4">Moodle Components</a>
   
 <ul id="collapsee74fae0ce25d18ab8db372c1fbe8aff4" class="sub-menu collapse show">
-<li class=""><a href="http://MOODLEROOT/moodle/components/introduction/">Introduction</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/introduction/">A Introduction</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/activity/">Activity</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/buttons/">Buttons</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/components/navigation/">Navigation</a></li>
 <li class="active"><a href="http://MOODLEROOT/moodle/components/coursecards/">Course cards</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/components/search-input/">Search Input</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/form-elements/">Form elements</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/footer/">Footer</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/components/moodle-icons/">Moodle icons</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/components/stack/">Stack icons</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/moodle-icons/">Icons</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/navigation/">Navigation</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/notification/">Notification</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/search-input/">Search Input</a></li>
 </ul>
   
 </li>
@@ -212,8 +213,14 @@
             
 
             
+              
 
-            <div id="root10" data-region="mustachewithcontext" data-template="core_course/view-cards" class="mb-5 mt-2 bg-light p-4" data-config='
+                  <div class="badge badge-info">Available</div>
+
+              
+            
+
+            <div id="root12" data-region="mustachewithcontext" data-template="core_course/view-cards" class="mb-5 mt-2 bg-light p-4" data-config='
 {
     &#34;courses&#34;: [
         {
@@ -232,39 +239,39 @@
     <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active"
-                id="nav-rendered10-tab"
+                id="nav-rendered12-tab"
                 data-toggle="tab"
-                href="#nav-rendered10"
-                role="tab" aria-controls="nav-rendered10" aria-selected="true"
+                href="#nav-rendered12"
+                role="tab" aria-controls="nav-rendered12" aria-selected="true"
             >
                 Rendered
             </a>
             <a class="nav-item nav-link"
-                id="nav-template10-tab"
+                id="nav-template12-tab"
                 data-toggle="tab"
-                href="#nav-template10" role="tab" aria-controls="nav-template10" aria-selected="false"
+                href="#nav-template12" role="tab" aria-controls="nav-template12" aria-selected="false"
             >
                 Template
             </a>
             <a class="nav-item nav-link"
-                id="nav-variables10-tab"
+                id="nav-variables12-tab"
                 data-toggle="tab"
-                href="#nav-variables10" role="tab" aria-controls="nav-variables10" aria-selected="false"
+                href="#nav-variables12" role="tab" aria-controls="nav-variables12" aria-selected="false"
             >
                 Variables
             </a>
         </div>
     </nav>
     <div class="tab-content p-3 bg-white" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-rendered10" role="tabpanel" aria-labelledby="nav-rendered10-tab">
+        <div class="tab-pane fade show active" id="nav-rendered12" role="tabpanel" aria-labelledby="nav-rendered12-tab">
             <div data-region="rendered">
             </div>
         </div>
-        <div class="tab-pane fade" id="nav-template10" role="tabpanel" aria-labelledby="nav-template10-tab">
+        <div class="tab-pane fade" id="nav-template12" role="tabpanel" aria-labelledby="nav-template12-tab">
             <pre data-region="source" class="mb3">
             </pre>
         </div>
-        <div class="tab-pane fade" id="nav-variables10" role="tabpanel" aria-labelledby="nav-variables10-tab">
+        <div class="tab-pane fade" id="nav-variables12" role="tabpanel" aria-labelledby="nav-variables12-tab">
             <pre data-region="configinner" class="mb3"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#111">{</span>
     <span style="color:#d88200">&#34;courses&#34;</span><span style="color:#f92672">:</span> <span style="color:#111">[</span>
         <span style="color:#111">{</span>
@@ -282,7 +289,7 @@
         </div>
     </div>
 </div>
-<h2 id="overview">Overview</h2>
+<h2 id="how-to-use-course-cards">How to use course cards</h2>
 <p>Course cards are rendered using a shared template found in
 <strong>course/templates/coursecard.mustache</strong>. They are loaded throught JavaScript or PHP on pages like the user dashboard.</p>
 <p>Course cards should always contain an image, if no image is provided by the backend a placeholder image is used. The card image and title should be clickable and should always link you to a course page.</p>
@@ -309,7 +316,7 @@
 <li>Use images smartly</li>
 </ul>
 <p>The example below show a deck of cards as used on the starred courses block</p>
-<div id="root62" data-region="mustachewithcontext" data-template="core_course/view-cards" class="mb-5 mt-2 bg-light p-4" data-config='
+<div id="root64" data-region="mustachewithcontext" data-template="core_course/view-cards" class="mb-5 mt-2 bg-light p-4" data-config='
 {
     &#34;courses&#34;: [
         {
@@ -355,39 +362,39 @@
     <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active"
-                id="nav-rendered62-tab"
+                id="nav-rendered64-tab"
                 data-toggle="tab"
-                href="#nav-rendered62"
-                role="tab" aria-controls="nav-rendered62" aria-selected="true"
+                href="#nav-rendered64"
+                role="tab" aria-controls="nav-rendered64" aria-selected="true"
             >
                 Rendered
             </a>
             <a class="nav-item nav-link"
-                id="nav-template62-tab"
+                id="nav-template64-tab"
                 data-toggle="tab"
-                href="#nav-template62" role="tab" aria-controls="nav-template62" aria-selected="false"
+                href="#nav-template64" role="tab" aria-controls="nav-template64" aria-selected="false"
             >
                 Template
             </a>
             <a class="nav-item nav-link"
-                id="nav-variables62-tab"
+                id="nav-variables64-tab"
                 data-toggle="tab"
-                href="#nav-variables62" role="tab" aria-controls="nav-variables62" aria-selected="false"
+                href="#nav-variables64" role="tab" aria-controls="nav-variables64" aria-selected="false"
             >
                 Variables
             </a>
         </div>
     </nav>
     <div class="tab-content p-3 bg-white" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-rendered62" role="tabpanel" aria-labelledby="nav-rendered62-tab">
+        <div class="tab-pane fade show active" id="nav-rendered64" role="tabpanel" aria-labelledby="nav-rendered64-tab">
             <div data-region="rendered">
             </div>
         </div>
-        <div class="tab-pane fade" id="nav-template62" role="tabpanel" aria-labelledby="nav-template62-tab">
+        <div class="tab-pane fade" id="nav-template64" role="tabpanel" aria-labelledby="nav-template64-tab">
             <pre data-region="source" class="mb3">
             </pre>
         </div>
-        <div class="tab-pane fade" id="nav-variables62" role="tabpanel" aria-labelledby="nav-variables62-tab">
+        <div class="tab-pane fade" id="nav-variables64" role="tabpanel" aria-labelledby="nav-variables64-tab">
             <pre data-region="configinner" class="mb3"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#111">{</span>
     <span style="color:#d88200">&#34;courses&#34;</span><span style="color:#f92672">:</span> <span style="color:#111">[</span>
         <span style="color:#111">{</span>

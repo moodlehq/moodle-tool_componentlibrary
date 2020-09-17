@@ -17,7 +17,7 @@
 <li class="parent"><a href="#" data-toggle="collapse" data-target="#collapseb48e793ecd64f381beae053e81ea80eb" aria-expanded="true" aria-controls="collapseb48e793ecd64f381beae053e81ea80eb">Getting Started</a>
   
 <ul id="collapseb48e793ecd64f381beae053e81ea80eb" class="sub-menu collapse show">
-<li class="active"><a href="http://MOODLEROOT/moodle/getting-started/introduction/">Introduction</a></li>
+<li class="active"><a href="http://MOODLEROOT/moodle/getting-started/introduction/">The Moodle UI component library</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/getting-started/adding-pages/">Adding pages</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/getting-started/adding-images/">Adding images</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/getting-started/syntax-highlighting/">Syntax highlighting</a></li>
@@ -31,15 +31,16 @@
 <li class=""><a href="#" data-toggle="collapse" data-target="#collapsee74fae0ce25d18ab8db372c1fbe8aff4" aria-expanded="true" aria-controls="collapsee74fae0ce25d18ab8db372c1fbe8aff4">Moodle Components</a>
   
 <ul id="collapsee74fae0ce25d18ab8db372c1fbe8aff4" class="sub-menu collapse ">
-<li class=""><a href="http://MOODLEROOT/moodle/components/introduction/">Introduction</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/introduction/">A Introduction</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/activity/">Activity</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/buttons/">Buttons</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/components/navigation/">Navigation</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/coursecards/">Course cards</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/components/search-input/">Search Input</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/form-elements/">Form elements</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/footer/">Footer</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/components/moodle-icons/">Moodle icons</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/components/stack/">Stack icons</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/moodle-icons/">Icons</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/navigation/">Navigation</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/notification/">Notification</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/search-input/">Search Input</a></li>
 </ul>
   
 </li>
@@ -206,22 +207,29 @@
         
         <div class="col-md-9 col-lg-10 py-md-3 pl-md-5 pr-md-5 bd-content">
         
-            <h1 class="bd-title" id="content">Introduction</h1>
+            <h1 class="bd-title" id="content">The Moodle UI component library</h1>
             <p class="bd-lead"></p>
 
             
 
             
 
-            <h2 id="what-are-moodle-ui-components">What are Moodle UI components?</h2>
-<p>UI components are used to represent distinct UI elements, such as tables, buttons, dialogs, and others.
+            <style>
+  .bd-title {
+    display: none;
+  }
+</style>
+<div class="d-flex">
+  <div class="w-50 ml-auto mr-auto">
+
+<img src="MOODLEIMAGEDIR/moodle/getting-started/introduction/logo.png" class="img-fluid" alt="The Moodle logo">
+</div>
+</div>
+<h2 id="the-moodle-ui-component-library">The Moodle UI Component library</h2>
+<p>The Moodle UI component library is the central location for documenting frequently used User Interface components used in Moodle. Moodle UI components are used to represent distinct UI elements, such as tables, buttons, dialogs, and others.
 The main purpose of this library is to provide documentation for designers and developers when doing frontend development of new features.</p>
-<h2 id="about-this-library">About this library</h2>
-<p>The Moodle UI component library has been developed to be the central location for documenting frequently used components used in Moodle.</p>
-<p>You can use it to find information on the available reusable components, where they can be found in Moodle core code and how to use them.</p>
-<p>Using this library allows you to creat user interfaces more efficiently, it is a tool for visual designers, front-end developers, ux developers and anybody creating core Moodle code or Moodle extensions.</p>
-<p>Whenever a new Moodle feature is created or updated the building blocks for the UI of the feature should be documented in this library. By doing so the Library will grow and it will become easier to re-use or reference repeating patterns and help the UI become more consistent.</p>
-<p>Working on this library should be fun. The hard work of building it has already been done and the tools have been created to allow you to easily add or edit components. It will allow you to test them on your custom Moodle theme, share them and test them while they are added.</p>
+<p>This library allows you to create user interfaces more efficiently, it is a tool for visual designers, front-end developers, ux developers and anybody creating core Moodle code or Moodle extensions.</p>
+<p>Whenever a new Moodle feature is created or updated the building blocks for the UI of the feature should be documented in this library.</p>
 <h2 id="bootstrap-docs">Bootstrap docs</h2>
 <p>A large part of this library contains information about <a href="http://getbootstrap.com">Bootstrap</a> components which are shipped with every Moodle installation. Bootstrap contains a lot of useful components and utilities which can safely be used for frontend development. For example, instead of adding custom CSS to add some padding in a box you should really look at the <a href="../../../moodle-3.9/utilities/spacing">spacing</a> utilities from Bootstrap instead.</p>
 <h2 id="build-with-hugo">Build with Hugo</h2>

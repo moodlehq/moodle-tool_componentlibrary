@@ -4,6 +4,10 @@ title: "Notification"
 description: "Moodle notifications"
 date: 2020-02-04T09:40:32+01:00
 draft: false
+weight: 50
+tags:
+- Available
+- Needs review
 ---
 
 {{< example show_markup="false">}}

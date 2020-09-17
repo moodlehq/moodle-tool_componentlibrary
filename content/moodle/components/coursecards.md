@@ -5,6 +5,8 @@ description: "Course cards are easy to access clickable components used in colle
 date: 2020-01-14T16:32:24+01:00
 draft: false
 weight: 20
+tags:
+- Available
 ---
 
 {{< mustachejson template="core_course/view-cards" show_markup="false">}}
@@ -23,7 +25,7 @@ weight: 20
 }
 {{< /mustachejson >}}
 
-## Overview
+## How to use course cards
 
 Course cards are rendered using a shared template found in
 **course/templates/coursecard.mustache**. They are loaded throught JavaScript or PHP on pages like the user dashboard.

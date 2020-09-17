@@ -29,6 +29,10 @@
     <lastmod>2020-02-04T09:40:32+01:00</lastmod>
   </url>
   <url>
+    <loc>http://MOODLEROOT/moodle/components/activity/</loc>
+    <lastmod>2020-01-28T10:13:29+01:00</lastmod>
+  </url>
+  <url>
     <loc>http://MOODLEROOT/moodle/themes/positioning/</loc>
     <lastmod>2020-02-04T09:40:32+01:00</lastmod>
   </url>
@@ -55,10 +59,6 @@
   <url>
     <loc>http://MOODLEROOT/bootstrap/</loc>
     <lastmod>2017-10-17T15:26:15+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://MOODLEROOT/moodle/components/navigation/</loc>
-    <lastmod>2020-09-07T16:32:24+01:00</lastmod>
   </url>
   <url>
     <loc>http://MOODLEROOT/moodle/components/</loc>
@@ -101,8 +101,8 @@
     <lastmod>2020-02-03T15:26:15+00:00</lastmod>
   </url>
   <url>
-    <loc>http://MOODLEROOT/moodle/components/search-input/</loc>
-    <lastmod>2020-08-26T16:32:24+01:00</lastmod>
+    <loc>http://MOODLEROOT/moodle/components/form-elements/</loc>
+    <lastmod>2020-01-14T16:32:24+01:00</lastmod>
   </url>
   <url>
     <loc>http://MOODLEROOT/moodle/components/footer/</loc>
@@ -113,16 +113,24 @@
     <lastmod>2020-02-04T09:40:32+01:00</lastmod>
   </url>
   <url>
-    <loc>http://MOODLEROOT/moodle/components/stack/</loc>
-    <lastmod>2020-02-04T09:40:32+01:00</lastmod>
-  </url>
-  <url>
     <loc>http://MOODLEROOT/moodle/accessibility/</loc>
     <lastmod>2020-02-03T15:26:15+00:00</lastmod>
   </url>
   <url>
     <loc>http://MOODLEROOT/moodle/themes/</loc>
     <lastmod>2020-02-03T15:26:15+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://MOODLEROOT/moodle/components/navigation/</loc>
+    <lastmod>2020-09-07T16:32:24+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://MOODLEROOT/moodle/components/notification/</loc>
+    <lastmod>2020-02-04T09:40:32+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://MOODLEROOT/moodle/components/search-input/</loc>
+    <lastmod>2020-08-26T16:32:24+01:00</lastmod>
   </url>
   <url>
     <loc>http://MOODLEROOT/</loc>
@@ -142,10 +150,6 @@
   </url>
   <url>
     <loc>http://MOODLEROOT/moodle/accessibility/keyboard-access/</loc>
-    <lastmod>2020-02-04T09:40:32+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://MOODLEROOT/moodle/components/notification/</loc>
     <lastmod>2020-02-04T09:40:32+01:00</lastmod>
   </url>
   <url>

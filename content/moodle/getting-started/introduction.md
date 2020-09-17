@@ -1,29 +1,30 @@
 ---
 layout: docs
-title: "Introduction"
+title: "The Moodle UI component library"
 date: 2020-01-28T10:13:29+01:00
 group: moodle-components
 draft: false
 weight: 1
 ---
+<style>
+  .bd-title {
+    display: none;
+  }
+</style>
+<div class="d-flex">
+  <div class="w-50 ml-auto mr-auto">
+{{< image "logo.png" "The Moodle logo">}}
+</div>
+</div>
 
-## What are Moodle UI components?
+## The Moodle UI Component library
 
-
-UI components are used to represent distinct UI elements, such as tables, buttons, dialogs, and others.
+The Moodle UI component library is the central location for documenting frequently used User Interface components used in Moodle. Moodle UI components are used to represent distinct UI elements, such as tables, buttons, dialogs, and others.
 The main purpose of this library is to provide documentation for designers and developers when doing frontend development of new features.
 
-## About this library
+This library allows you to create user interfaces more efficiently, it is a tool for visual designers, front-end developers, ux developers and anybody creating core Moodle code or Moodle extensions.
 
-The Moodle UI component library has been developed to be the central location for documenting frequently used components used in Moodle.
-
-You can use it to find information on the available reusable components, where they can be found in Moodle core code and how to use them.
-
-Using this library allows you to creat user interfaces more efficiently, it is a tool for visual designers, front-end developers, ux developers and anybody creating core Moodle code or Moodle extensions.
-
-Whenever a new Moodle feature is created or updated the building blocks for the UI of the feature should be documented in this library. By doing so the Library will grow and it will become easier to re-use or reference repeating patterns and help the UI become more consistent.
-
-Working on this library should be fun. The hard work of building it has already been done and the tools have been created to allow you to easily add or edit components. It will allow you to test them on your custom Moodle theme, share them and test them while they are added.
+Whenever a new Moodle feature is created or updated the building blocks for the UI of the feature should be documented in this library.
 
 ## Bootstrap docs
 

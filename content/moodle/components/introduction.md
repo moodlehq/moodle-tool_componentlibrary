@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: "Introduction"
+title: "A Introduction"
 description: "What are Moodle UI components and when should they be documented?"
 date: 2020-01-28T10:13:29+01:00
 group: moodle-components

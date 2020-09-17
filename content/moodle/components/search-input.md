@@ -4,9 +4,11 @@ title: "Search Input"
 description: "find items in a collection of data"
 date: 2020-08-26T16:32:24+01:00
 draft: false
-weight: 40
+weight: 60
+tags:
+- In development
+- MDL-69454
 ---
-
 
 <style>
 .simplesearchform .btn {

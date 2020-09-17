@@ -3,10 +3,13 @@ layout: docs
 title: "Form elements"
 description: "Custom form elements for Moodle"
 date: 2020-01-14T16:32:24+01:00
-draft: true
+draft: false
+weight: 30
+tags:
+- In development
 ---
 
-## Moodle forms
+## How to use moodle forms
 
 Forms are constructed using lib/formslib.php. Using the addElement methods in php a set of different form element types can be added to a form. For more info visit the [Moodledocs](https://docs.moodle.org/dev/lib/formslib.php_Form_Definition) page for forms
 

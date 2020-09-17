@@ -4,7 +4,9 @@ title: "Navigation"
 description: "Moodle's navigation components"
 date: 2020-09-07T16:32:24+01:00
 draft: false
-weight: 20
+weight: 50
+tags:
+- In development
 ---
 
 {{< image "navigation.png" "Moodle levels of navigation">}}
