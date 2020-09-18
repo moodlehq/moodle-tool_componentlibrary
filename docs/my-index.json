@@ -639,7 +639,7 @@
     {
         "uri": "/moodle/themes/colours",
         "title": "Colours",
-        "content": "\nThe Moodle colour scheme:\n\n{{}}\n\n{{}}\n{{- range (index $.Site.Data \"colours\") }}\n\n     {{ .name }}\n\n{{- end -}}\n{{}}\n\n{{}}\n\nThese colours are used throughout Moodle in text, buttons\n\n{{}}\n\nBadges\n\nButtons\n\n  Borders\n\n{{}}\n\nCustomizing moodle colours\n\nUse the $theme-colours Scss array to customize colours in theme/boost/scss/preset/default.scss.\n\n{{}}\n$theme-colors: map-merge((\n    primary: #1177d1,\n    secondary: #ced4da,\n    success: #398439,\n    info: #5bc0de,\n    warning: #f0ad4e,\n    danger: #d43f3a,\n    light: #f8f9fa,\n    dark: #373a3c\n), $theme-colors);\n{{}}\n",
+        "content": "\nThe Moodle colour scheme:\n\n{{}}\n\n{{}}\n{{- range (index $.Site.Data \"colours\") }}\n\n     {{ .name }}\n\n{{- end -}}\n{{}}\n\n{{}}\n\nGrays\n\nThese colours are used throughout Moodle in text, buttons\n\n{{}}\n\nBadges\n\nButtons\n\n  Borders\n\n{{}}\n\nCustomizing moodle colours\n\nUse the $theme-colours Scss array to customize colours in theme/boost/scss/preset/default.scss.\n\n{{}}\n$theme-colors: map-merge((\n    primary: #1177d1,\n    secondary: #ced4da,\n    success: #398439,\n    info: #5bc0de,\n    warning: #f0ad4e,\n    danger: #d43f3a,\n    light: #f8f9fa,\n    dark: #373a3c\n), $theme-colors);\n{{}}\n",
         "tags": []
     },
     {

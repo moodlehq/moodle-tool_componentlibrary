@@ -26,11 +26,12 @@ weight: 1
 
 ## Grays
 
+{{< example show_markup=false >}}
 <div class="card-deck">
 {{< colors.inline >}}
 {{- range (index $.Site.Data "grays") }}
   <div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
-    <div class="card-body bg-{{ .name }} w-100" style="height: 100px; background-color: {{ .hex }};">
+    <div class="card-body bg-{{ .name }} w-100" style="height: 100px; background-color: {{ .hex }}">
     </div>
     <div class="card-footer w-100">
      <span>{{ .name }}</span>
@@ -38,6 +39,13 @@ weight: 1
   </div>
 {{- end -}}
 {{< /colors.inline >}}
+<div class="card mb-2 justify-content-center align-items-center d-flex" style="flex: 0 0 20%; height: 150px">
+    <div class="card-body bg-eee w-100" style="height: 100px; background-color: #eee">
+    </div>
+    <div class="card-footer w-100">
+     <span>#eee</span>
+   </div>
+  </div>
 </div>
 {{< /example >}}
 
