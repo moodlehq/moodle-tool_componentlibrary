@@ -21,7 +21,7 @@
  * @copyright  2020 Bas Brands <bas@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-define(['jquery', 'theme_boost/tooltip', 'tool_componentlibrary/build/clipboard'],
+define(['jquery', 'theme_boost/bootstrap/tooltip', 'tool_componentlibrary/build/clipboard'],
 
 function($, Tooltip, ClipboardJS) {
 
