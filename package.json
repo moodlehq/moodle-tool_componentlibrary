@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all --parallel docs-watch livereload docs-index css-watch",
+    "build": "npm-run-all --parallel docs-build css-compile --sequential docs-index",
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 hugo/scss/docs.scss -o hugo/dist/css/",
     "css-watch": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 hugo/scss/docs.scss -o hugo/dist/css/ -w hugo/scss",
     "docs-build": "hugo --cleanDestinationDir",
