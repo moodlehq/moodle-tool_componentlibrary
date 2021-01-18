@@ -56,6 +56,8 @@ if (!$admin) {
     die;
 }
 
+$CFG->themedesignermode = true;
+
 $output = $PAGE->get_renderer('core');
 $isfontawesome = \core\output\icon_system::instance(\core\output\icon_system::FONTAWESOME);
 $isstandard = \core\output\icon_system::instance(\core\output\icon_system::STANDARD);
