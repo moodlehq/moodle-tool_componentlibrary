@@ -53,7 +53,7 @@ Bas@ /var/www/moodle/admin/tool/componentlibrary (master) $ npm run start
 
 
 > moodle-componentlibrary@1.0.0 docs-index /private/var/www/moodles/moodle/moodle/admin/tool/componentlibrary
-> hugo --cleanDestinationDir & hugo-lunr-indexer -i "content/**" -o docs/my-index.json -l "yaml" -d "---"
+> hugo --cleanDestinationDir & hugo-lunr-indexer -i "content/**" -o hugo/site/data/my-index.json -l "yaml" -d "---"
 
 Starting LiveReload v0.9.1 for /private/var/www/moodles/moodle/moodle/admin/tool/componentlibrary on port 35729.
 Total in 56 ms
