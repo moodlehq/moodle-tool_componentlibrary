@@ -41,10 +41,26 @@ $section = clean_param($args[2], PARAM_TEXT);
 $docsdir = '/admin/tool/componentlibrary/docs/';
 $cssfile = '/admin/tool/componentlibrary/hugo/dist/css/docs.css';
 $docspage = '';
-if ($docs == 'bootstrap') {
-    $docspage = $CFG->dirroot . $docsdir . 'bootstrap/' . $folder . '/' . $section . '/index.html';
-} else if ($docs == 'moodle') {
-    $docspage = $CFG->dirroot . $docsdir . 'moodle/' . $folder . '/' . $section . '/index.html';
+
+$validroots = [
+    'bootstrap',
+    'library',
+    'moodle',
+];
+
+if (in_array($docs, $validroots)) {
+    $docspage = implode(
+        '/',
+        [
+            $CFG->dirroot,
+            $docsdir,
+            $docs,
+            $folder,
+            $section,
+            'index.html',
+
+        ]
+    );
 }
 
 $PAGE->set_pagelayout('embedded');

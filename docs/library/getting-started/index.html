@@ -10,28 +10,15 @@
 <nav class="docs-sidebar" aria-label="Component Library Navigation">
 <ul>
 
-<li class="parent"><a href="#" data-toggle="collapse" data-target="#collapse653a408ab95e41dcde1c00945f6c01a9" aria-expanded="true" aria-controls="collapse653a408ab95e41dcde1c00945f6c01a9">Moodle</a>
+<li class=""><a href="#" data-toggle="collapse" data-target="#collapse653a408ab95e41dcde1c00945f6c01a9" aria-expanded="true" aria-controls="collapse653a408ab95e41dcde1c00945f6c01a9">Moodle</a>
   
-<ul id="collapse653a408ab95e41dcde1c00945f6c01a9" class="sub-menu collapse show">
-
-<li class="parent"><a href="#" data-toggle="collapse" data-target="#collapseb48e793ecd64f381beae053e81ea80eb" aria-expanded="true" aria-controls="collapseb48e793ecd64f381beae053e81ea80eb">Getting Started</a>
-  
-<ul id="collapseb48e793ecd64f381beae053e81ea80eb" class="sub-menu collapse show">
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/introduction/">The Moodle UI component library</a></li>
-<li class="active"><a href="http://MOODLEROOT/moodle/getting-started/adding-pages/">Adding pages</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/adding-images/">Adding images</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/syntax-highlighting/">Syntax highlighting</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/moodle-javascript/">Moodle JavaScript</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/moodle-templates/">Moodle templates</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/component-library-backend/">Component Library Backend</a></li>
-</ul>
-  
-</li>
+<ul id="collapse653a408ab95e41dcde1c00945f6c01a9" class="sub-menu collapse ">
+<li class=""><a href="http://MOODLEROOT/moodle/getting-started/">Getting started</a></li>
 
 <li class=""><a href="#" data-toggle="collapse" data-target="#collapsee74fae0ce25d18ab8db372c1fbe8aff4" aria-expanded="true" aria-controls="collapsee74fae0ce25d18ab8db372c1fbe8aff4">Moodle Components</a>
   
 <ul id="collapsee74fae0ce25d18ab8db372c1fbe8aff4" class="sub-menu collapse ">
-<li class=""><a href="http://MOODLEROOT/moodle/components/introduction/">A Introduction</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/introduction/">Introduction</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/activity/">Activity</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/buttons/">Buttons</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/coursecards/">Course cards</a></li>
@@ -199,6 +186,28 @@
 </ul>
   
 </li>
+
+<li class="parent"><a href="#" data-toggle="collapse" data-target="#collapse9ba5be266a0aa16e270533121dec231a" aria-expanded="true" aria-controls="collapse9ba5be266a0aa16e270533121dec231a">Component library</a>
+  
+<ul id="collapse9ba5be266a0aa16e270533121dec231a" class="sub-menu collapse show">
+<li class="active"><a href="http://MOODLEROOT/library/getting-started/">Getting started</a></li>
+<li class=""><a href="http://MOODLEROOT/library/adding-pages/">Adding pages</a></li>
+<li class=""><a href="http://MOODLEROOT/library/adding-images/">Adding images</a></li>
+<li class=""><a href="http://MOODLEROOT/library/syntax-highlighting/">Syntax highlighting</a></li>
+
+<li class=""><a href="#" data-toggle="collapse" data-target="#collapse73a68f46ab815cd01186f0869327617f" aria-expanded="true" aria-controls="collapse73a68f46ab815cd01186f0869327617f">Content types</a>
+  
+<ul id="collapse73a68f46ab815cd01186f0869327617f" class="sub-menu collapse ">
+<li class=""><a href="http://MOODLEROOT/library/types/components/">Moodle UI Components</a></li>
+</ul>
+  
+</li>
+<li class=""><a href="http://MOODLEROOT/library/moodle-javascript/">Moodle JavaScript</a></li>
+<li class=""><a href="http://MOODLEROOT/library/moodle-templates/">Moodle templates</a></li>
+<li class=""><a href="http://MOODLEROOT/library/component-library-backend/">Component Library Backend</a></li>
+</ul>
+  
+</li>
 </ul>
 </nav>
 
@@ -207,67 +216,85 @@
         
         <div class="col-md-9 col-lg-10 py-md-3 pl-md-5 pr-md-5 bd-content">
         
-            <h1 class="bd-title" id="content">Adding pages</h1>
+            <h1 class="bd-title" id="content">Getting started</h1>
             <p class="bd-lead"></p>
 
             
 
             
 
-            <h2 id="adding-or-editing-a-page-in-the-component-library">Adding or editing a page in the component library</h2>
-<p>In this step-by-step guide you will create a new page called Breadcrumb navigation and compile it from a markdown text file to a HTML page in the component library.</p>
-<p>To add a page to the component library on your local machine navigate open your editor or file manager and create a new markdown text file in folder /content/moodle/components/breadcrumbs.md</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">└── content
-    └── moodle
-       └── components
-          └── breadcrumbs.md
-</code></pre></div><p>Open the file in your favourite editor and start it with some metadata, we call this syntax <a href="https://gohugo.io/content-management/front-matter/">frontmatter</a>.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">---
-layout: docs
-title: &#34;Breadcrumb navigation&#34;
-date: 2020-03-02T10:13:29+01:00
-draft: false
----
-</code></pre></div><p>Make sure you add these characters <code>---</code> before and after your metadata. You can change the title and date to match your document.</p>
-<h2 id="run-the-component-library-npm-task">Run the component library NPM task.</h2>
-<p>In your terminal run the command <code>npm install</code> and then <code>npm run start</code> in the /admin/tool/componentlibrary folder to. This will start the watcher and livereload deamons that will build the HTML pages for the markdown text file you are writing. If you do not have npm installed on your system please visit <a href="https://www.npmjs.com/get-npm">npmjs.com</a> to learn how to get a working setup.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Bas@ /var/www/moodle/admin/tool/componentlibrary (master) $ npm run start
+            <style>
+  .bd-title {
+    display: none;
+  }
+</style>
+<div class="d-flex">
+  <div class="w-50 ml-auto mr-auto">
 
-&gt; moodle-componentlibrary@1.0.0 start /private/var/www/moodles/moodle/moodle/admin/tool/componentlibrary
-&gt; npm-run-all --parallel docs-watch livereload docs-index
-
-
-&gt; moodle-componentlibrary@1.0.0 livereload /private/var/www/moodles/moodle/moodle/admin/tool/componentlibrary
-&gt; livereload
-
-
-&gt; moodle-componentlibrary@1.0.0 docs-watch /private/var/www/moodles/moodle/moodle/admin/tool/componentlibrary
-&gt; hugo -w
-
-
-&gt; moodle-componentlibrary@1.0.0 docs-index /private/var/www/moodles/moodle/moodle/admin/tool/componentlibrary
-&gt; hugo --cleanDestinationDir &amp; hugo-lunr-indexer -i &#34;content/**&#34; -o docs/my-index.json -l &#34;yaml&#34; -d &#34;---&#34;
-
-Starting LiveReload v0.9.1 for /private/var/www/moodles/moodle/moodle/admin/tool/componentlibrary on port 35729.
-Total in 56 ms
-Error: Error copying static files: unlinkat /var/www/moodle/admin/tool/componentlibrary/docs/bootstrap/utilities: directory not empty
-
-                   | EN  
-+------------------+----+
-  Pages            | 97  
-  Paginator pages  |  0  
-  Non-page files   | 11  
-  Static files     | 14  
-  Processed images |  0  
-  Aliases          |  7  
-  Sitemaps         |  1  
-  Cleaned          |  0  
-
-Watching for changes in /var/www/moodle/admin/tool/componentlibrary/{content,hugo}
-Press Ctrl+C to stop
-Watching for config changes in /var/www/moodle/admin/tool/componentlibrary/config.yml
-</code></pre></div><p>Once the watcher and livereload deamons are running you can open your browser and navigate to: <strong>http://yourmoodlehost/admin/tool/componentlibrary/</strong></p>
-<p>You should be able to find your new page in the page navigation. Now all you need to do is start editing your breadcrumb.md file and save your changes. The npm daemons will notice the change, rebuild the HTMl and reload your browser so you can see the changes on your page directly.</p>
+<img src="MOODLEIMAGEDIR/library/getting-started/logo.png" class="img-fluid" alt="The Moodle logo">
+</div>
+</div>
+<h2 id="the-moodle-ui-component-library">The Moodle UI Component library</h2>
+<p>The Moodle UI component library is the central location for documenting frequently used User Interface components used in Moodle. Moodle UI components are used to represent distinct UI elements, such as tables, buttons, dialogs, and others.
+The main purpose of this library is to provide documentation for designers and developers when doing frontend development of new features.</p>
+<p>This library allows you to create user interfaces more efficiently, it is a tool for visual designers, front-end developers, ux developers and anybody creating core Moodle code or Moodle extensions.</p>
+<p>Whenever a new Moodle feature is created or updated the building blocks for the UI of the feature should be documented in this library.</p>
+<h2 id="bootstrap-docs">Bootstrap docs</h2>
+<p>A large part of this library contains information about <a href="http://getbootstrap.com">Bootstrap</a> components which are shipped with every Moodle installation. Bootstrap contains a lot of useful components and utilities which can safely be used for frontend development. For example, instead of adding custom CSS to add some padding in a box you should really look at the <a href="../../moodle-3.9/utilities/spacing">spacing</a> utilities from Bootstrap instead.</p>
+<h2 id="build-with-hugo">Build with Hugo</h2>
+<p>This page and all other pages in the Component library are build using <a href="http:/gohugo.io">Hugo</a>, a static site generator that can turn documentation written in Markdown into nice pages like the one you are looking at right now.</p>
+<h2 id="using-npm-scripts">Using npm scripts</h2>
+<p>The package.json includes numerous tasks. Run <code>npm run</code> to see all the npm scripts in your terminal. <strong>Primary tasks include:</strong></p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>npm run start</code>
+      </td>
+      <td>
+        Run all scripts to create docs, build css, build the search index.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>npm run docs-build</code>
+      </td>
+      <td>
+        Rebuild all of the docs pages in admin/tool/componentlibrary/docs
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>npm run docs-watch</code>
+      </td>
+      <td>
+       Build all docs pages and keep watching for changes in admin/tool/componentlibrary/content
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>npm run css-compile</code>
+      </td>
+      <td>
+        Compile all scss for these docs pages.
+      </td>
+    </tr>
+        <tr>
+      <td>
+        <code>npm run index</code>
+      </td>
+      <td>
+        Index all pages for the search feature
+      </td>
+    </tr>
+  </tbody>
+</table>
 
         </div>
         

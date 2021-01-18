@@ -1,8 +1,8 @@
 ---
 layout: docs
-title: "The Moodle UI component library"
+title: "Getting started"
 date: 2020-01-28T10:13:29+01:00
-group: moodle-components
+group: library
 draft: false
 weight: 1
 ---
