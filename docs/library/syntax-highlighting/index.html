@@ -10,28 +10,15 @@
 <nav class="docs-sidebar" aria-label="Component Library Navigation">
 <ul>
 
-<li class="parent"><a href="#" data-toggle="collapse" data-target="#collapse653a408ab95e41dcde1c00945f6c01a9" aria-expanded="true" aria-controls="collapse653a408ab95e41dcde1c00945f6c01a9">Moodle</a>
+<li class=""><a href="#" data-toggle="collapse" data-target="#collapse653a408ab95e41dcde1c00945f6c01a9" aria-expanded="true" aria-controls="collapse653a408ab95e41dcde1c00945f6c01a9">Moodle</a>
   
-<ul id="collapse653a408ab95e41dcde1c00945f6c01a9" class="sub-menu collapse show">
-
-<li class="parent"><a href="#" data-toggle="collapse" data-target="#collapseb48e793ecd64f381beae053e81ea80eb" aria-expanded="true" aria-controls="collapseb48e793ecd64f381beae053e81ea80eb">Getting Started</a>
-  
-<ul id="collapseb48e793ecd64f381beae053e81ea80eb" class="sub-menu collapse show">
-<li class="active"><a href="http://MOODLEROOT/moodle/getting-started/introduction/">The Moodle UI component library</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/adding-pages/">Adding pages</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/adding-images/">Adding images</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/syntax-highlighting/">Syntax highlighting</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/moodle-javascript/">Moodle JavaScript</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/moodle-templates/">Moodle templates</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/component-library-backend/">Component Library Backend</a></li>
-</ul>
-  
-</li>
+<ul id="collapse653a408ab95e41dcde1c00945f6c01a9" class="sub-menu collapse ">
+<li class=""><a href="http://MOODLEROOT/moodle/getting-started/">Getting started</a></li>
 
 <li class=""><a href="#" data-toggle="collapse" data-target="#collapsee74fae0ce25d18ab8db372c1fbe8aff4" aria-expanded="true" aria-controls="collapsee74fae0ce25d18ab8db372c1fbe8aff4">Moodle Components</a>
   
 <ul id="collapsee74fae0ce25d18ab8db372c1fbe8aff4" class="sub-menu collapse ">
-<li class=""><a href="http://MOODLEROOT/moodle/components/introduction/">A Introduction</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/introduction/">Introduction</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/activity/">Activity</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/buttons/">Buttons</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/coursecards/">Course cards</a></li>
@@ -199,6 +186,28 @@
 </ul>
   
 </li>
+
+<li class="parent"><a href="#" data-toggle="collapse" data-target="#collapse9ba5be266a0aa16e270533121dec231a" aria-expanded="true" aria-controls="collapse9ba5be266a0aa16e270533121dec231a">Component library</a>
+  
+<ul id="collapse9ba5be266a0aa16e270533121dec231a" class="sub-menu collapse show">
+<li class=""><a href="http://MOODLEROOT/library/getting-started/">Getting started</a></li>
+<li class=""><a href="http://MOODLEROOT/library/adding-pages/">Adding pages</a></li>
+<li class=""><a href="http://MOODLEROOT/library/adding-images/">Adding images</a></li>
+<li class="active"><a href="http://MOODLEROOT/library/syntax-highlighting/">Syntax highlighting</a></li>
+
+<li class=""><a href="#" data-toggle="collapse" data-target="#collapse73a68f46ab815cd01186f0869327617f" aria-expanded="true" aria-controls="collapse73a68f46ab815cd01186f0869327617f">Content types</a>
+  
+<ul id="collapse73a68f46ab815cd01186f0869327617f" class="sub-menu collapse ">
+<li class=""><a href="http://MOODLEROOT/library/types/components/">Moodle UI Components</a></li>
+</ul>
+  
+</li>
+<li class=""><a href="http://MOODLEROOT/library/moodle-javascript/">Moodle JavaScript</a></li>
+<li class=""><a href="http://MOODLEROOT/library/moodle-templates/">Moodle templates</a></li>
+<li class=""><a href="http://MOODLEROOT/library/component-library-backend/">Component Library Backend</a></li>
+</ul>
+  
+</li>
 </ul>
 </nav>
 
@@ -207,93 +216,84 @@
         
         <div class="col-md-9 col-lg-10 py-md-3 pl-md-5 pr-md-5 bd-content">
         
-            <h1 class="bd-title" id="content">The Moodle UI component library</h1>
-            <p class="bd-lead"></p>
+            <h1 class="bd-title" id="content">Syntax highlighting</h1>
+            <p class="bd-lead">Use Hugo shortcodes for Syntax highlighting.</p>
 
             
 
             
 
-            <style>
-  .bd-title {
-    display: none;
-  }
-</style>
-<div class="d-flex">
-  <div class="w-50 ml-auto mr-auto">
-
-<img src="MOODLEIMAGEDIR/moodle/getting-started/introduction/logo.png" class="img-fluid" alt="The Moodle logo">
+            <h2 id="using-shortcodes-for-syntax">Using Shortcodes for syntax</h2>
+<p>Using this (shortcode) syntax you can higlight programming syntax in the component library</p>
+<h2 id="html-highlighting">HTML highlighting</h2>
+<p>Syntax for markdown (.md) files:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">{{&lt; highlight html &gt;}}
+&lt;div class=&#34;myclass&#34;&gt;
+  This is an example.
+&lt;/div&gt;
+{{&lt; /highlight  &gt;}}
+</code></pre></div><p>Rendered result on this page:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;myclass&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+	This is an example.
+<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span></code></pre></div>
+<h2 id="php-shortcode">PHP shortcode</h2>
+<p>Syntax for markdown (.md) files:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">{{&lt; php &gt;}}
+  $mform-&gt;addElement(&#39;passwordunmask&#39;, &#39;password&#39;, get_string(&#39;label&#39;), $attributes);
+{{&lt; /php  &gt;}}
+</code></pre></div><p>Rendered result on this page:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span> 
+	<span style="color:#111">$mform</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">addElement</span><span style="color:#111">(</span><span style="color:#d88200">&#39;passwordunmask&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;password&#39;</span><span style="color:#111">,</span> <span style="color:#75af00">get_string</span><span style="color:#111">(</span><span style="color:#d88200">&#39;label&#39;</span><span style="color:#111">),</span> <span style="color:#111">$attributes</span><span style="color:#111">);</span>
+ <span style="color:#75715e">?&gt;</span>
+</code></pre></div>
+<h2 id="highlight-shortcode">Highlight shortcode</h2>
+<p>Syntax for markdown (.md) files:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">{{&lt; highlight js &gt;}}
+var config = {
+    test: null,
+    selector: &#39;[data-drag-type=move]&#39;
+};
+{{&lt; /highlight  &gt;}}
+</code></pre></div><p>Rendered result on this page:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#00a8c8">var</span> <span style="color:#75af00">config</span> <span style="color:#f92672">=</span> <span style="color:#111">{</span>
+    <span style="color:#75af00">test</span><span style="color:#f92672">:</span> <span style="color:#00a8c8">null</span><span style="color:#111">,</span>
+    <span style="color:#75af00">selector</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#39;[data-drag-type=move]&#39;</span>
+<span style="color:#111">}</span><span style="color:#111">;</span>
+</code></pre></div>
+<h2 id="example-shortcode">Example shortcode</h2>
+<p>The example shortcode shows the HTML source with syntax highlighting and renders it on the page. This shortcode takes the following arguments:</p>
+<p>show_markup=&quot;true/false&rdquo;
+show_preview=&quot;true/false&rdquo;</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">{{&lt; example &gt;}}
+&lt;div class=&#34;input-group&#34;&gt;
+  &lt;input type=&#34;text&#34; class=&#34;form-control&#34; placeholder=&#34;Search&#34;&gt;
+  &lt;div class=&#34;input-group-append&#34;&gt;
+    &lt;button class=&#34;btn btn-primary&#34; type=&#34;button&#34;&gt;
+        &lt;i class=&#34;fa fa-search&#34;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+{{#js}}
+    window.console.log(&#39;hello&#39;);
+{{/js}}
+{{&lt; /example  &gt;}}
+</code></pre></div><div class="bd-example">
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="Search">
+  <div class="input-group-append">
+    <button class="btn btn-primary" type="button">
+        <i class="fa fa-search"></i>
+    </button>
+  </div>
 </div>
-</div>
-<h2 id="the-moodle-ui-component-library">The Moodle UI Component library</h2>
-<p>The Moodle UI component library is the central location for documenting frequently used User Interface components used in Moodle. Moodle UI components are used to represent distinct UI elements, such as tables, buttons, dialogs, and others.
-The main purpose of this library is to provide documentation for designers and developers when doing frontend development of new features.</p>
-<p>This library allows you to create user interfaces more efficiently, it is a tool for visual designers, front-end developers, ux developers and anybody creating core Moodle code or Moodle extensions.</p>
-<p>Whenever a new Moodle feature is created or updated the building blocks for the UI of the feature should be documented in this library.</p>
-<h2 id="bootstrap-docs">Bootstrap docs</h2>
-<p>A large part of this library contains information about <a href="http://getbootstrap.com">Bootstrap</a> components which are shipped with every Moodle installation. Bootstrap contains a lot of useful components and utilities which can safely be used for frontend development. For example, instead of adding custom CSS to add some padding in a box you should really look at the <a href="../../../moodle-3.9/utilities/spacing">spacing</a> utilities from Bootstrap instead.</p>
-<h2 id="build-with-hugo">Build with Hugo</h2>
-<p>This page and all other pages in the Component library are build using <a href="http:/gohugo.io">Hugo</a>, a static site generator that can turn documentation written in Markdown into nice pages like the one you are looking at right now.</p>
-<h2 id="using-npm-scripts">Using npm scripts</h2>
-<p>The package.json includes numerous tasks. Run <code>npm run</code> to see all the npm scripts in your terminal. <strong>Primary tasks include:</strong></p>
-<table class="table">
-  <thead>
-    <tr>
-      <th>Task</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <code>npm run build</code>
-      </td>
-      <td>
-        Run all scripts to create docs, build css, build the search index.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>npm run start</code>
-      </td>
-      <td>
-        Run all scripts to create docs, build css, build the search index, and watch for changes.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>npm run docs-build</code>
-      </td>
-      <td>
-        Rebuild all of the docs pages in admin/tool/componentlibrary/docs
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>npm run docs-watch</code>
-      </td>
-      <td>
-       Build all docs pages and keep watching for changes in admin/tool/componentlibrary/content
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>npm run css-compile</code>
-      </td>
-      <td>
-        Compile all scss for these docs pages.
-      </td>
-    </tr>
-        <tr>
-      <td>
-        <code>npm run index</code>
-      </td>
-      <td>
-        Index all pages for the search feature
-      </td>
-    </tr>
-  </tbody>
-</table>
+</div><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;input-group&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+  <span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;text&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;form-control&#34;</span> <span style="color:#75af00">placeholder</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Search&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;input-group-append&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;btn btn-primary&#34;</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span>
+        <span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fa fa-search&#34;</span><span style="color:#111"></span><span style="color:#111">&gt;</span><span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
+    <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
+  <span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+<span style="color:#111">&lt;</span><span style="color:#111">/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span></code></pre></div>
 
         </div>
         

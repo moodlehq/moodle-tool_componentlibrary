@@ -10,28 +10,15 @@
 <nav class="docs-sidebar" aria-label="Component Library Navigation">
 <ul>
 
-<li class="parent"><a href="#" data-toggle="collapse" data-target="#collapse653a408ab95e41dcde1c00945f6c01a9" aria-expanded="true" aria-controls="collapse653a408ab95e41dcde1c00945f6c01a9">Moodle</a>
+<li class=""><a href="#" data-toggle="collapse" data-target="#collapse653a408ab95e41dcde1c00945f6c01a9" aria-expanded="true" aria-controls="collapse653a408ab95e41dcde1c00945f6c01a9">Moodle</a>
   
-<ul id="collapse653a408ab95e41dcde1c00945f6c01a9" class="sub-menu collapse show">
-
-<li class="parent"><a href="#" data-toggle="collapse" data-target="#collapseb48e793ecd64f381beae053e81ea80eb" aria-expanded="true" aria-controls="collapseb48e793ecd64f381beae053e81ea80eb">Getting Started</a>
-  
-<ul id="collapseb48e793ecd64f381beae053e81ea80eb" class="sub-menu collapse show">
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/introduction/">The Moodle UI component library</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/adding-pages/">Adding pages</a></li>
-<li class="active"><a href="http://MOODLEROOT/moodle/getting-started/adding-images/">Adding images</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/syntax-highlighting/">Syntax highlighting</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/moodle-javascript/">Moodle JavaScript</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/moodle-templates/">Moodle templates</a></li>
-<li class=""><a href="http://MOODLEROOT/moodle/getting-started/component-library-backend/">Component Library Backend</a></li>
-</ul>
-  
-</li>
+<ul id="collapse653a408ab95e41dcde1c00945f6c01a9" class="sub-menu collapse ">
+<li class=""><a href="http://MOODLEROOT/moodle/getting-started/">Getting started</a></li>
 
 <li class=""><a href="#" data-toggle="collapse" data-target="#collapsee74fae0ce25d18ab8db372c1fbe8aff4" aria-expanded="true" aria-controls="collapsee74fae0ce25d18ab8db372c1fbe8aff4">Moodle Components</a>
   
 <ul id="collapsee74fae0ce25d18ab8db372c1fbe8aff4" class="sub-menu collapse ">
-<li class=""><a href="http://MOODLEROOT/moodle/components/introduction/">A Introduction</a></li>
+<li class=""><a href="http://MOODLEROOT/moodle/components/introduction/">Introduction</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/activity/">Activity</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/buttons/">Buttons</a></li>
 <li class=""><a href="http://MOODLEROOT/moodle/components/coursecards/">Course cards</a></li>
@@ -199,6 +186,28 @@
 </ul>
   
 </li>
+
+<li class="parent"><a href="#" data-toggle="collapse" data-target="#collapse9ba5be266a0aa16e270533121dec231a" aria-expanded="true" aria-controls="collapse9ba5be266a0aa16e270533121dec231a">Component library</a>
+  
+<ul id="collapse9ba5be266a0aa16e270533121dec231a" class="sub-menu collapse show">
+<li class=""><a href="http://MOODLEROOT/library/getting-started/">Getting started</a></li>
+<li class=""><a href="http://MOODLEROOT/library/adding-pages/">Adding pages</a></li>
+<li class=""><a href="http://MOODLEROOT/library/adding-images/">Adding images</a></li>
+<li class=""><a href="http://MOODLEROOT/library/syntax-highlighting/">Syntax highlighting</a></li>
+
+<li class=""><a href="#" data-toggle="collapse" data-target="#collapse73a68f46ab815cd01186f0869327617f" aria-expanded="true" aria-controls="collapse73a68f46ab815cd01186f0869327617f">Content types</a>
+  
+<ul id="collapse73a68f46ab815cd01186f0869327617f" class="sub-menu collapse ">
+<li class=""><a href="http://MOODLEROOT/library/types/components/">Moodle UI Components</a></li>
+</ul>
+  
+</li>
+<li class=""><a href="http://MOODLEROOT/library/moodle-javascript/">Moodle JavaScript</a></li>
+<li class=""><a href="http://MOODLEROOT/library/moodle-templates/">Moodle templates</a></li>
+<li class="active"><a href="http://MOODLEROOT/library/component-library-backend/">Component Library Backend</a></li>
+</ul>
+  
+</li>
 </ul>
 </nav>
 
@@ -207,40 +216,45 @@
         
         <div class="col-md-9 col-lg-10 py-md-3 pl-md-5 pr-md-5 bd-content">
         
-            <h1 class="bd-title" id="content">Adding images</h1>
+            <h1 class="bd-title" id="content">Component Library Backend</h1>
             <p class="bd-lead"></p>
 
             
 
             
 
-            <h2 id="images">Images</h2>
-<p>Images that need to be show in the component library should be placed in a separate folder for each new page.</p>
-<p>The Markdown file for this page is located here:</p>
+            <h2 id="creating-new-pages">Creating new Pages</h2>
+<p>Pages for the component library are written in <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown</a> and a number of <a href="https://gohugo.io">Hugo</a> powered tools.</p>
+<p>To add a page simply create a Markdown file in content/moodle/[foldername]/</p>
+<h2 id="generating-the-html-versions-of-the-markdown-files">Generating the HTML versions of the Markdown files</h2>
+<p>The HTML pages for this library are created in the docs/ folder of this plugin.</p>
+<p>Please run <code>npm install</code> in the $moodleroot/admin/tools/componentlibrary folder to fetch all requirements for contributing to this library.</p>
+<p>Once all requirements are installed you all you need to do is run <code>npm run start</code> to create the component library pages.</p>
+<h2 id="location-of-markdown-files">Location of Markdown files</h2>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">└── content
-     └── moodle
-         └── getting-started
-            └── adding-images.md
-</code></pre></div><p>To access images for this page create a new folder here.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">└── static
-     └── moodle
-         └── getting-started
-            └── adding-images
-</code></pre></div><p>Place your images in this new folder:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">└── static
-     └── moodle
-         └── getting-started
-            └── adding-images
-                ├── wildebeest-1200.jpg
-                ├── kitten1.png
-                └── kitten2.png
-</code></pre></div><p>To use images use this syntax:</p>
-<p>Syntax for markdown (.md) files:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">{{&lt; image &#34;wildebeest-1200.jpg&#34; &#34;Image of a Wildebeest&#34; &gt;}}
-</code></pre></div><p>Rendered result on this page:</p>
-
-<img src="MOODLEIMAGEDIR/moodle/getting-started/adding-images/wildebeest-1200.jpg" class="img-fluid" alt="Image of a Wildebeest">
-
+    ├─ bootstrap
+    └─ moodle
+</code></pre></div><h2 id="html-output-folder">HTML output folder</h2>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">├── docs
+</code></pre></div><h2 id="page-setup-using-the-hugo-static-site-builder">Page setup using the Hugo static site builder</h2>
+<p>If you have run <code>npm install</code> the hugo static site builder for creating this library is found in your node_modules folder.</p>
+<p>The hugo config file can be found in /admin/tool/componentlibrary/config.yml</p>
+<p>The HTML and CSS for the component library pages are found here:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">└─── hugo
+    ├── archetypes
+    ├── dist
+    ├── scss
+    └─- site
+</code></pre></div><p><code>archetypes</code> are template markdown files used when creating a new hugo page.</p>
+<p><code>dist</code> CSS and JavaScript for use in Hugo pages</p>
+<p><code>scss</code> The SCSS used to generate the docs css for the Component Library.</p>
+<p><code>site</code> The page templates for hugo that include the left hand menu, navbar etc. And the templates to render example code shown in this component library.</p>
+<h2 id="creating-a-new-docs-page">Creating a new docs page</h2>
+<p>Run this command to create a new page called <code>MYDOCSPAGE</code>. Or simply copy one of the existing markdown files in the /content folder, rename it and start editing it.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">./node_modules/hugo-bin/vendor/hugo new -k moodle moodle/testing/MYDOCSPAGE.md
+</code></pre></div><p>Open your new docs page in your editor and start writing your page. When you are done run this command to see the results.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">npm run start
+</code></pre></div>
         </div>
         
     </div>
