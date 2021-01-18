@@ -48,10 +48,18 @@ The package.json includes numerous tasks. Run `npm run` to see all the npm scrip
   <tbody>
     <tr>
       <td>
-        <code>npm run start</code>
+        <code>npm run build</code>
       </td>
       <td>
         Run all scripts to create docs, build css, build the search index.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>npm run start</code>
+      </td>
+      <td>
+        Run all scripts to create docs, build css, build the search index, and watch for changes.
       </td>
     </tr>
     <tr>
