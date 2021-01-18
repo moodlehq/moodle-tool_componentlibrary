@@ -65,7 +65,7 @@ echo $OUTPUT->header();
 $config = new stdClass();
 $config->homeurl = $CFG->wwwroot;
 $config->posturl = $PAGE->url . $relativepath;
-$config->jsonfile = $CFG->wwwroot . '/admin/tool/componentlibrary/docs/my-index.json';
+$config->jsonfile = $CFG->wwwroot . '/admin/tool/componentlibrary/hugo/site/data/my-index.json';
 
 if (get_config('core', 'allowthemechangeonurl')) {
     $themes = core_component::get_plugin_list('theme');

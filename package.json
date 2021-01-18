@@ -10,7 +10,7 @@
     "docs-build": "hugo --cleanDestinationDir",
     "livereload": "livereload",
     "docs-watch": "hugo -w",
-    "docs-index": "hugo-lunr-indexer -i \"content/**\" -o docs/my-index.json -l \"yaml\" -d \"---\""
+    "docs-index": "hugo-lunr-indexer -i \"content/**\" -o hugo/site/data/my-index.json -l \"yaml\" -d \"---\""
   },
   "repository": {
     "type": "git",
