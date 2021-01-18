@@ -93,7 +93,7 @@ if (get_config('core', 'allowthemechangeonurl')) {
 }
 
 if (!file_exists($docspage)) {
-    $firstpage = new moodle_url('/admin/tool/componentlibrary/docspage.php/moodle/getting-started/introduction/');
+    $firstpage = new moodle_url('/admin/tool/componentlibrary/docspage.php/moodle/getting-started/');
     redirect($firstpage);
 }
 

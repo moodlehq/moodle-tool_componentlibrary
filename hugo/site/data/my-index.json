@@ -589,7 +589,7 @@
     {
         "uri": "/moodle/components/navigation",
         "title": "Navigation",
-        "content": "\n{{}}\n\nPrimary Navigation\n\nMoodle's primary navigation is found on every page within the navdrawer and the user menu\n\nSecondary navigation\n\nSecondary navigation is found above the main content of the page, typically course pages and activity pages. The secondary navigation is context aware and changes as you navigate.\n\nWhen a secondary navigation item is clicked only the content part of the page changes\n\nTertiary navigation\n\nTertiary navigation is found within the main content page. it controls the properties of the page and when interacted with opens a modal overlaying the page instead of leaving it\n",
+        "content": "\nPrimary Navigation\n\nMoodle's primary navigation is found on every page within the navdrawer and the user menu\n\nSecondary navigation\n\nSecondary navigation is found above the main content of the page, typically course pages and activity pages. The secondary navigation is context aware and changes as you navigate.\n\nWhen a secondary navigation item is clicked only the content part of the page changes\n\nTertiary navigation\n\nTertiary navigation is found within the main content page. it controls the properties of the page and when interacted with opens a modal overlaying the page instead of leaving it\n",
         "tags": [
             "In development"
         ]

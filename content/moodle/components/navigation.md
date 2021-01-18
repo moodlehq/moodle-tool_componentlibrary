@@ -9,8 +9,6 @@ tags:
 - In development
 ---
 
-{{< image "navigation.png" "Moodle levels of navigation">}}
-
 ## Primary Navigation
 
 Moodle's primary navigation is found on every page within the navdrawer and the user menu
