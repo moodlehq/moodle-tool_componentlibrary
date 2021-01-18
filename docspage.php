@@ -60,8 +60,6 @@ $PAGE->requires->js_call_amd('tool_componentlibrary/jsrunner', 'init');
 $PAGE->requires->js_call_amd('tool_componentlibrary/checkcontrast', 'init');
 $PAGE->requires->js_call_amd('tool_componentlibrary/clipboardwrapper', 'init');
 
-echo $OUTPUT->header();
-
 $config = new stdClass();
 $config->homeurl = $CFG->wwwroot;
 $config->posturl = $PAGE->url . $relativepath;
@@ -78,6 +76,12 @@ if (get_config('core', 'allowthemechangeonurl')) {
     $config->hasthemes = false;
 }
 
+if (!file_exists($docspage)) {
+    $firstpage = new moodle_url('/admin/tool/componentlibrary/docspage.php/moodle/getting-started/introduction/');
+    redirect($firstpage);
+}
+
+echo $OUTPUT->header();
 echo $OUTPUT->render_from_template('tool_componentlibrary/navbar', $config);
 if (!file_exists($CFG->dirroot . $docsdir)) {
     echo $OUTPUT->render_from_template('tool_componentlibrary/rundocs', (object) []);
@@ -85,16 +89,11 @@ if (!file_exists($CFG->dirroot . $docsdir)) {
 }
 
 // Load the content after the footer that contains the JS for this page.
-if (file_exists($docspage)) {
-    $page = file_get_contents($docspage);
-    $page = str_replace('http://MOODLEROOT', $thispageurl, $page);
-    $page = str_replace('MOODLEIMAGEDIR', new moodle_url('/admin/tool/componentlibrary/content/static'), $page);
-    $filtered = str_replace('MOODLEROOT', $thispageurl, $page);
-    $filtered = str_replace('MOODLESITE', $CFG->wwwroot, $page);
-    echo $filtered;
-} else {
-    $firstpage = new moodle_url('/admin/tool/componentlibrary/docspage.php/moodle/getting-started/introduction/');
-    redirect($firstpage);
-}
+$page = file_get_contents($docspage);
+$page = str_replace('http://MOODLEROOT', $thispageurl, $page);
+$page = str_replace('MOODLEIMAGEDIR', new moodle_url('/admin/tool/componentlibrary/content/static'), $page);
+$filtered = str_replace('MOODLEROOT', $thispageurl, $page);
+$filtered = str_replace('MOODLESITE', $CFG->wwwroot, $page);
+echo $filtered;
 
 echo $OUTPUT->footer();
