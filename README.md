@@ -1,3 +1,6 @@
+> [!WARNING]   
+> This repository has been archived because the tool is now part of Moodle 4.0 and up. For more information about how to use and contribute to it, please read the [developers documentation](https://moodledev.io/general/development/tools/component-library).
+
 ## Moodle Component Library plugin
 
 The Moodle UI component Library is built with the aim to provide a single repository
